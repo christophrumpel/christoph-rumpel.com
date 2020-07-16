@@ -114,15 +114,22 @@
         &:before {
             content: "";
             position: absolute;
-            width: 100%;
+            width: 90%;
             height: 100%;
             top: 0%;
-            right: -15%;
+            right: -1%;
             z-index: -1;
             background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
             transform: rotate(2deg);
             @apply .rounded-sm;
+
+            @screen lg {
+                right: -10%;
+                width: 98%;
+            }
         }
+
+
 
     }
 }
