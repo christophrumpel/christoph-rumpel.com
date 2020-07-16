@@ -1,8 +1,8 @@
-<x-main-layout title="Uses">
+<x-main-layout title="Uses" page="uses">
     <main class="page">
         <article class="post-markdown-styles">
 
-            <h1>Tools That Help Me Create</h1>
+            <h1>The Tools That Help Me Create</h1>
 
             <img src="{{ asset('images/pages/uses_table.jpg') }}" alt="Christoph's working desk">
 

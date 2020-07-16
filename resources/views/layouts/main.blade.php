@@ -10,23 +10,29 @@
     <meta name="author" content="Christoph Rumpel">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    @include('partials.favicon')
+@include('partials.favicon')
 
-    <!-- Styles -->
+<!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&display=swap"
           rel="stylesheet">
     @livewireStyles
 
-@isset($post)
-    @include('partials.postMeta')
-@endisset
+@if($page === 'home')
+    @include('partials.metaHome')
+@elseif($page === 'post')
+    @include('partials.metaPost')
+@elseif($page === 'speaking')
+    @include('partials.metaSpeaking')
+@elseif($page === 'uses')
+    @include('partials.metaUses')
+@endif
 
 @production
     <!-- Fathom - beautiful, simple website analytics -->
-    <script src="https://cdn.usefathom.com/script.js" site="DEPGUYJS" defer></script>
-    <!-- / Fathom -->
-@endproduction
+        <script src="https://cdn.usefathom.com/script.js" site="DEPGUYJS" defer></script>
+        <!-- / Fathom -->
+    @endproduction
 
 </head>
 
