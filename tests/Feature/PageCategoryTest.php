@@ -8,7 +8,6 @@ use Tests\TestCase;
 
 class PageCategoryTest extends TestCase
 {
-
     /** @test * */
     public function it_shows_post_only_from_one_category(): void
     {

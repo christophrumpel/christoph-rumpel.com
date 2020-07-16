@@ -2,9 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Post\PostCollector;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
 use Tests\Factories\PostFactory;
@@ -12,7 +9,6 @@ use Tests\TestCase;
 
 class LiveWirePostListTest extends TestCase
 {
-
     /** @test * */
     public function it_shows_posts_per_page(): void
     {
@@ -21,7 +17,7 @@ class LiveWirePostListTest extends TestCase
         PostFactory::new()
             ->createMultiple(30);
 
-        Livewire::test('post-list',)
+        Livewire::test('post-list', )
             ->assertSee('Blog Title 30')
             ->assertDontSee('Blog Title 15')
             ->call('nextPage')
@@ -42,13 +38,12 @@ class LiveWirePostListTest extends TestCase
             ->createMultiple(30);
 
 
-        Livewire::test('post-list',)
+        Livewire::test('post-list', )
             ->assertSee('Next')
             ->assertDontSee('Previous')
             ->call('nextPage')
             ->assertDontSee('Next')
             ->assertSee('Previous');
-
     }
 
     /** @test **/
@@ -60,7 +55,7 @@ class LiveWirePostListTest extends TestCase
             ->createMultiple(100);
 
 
-        Livewire::test('post-list',)
+        Livewire::test('post-list', )
             ->call('nextPage')
             ->assertSet('currentPage', 2)
             ->set('searchTerm', 'laravel')

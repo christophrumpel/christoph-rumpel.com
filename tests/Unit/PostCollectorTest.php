@@ -4,14 +4,12 @@ namespace Tests\Unit;
 
 use App\Post\Post;
 use App\Post\PostCollector;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Tests\Factories\PostFactory;
 use Tests\TestCase;
 
 class PostCollectorTest extends TestCase
 {
-
     /** @test * */
     public function it_collects_all_given_posts_from_filesystem(): void
     {
@@ -106,5 +104,4 @@ class PostCollectorTest extends TestCase
 
         $this->assertEquals(5, PostCollector::count());
     }
-
 }

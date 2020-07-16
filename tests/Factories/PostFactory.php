@@ -9,7 +9,6 @@ use Illuminate\Support\Str;
 
 class PostFactory
 {
-
     private string $title = 'My Blog Title';
 
     private array $categories = [];
@@ -29,8 +28,10 @@ class PostFactory
     public function createMultiple(int $times): Collection
     {
         $date = Carbon::today();
+
         return collect()->times($times, function ($currentCount, $key) use ($date, $times) {
-            $postTitleNumber = $times - ($currentCount -1);
+            $postTitleNumber = $times - ($currentCount - 1);
+
             return $this->createPostFile($this->title.' '.$postTitleNumber, $date->subDays($key));
         });
     }
@@ -78,9 +79,8 @@ class PostFactory
 
     public function content(string $content): self
     {
-       $this->content = $content;
+        $this->content = $content;
 
-       return $this;
+        return $this;
     }
-
 }

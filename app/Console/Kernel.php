@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        SendMissingEmailsCrUpdates4::class
+        SendMissingEmailsCrUpdates4::class,
     ];
 
     /**

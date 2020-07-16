@@ -2,14 +2,12 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Tests\Factories\PostFactory;
 use Tests\TestCase;
 
 class PageHomeTest extends TestCase
 {
-
     /** @test * */
     public function it_lists_latest_blog_posts(): void
     {
@@ -58,7 +56,7 @@ class PageHomeTest extends TestCase
     }
 
     /** @test  */
-    function it_sees_post_list_component_on_home_page()
+    public function it_sees_post_list_component_on_home_page()
     {
         $this->get('/')->assertSeeLivewire('post-list');
     }
