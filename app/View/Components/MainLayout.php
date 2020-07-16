@@ -9,9 +9,12 @@ class MainLayout extends Component
 {
     public $post;
 
-    public function __construct($post = null)
+    public string $title;
+
+    public function __construct($post = null, $title = null)
     {
         $this->post = $post;
+        $this->title = $title ? $title.' - Christoph Rumpel' : 'Christoph Rumpel';
     }
 
     /**

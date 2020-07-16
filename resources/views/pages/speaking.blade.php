@@ -1,4 +1,4 @@
-<x-main-layout>
+<x-main-layout title="Speaking">
     <main class="post-markdown-styles">
 
         <h1>Speaking</h1>

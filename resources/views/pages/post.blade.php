@@ -1,4 +1,4 @@
-<x-main-layout :post="$post">
+<x-main-layout :post="$post" :title="$post->title">
     <main class="mt-16">
 
         <article class="post">

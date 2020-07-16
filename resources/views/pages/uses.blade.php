@@ -1,4 +1,4 @@
-<x-main-layout>
+<x-main-layout title="Uses">
     <main class="page">
         <article class="post-markdown-styles">
 

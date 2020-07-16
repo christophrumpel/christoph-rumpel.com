@@ -1,4 +1,4 @@
-<x-main-layout>
+<x-main-layout title="Home">
     <main class="home">
 
         <div class="flex flex-col lg:flex-row justify-evenly items-center my-24 lg:my-48">
