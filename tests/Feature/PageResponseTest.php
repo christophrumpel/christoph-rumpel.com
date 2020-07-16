@@ -7,14 +7,13 @@ use Tests\TestCase;
 
 class PageResponseTest extends TestCase
 {
-
     use RefreshDatabase;
 
     /** @test * */
     public function it_gives_successful_response_for_homepage(): void
     {
         $this->withoutExceptionHandling();
-       $this->get('/')
+        $this->get('/')
             ->assertSuccessful();
     }
 

@@ -8,7 +8,6 @@ use Tests\TestCase;
 
 class PagePostTest extends TestCase
 {
-
     /** @test * */
     public function it_shows_a_specific_post(): void
     {
@@ -27,5 +26,4 @@ class PagePostTest extends TestCase
             ->assertSee('laravel')
             ->assertSee('My blog content');
     }
-
 }

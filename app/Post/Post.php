@@ -6,7 +6,6 @@ use Illuminate\Support\Carbon;
 
 class Post
 {
-
     public string $path;
 
     public string $title;

@@ -7,7 +7,6 @@ use Tests\TestCase;
 
 class PageSpeakingTest extends TestCase
 {
-
     /** @test * */
     public function it_shows_upcoming_talks(): void
     {
@@ -79,6 +78,5 @@ class PageSpeakingTest extends TestCase
 
         $this->get('/speaking')
             ->assertSuccessful();
-
     }
 }

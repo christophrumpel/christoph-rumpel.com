@@ -9,8 +9,8 @@ class PageCategoryController extends Controller
 {
     public function __invoke(Request $request, $category)
     {
-       $posts = PostCollector::category($category);
+        $posts = PostCollector::category($category);
 
-       return view('pages.category', ['posts' => $posts, 'category' => $category]);
+        return view('pages.category', ['posts' => $posts, 'category' => $category]);
     }
 }

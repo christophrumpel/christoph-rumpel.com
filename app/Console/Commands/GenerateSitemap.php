@@ -7,7 +7,6 @@ use Spatie\Sitemap\SitemapGenerator;
 
 class GenerateSitemap extends Command
 {
-
     /**
      * The console command name.
      *

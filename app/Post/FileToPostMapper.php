@@ -3,17 +3,16 @@
 namespace App\Post;
 
 use Illuminate\Support\Facades\Storage;
-use Spatie\YamlFrontMatter\YamlFrontMatter;
 use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\IndentedCode;
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
 use Spatie\CommonMarkHighlighter\FencedCodeRenderer;
 use Spatie\CommonMarkHighlighter\IndentedCodeRenderer;
+use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 class FileToPostMapper
 {
-
     public static function map(string $fileName): Post
     {
         $filePath = Storage::disk('posts')

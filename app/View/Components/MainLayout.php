@@ -2,13 +2,11 @@
 
 namespace App\View\Components;
 
-use App\Post\Post;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
 class MainLayout extends Component
 {
-
     public $post;
 
     public function __construct($post = null)

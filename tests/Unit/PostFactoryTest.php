@@ -2,14 +2,12 @@
 
 namespace Tests\Unit;
 
-use App\Post\Post;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Tests\Factories\PostFactory;
 
 class PostFactoryTest extends \Tests\TestCase
 {
-
     private function getPostFile(string $slug): string
     {
         return Storage::disk('posts')
