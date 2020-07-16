@@ -1,7 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
-/public/sitemap
+/public/sitemap.xml
 /storage/*.key
 /vendor
 .env
