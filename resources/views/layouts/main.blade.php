@@ -16,9 +16,15 @@
           rel="stylesheet">
     @livewireStyles
 
-    @isset($post)
-        @include('partials.postMeta')
-    @endisset
+@isset($post)
+    @include('partials.postMeta')
+@endisset
+
+@production
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" site="DEPGUYJS" defer></script>
+    <!-- / Fathom -->
+@endproduction
 
 </head>
 
