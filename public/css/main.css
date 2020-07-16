@@ -19754,6 +19754,10 @@ video {
   transition-delay: 1000ms;
 }
 
+[x-cloak] {
+  display: none;
+}
+
 .text-link {
   position: relative;
   font-style: italic;
@@ -19777,7 +19781,7 @@ video {
   height: 100%;
 }
 
-.post-markdown h1 {
+.post-markdown-styles h1 {
   font-family: Bitter;
   font-size: 2.25rem;
   --text-opacity: 1;
@@ -19787,12 +19791,12 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .post-markdown h1 {
+  .post-markdown-styles h1 {
     font-size: 3rem;
   }
 }
 
-.post-markdown h2 {
+.post-markdown-styles h2 {
   font-family: Bitter;
   font-weight: 700;
   font-size: 1.875rem;
@@ -19804,12 +19808,12 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .post-markdown h2 {
+  .post-markdown-styles h2 {
     font-size: 2.25rem;
   }
 }
 
-.post-markdown h3 {
+.post-markdown-styles h3 {
   font-family: Bitter;
   font-weight: 700;
   font-size: 1.5rem;
@@ -19821,12 +19825,12 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .post-markdown h3 {
+  .post-markdown-styles h3 {
     font-size: 1.875rem;
   }
 }
 
-.post-markdown h4 {
+.post-markdown-styles h4 {
   font-family: Bitter;
   font-weight: 700;
   font-size: 1.5rem;
@@ -19837,19 +19841,19 @@ video {
   margin-bottom: 1rem;
 }
 
-.post-markdown p {
+.post-markdown-styles p {
   font-size: 1.25rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 1024px) {
-  .post-markdown p {
+  .post-markdown-styles p {
     font-size: 1.5rem;
   }
 }
 
-.post-markdown ul {
+.post-markdown-styles ul {
   font-size: 1.5rem;
   margin-left: 3rem;
   margin-top: 3rem;
@@ -19858,13 +19862,13 @@ video {
   list-style-type: none;
 }
 
-.post-markdown ul li {
+.post-markdown-styles ul li {
   position: relative;
   margin-left: 3rem;
   font-size: 1.25rem;
 }
 
-.post-markdown ul li:before {
+.post-markdown-styles ul li:before {
   border-radius: 9999px;
   content: "";
   position: absolute;
@@ -19876,12 +19880,12 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .post-markdown ul li {
+  .post-markdown-styles ul li {
     font-size: 1.5rem;
   }
 }
 
-.post-markdown img {
+.post-markdown-styles img {
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-bottom-width: 8px;
@@ -19890,12 +19894,12 @@ video {
   border-color: rgba(162, 247, 182, var(--border-opacity));
 }
 
-.post-markdown a {
+.post-markdown-styles a {
   position: relative;
   font-style: italic;
 }
 
-.post-markdown a:after {
+.post-markdown-styles a:after {
   content: "";
   position: absolute;
   transform: rotate(-2deg);
@@ -19909,11 +19913,11 @@ video {
   transition: all 375ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.post-markdown a:hover:after {
+.post-markdown-styles a:hover:after {
   height: 100%;
 }
 
-.post-markdown p code, .post-markdown ul code {
+.post-markdown-styles p code, .post-markdown-styles ul code {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.25rem;
@@ -19922,7 +19926,7 @@ video {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
-.post-markdown blockquote {
+.post-markdown-styles blockquote {
   margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 3rem;
@@ -19932,7 +19936,7 @@ video {
   font-size: 1.5rem;
 }
 
-.post-markdown blockquote:before {
+.post-markdown-styles blockquote:before {
   content: "";
   position: absolute;
   width: 130%;
@@ -19945,7 +19949,7 @@ video {
   border-radius: 0.125rem;
 }
 
-.post-markdown .blognote {
+.post-markdown-styles .blognote {
   --bg-opacity: 1;
   background-color: #f4e04d;
   background-color: rgba(244, 224, 77, var(--bg-opacity));
@@ -19959,7 +19963,7 @@ video {
   border-radius: 0.125rem;
 }
 
-.post-markdown .blognote:before {
+.post-markdown-styles .blognote:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -19999,7 +20003,7 @@ video {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
-.page h1 {
+.page-h1 {
   font-family: Bitter;
   font-size: 1.875rem;
   --text-opacity: 1;
@@ -20009,12 +20013,12 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .page h1 {
+  .page-h1 {
     font-size: 3rem;
   }
 }
 
-.page h2 {
+.page-h2 {
   font-family: Bitter;
   font-weight: 700;
   font-size: 1.875rem;
@@ -20026,12 +20030,12 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .page h2 {
+  .page-h2 {
     font-size: 2.25rem;
   }
 }
 
-.page h3 {
+.page-h3 {
   font-family: Bitter;
   font-weight: 700;
   font-size: 1.5rem;
@@ -20043,12 +20047,12 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .page h3 {
+  .page-h3 {
     font-size: 1.875rem;
   }
 }
 
-.page h4 {
+.page-h4 {
   font-family: Bitter;
   font-weight: 700;
   font-size: 1.5rem;
@@ -20059,19 +20063,19 @@ video {
   margin-bottom: 1rem;
 }
 
-.page p {
+.page-p {
   font-size: 1.25rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 1024px) {
-  .page p {
+  .page-p {
     font-size: 1.5rem;
   }
 }
 
-.page ul {
+.page-ul {
   font-size: 1.5rem;
   margin-left: 1rem;
   margin-top: 1rem;
@@ -20081,20 +20085,20 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .page ul {
+  .page-ul {
     margin-left: 3rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
 }
 
-.page ul li {
+.page-ul li {
   position: relative;
   margin-left: 3rem;
   font-size: 1.25rem;
 }
 
-.page ul li:before {
+.page-ul li:before {
   border-radius: 9999px;
   content: "";
   position: absolute;
@@ -20106,18 +20110,18 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .page ul li:before {
+  .page-ul li:before {
     top: 10px;
   }
 }
 
 @media (min-width: 1024px) {
-  .page ul li {
+  .page-ul li {
     font-size: 1.5rem;
   }
 }
 
-.page img {
+.page-img {
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-bottom-width: 8px;
@@ -20126,12 +20130,12 @@ video {
   border-color: rgba(162, 247, 182, var(--border-opacity));
 }
 
-.page a {
+.page-a {
   position: relative;
   font-style: italic;
 }
 
-.page a:after {
+.page-a:after {
   content: "";
   position: absolute;
   transform: rotate(-2deg);
@@ -20145,11 +20149,11 @@ video {
   transition: all 375ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.page a:hover:after {
+.page-a:hover:after {
   height: 100%;
 }
 
-.page p code, .page ul code {
+.page-code {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.25rem;
@@ -20158,7 +20162,7 @@ video {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
-.page blockquote {
+.page-blockquote {
   margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 3rem;
@@ -20168,7 +20172,7 @@ video {
   font-size: 1.5rem;
 }
 
-.page blockquote:before {
+.page-blockquote:before {
   content: "";
   position: absolute;
   width: 130%;
@@ -20181,7 +20185,7 @@ video {
   border-radius: 0.125rem;
 }
 
-.page .blognote {
+.page-note {
   --bg-opacity: 1;
   background-color: #f4e04d;
   background-color: rgba(244, 224, 77, var(--bg-opacity));
@@ -20195,7 +20199,7 @@ video {
   border-radius: 0.125rem;
 }
 
-.page .blognote:before {
+.page-note:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -20292,52 +20296,20 @@ video {
   font-weight: bold;
 }
 
-[x-cloak] {
-  display: none;
+.post-list {
+  list-style: none !important;
 }
 
-nav a, .logo {
-  position: relative;
-  font-style: italic;
-}
-
-nav a:after, .logo:after {
-  content: "";
-  position: absolute;
-  transform: rotate(-2deg);
-  width: 100%;
-  height: 6px;
-  border-radius: 3px;
-  background: #f4e04d;
-  left: 0;
-  bottom: 6px;
-  z-index: -1;
-  transition: all 375ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-nav a:hover:after, .logo:hover:after {
-  height: 100%;
-}
-
-.home code {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  border-radius: 0.125rem;
-  background-image: linear-gradient(120deg, #A2F7B6 0%, #8fd3f4 100%);
-}
-
-.home .post-list li {
+.post-list li {
   position: relative;
   transition-property: all;
 }
 
-.home .post-list li:hover {
+.post-list li:hover {
   text-align: center;
 }
 
-.home .post-list li:after {
+.post-list li:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -20350,15 +20322,8 @@ nav a:hover:after, .logo:hover:after {
   transition: all 375ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.home .post-list li:hover:after {
+.post-list li:hover:after {
   transform: rotate(-2deg);
-}
-
-.logo {
-  display: block;
-  background-image: url("/images/logo-bg.svg");
-  background-size: cover;
-  background-position: center;
 }
 
 .search-btn {
@@ -20404,6 +20369,13 @@ nav a:hover:after, .logo:hover:after {
   bottom: -6px;
   z-index: -1;
   transition: all 375ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo {
+  display: block;
+  background-image: url("/images/logo-bg.svg");
+  background-size: cover;
+  background-position: center;
 }
 
 @media (min-width: 640px) {

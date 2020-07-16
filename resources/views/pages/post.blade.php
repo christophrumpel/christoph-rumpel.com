@@ -15,7 +15,7 @@
             <p class="text-xl lg:text-2xl my-6 ">
                 {!! $post->summary !!}
             </p>
-            <div class="post-markdown">
+            <div class="post-markdown-styles">
                 {!! $post->content !!}
             </div>
         </article>

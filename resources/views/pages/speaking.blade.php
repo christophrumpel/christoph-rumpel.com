@@ -1,5 +1,5 @@
 <x-main-layout>
-    <main class="page speaking">
+    <main class="post-markdown-styles">
 
         <h1>Speaking</h1>
 
