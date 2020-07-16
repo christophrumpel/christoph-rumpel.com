@@ -10,6 +10,8 @@
     <meta name="author" content="Christoph Rumpel">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    @include('partials.favicon')
+
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&display=swap"
