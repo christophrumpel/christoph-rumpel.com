@@ -1,4 +1,4 @@
-<x-main-layout title="Home" page="home">
+<x-main-layout title="Home" page="home" livewire="true">
     <main class="home">
 
         <div class="flex flex-col lg:flex-row justify-evenly items-center my-24 lg:my-48">

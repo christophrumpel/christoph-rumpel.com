@@ -13,11 +13,14 @@ class MainLayout extends Component
 
     public string $page;
 
-    public function __construct($post = null, $title = null, $page = '')
+    public $livewire;
+
+    public function __construct($post = null, $title = null, $page = '', $livewire = false)
     {
         $this->post = $post;
         $this->title = $title ? $title.' - Christoph Rumpel' : 'Christoph Rumpel';
         $this->page = $page;
+        $this->livewire = $livewire;
     }
 
     /**

@@ -14,7 +14,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet"/>
-    @livewireStyles
+    @if($livewire)
+        @livewireStyles
+    @endif
     @include('partials.loadPageMeta')
     @include('partials.fontStyles')
     <!-- Styles -->
@@ -41,9 +43,10 @@
     {{ $slot }}
 </div>
 
-@include('partials.footer')
-
-@livewireScripts
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    @include('partials.footer')
+    @if($livewire)
+        @livewireScripts
+    @endif
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </body>
 </html>
