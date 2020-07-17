@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
@@ -16,9 +15,9 @@ class CachePostsCommand extends TestCase
 
         $this->artisan('posts:cache');
 
-    	$this->assertTrue(Cache::has('posts'));
+        $this->assertTrue(Cache::has('posts'));
 
-    	$posts = Cache::get('posts');
-    	$this->assertCount(count(Storage::disk('posts')->allFiles()), $posts);
+        $posts = Cache::get('posts');
+        $this->assertCount(count(Storage::disk('posts')->allFiles()), $posts);
     }
 }
