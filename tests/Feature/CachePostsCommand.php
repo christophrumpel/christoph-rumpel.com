@@ -5,6 +5,8 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class CachePostsCommand extends TestCase
@@ -17,5 +19,8 @@ class CachePostsCommand extends TestCase
     	$this->artisan('posts:cache');
 
     	$this->assertTrue(Cache::has('posts'));
+
+    	$posts = Cache::get('posts');
+    	$this->assertCount(count(Storage::disk('posts')->allFiles()), $posts);
     }
 }

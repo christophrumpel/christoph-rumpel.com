@@ -30,6 +30,7 @@
         "spatie/laravel-backup": "^6.11",
         "spatie/laravel-mailcoach": "^2.0.0",
         "spatie/laravel-mailcoach-unlayer": "^1.0",
+        "spatie/laravel-responsecache": "^6.6",
         "spatie/laravel-sitemap": "^5.7",
         "spatie/yaml-front-matter": "^2.0"
     },
