@@ -41,6 +41,7 @@ class FileToPostMapper
             'date' => $date,
             'slug' => $slug,
             'summary' => $postMetaData->matter('summary'),
+            'old' => $postMetaData->matter('old') ?? false
         ]);
     }
 }

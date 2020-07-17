@@ -12,6 +12,10 @@
                    class="border-black border-2 rounded p-2 uppercase text-link">#{{$category}}</a>
             @endforeach
 
+            @if($post->old)
+                @include('partials.blogOldNote')
+            @endif
+
             <p class="text-xl lg:text-2xl my-6 ">
                 {!! $post->summary !!}
             </p>
