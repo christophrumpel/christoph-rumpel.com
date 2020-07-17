@@ -2,8 +2,6 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Cache;
 use Tests\TestCase;
 
@@ -14,8 +12,8 @@ class CachePostsCommand extends TestCase
     {
         $this->assertFalse(Cache::has('posts'));
 
-    	$this->artisan('posts:cache');
+        $this->artisan('posts:cache');
 
-    	$this->assertTrue(Cache::has('posts'));
+        $this->assertTrue(Cache::has('posts'));
     }
 }
