@@ -3,13 +3,15 @@
         <div class="flex flex-col lg:flex-row items-center lg:justify-between mb-16">
             <h2 class="font-display text-4xl text-textBlue">From the blog:</h2>
 
-            <button class="search-btn flex flex-row" @click="open = !open">
+            <button class="search-btn flex flex-row" @click="open = !open; if (open) $nextTick(()=>{$refs.search.focus()});">
                 @include('partials.svg.search')
             </button>
 
         </div>
         <div id="search" x-cloak x-show="open">
-            <input wire:model="searchTerm" type="text"
+            <input wire:model="searchTerm"
+                   x-ref="search"
+                   type="text"
                    placeholder="Search by keywords like laravel, business, setup..."
                    class="w-full form-input relative rounded-md shadow-sm p-4 text-xs md:text-lg lg:text-2xl text-center rounded"/>
         </div>
