@@ -34,6 +34,8 @@
         <!-- / Fathom -->
     @endproduction
 
+    <script defer src="{{ mix('js/app.js') }}"></script>
+
 </head>
 
 <body class="bg-bgBlue">
