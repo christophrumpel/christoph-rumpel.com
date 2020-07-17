@@ -1,6 +1,6 @@
 <x-main-layout>
     <main class="page">
-        <article>
+        <article class="post-markdown-styles">
             <h1>Build Chatbots with PHP</h1>
 
             <img src="/images/pages/bcwp.png" alt="Screenshot of old Build Chatbots with PHP Page">
