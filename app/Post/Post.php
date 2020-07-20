@@ -3,8 +3,11 @@
 namespace App\Post;
 
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 
-class Post
+class Post implements Feedable
 {
     public string $path;
 
@@ -48,5 +51,21 @@ class Post
     public function link(): string
     {
         return route('page.post', ['year' => $this->date->year, 'month' => $this->date->month, 'slug' => $this->slug]);
+    }
+
+    public static function getFeedItems(): Collection
+    {
+        return PostCollector::all();
+    }
+
+    public function toFeedItem(): FeedItem
+    {
+        return FeedItem::create()
+            ->id($this->link())
+            ->title($this->title)
+            ->summary($this->summary)
+            ->updated($this->date)
+            ->link($this->link())
+            ->author('Christoph Rumpel');
     }
 }

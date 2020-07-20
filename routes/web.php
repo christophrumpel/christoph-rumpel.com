@@ -22,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::feeds();
+
 Route::get('/', '\\' . PageHomeController::class)->name('page.home');
 Route::get('speaking', '\\' . PageSpeakingController::class)->name('page.speaking');
 Route::get('/category/{category}', '\\' . PageCategoryController::class)->name('page.category');
