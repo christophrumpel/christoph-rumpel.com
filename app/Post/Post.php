@@ -26,7 +26,10 @@ class Post
 
     public $old;
 
-    public function __construct(array $attributes)
+    public function __construct()
+    {}
+
+    public function create(array $attributes): self
     {
         $this->path = $attributes['path'];
         $this->title = $attributes['title'] ?? '';
@@ -38,6 +41,8 @@ class Post
         $this->slug = $attributes['slug'] ?? '';
         $this->summary = $attributes['summary'] ?? '';
         $this->old = $attributes['old'] ?? false;
+
+        return $this;
     }
 
     public function link(): string

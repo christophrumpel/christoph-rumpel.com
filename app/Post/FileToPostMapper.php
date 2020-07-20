@@ -31,7 +31,7 @@ class FileToPostMapper
 
         $commonMarkConverter = new CommonMarkConverter([], $environment);
 
-        return new Post([
+        return (new Post)->create([
             'path' => $filePath,
             'title' => $postMetaData->matter('title'),
             'categories' => explode(', ', strtolower($postMetaData->matter('categories'))),
