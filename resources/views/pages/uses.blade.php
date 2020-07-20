@@ -79,19 +79,9 @@
             <ul>
                 <li>Custom Top</li>
             </ul>
-            <p>I needed a custom top for my desk to fit a niche in my office room. I didn't find one to buy, so I
-                decided to give it a try myself. I had no experience with woodworking so far, so I watched a lot of
-                youtube videos and talked to <a href="https://twitter.com/gonedark">Jason
+            <p>I needed a custom top for my desk to fit a niche in my office room. I didn't find one to buy, so I decided to give it a try myself. I had no experience with woodworking so far, so I watched a lot of youtube videos and talked to <a href="https://twitter.com/gonedark">Jason
                     McCreary</a>, who is more experienced with that kind of work. In <a
-                    href="/2020/6/my-custom-wooden-desk-top">this post</a>, I share some images of the process building
-                the desk top.
-
-
-                I needed a custom top for my desk so that it would fit a niche in my office room. I didn't find one to
-                buy so I decided to give it a try myself. I had like no experiences with wood working so far, so I
-                watched a lot of youtube videos and also talked to who is more experienced with that kind of work. In I
-                share some images of the process building
-                the desk top.</p>
+                    href="/2020/6/my-custom-wooden-desk-top">this post</a>, I share some images of the process building the desk top.</p>
 
             <h3>Chair</h3>
             <ul>
