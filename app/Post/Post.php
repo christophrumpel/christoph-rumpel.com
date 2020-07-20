@@ -30,7 +30,8 @@ class Post implements Feedable
     public $old;
 
     public function __construct()
-    {}
+    {
+    }
 
     public function create(array $attributes): self
     {
