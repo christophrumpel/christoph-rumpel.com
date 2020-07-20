@@ -15,7 +15,7 @@
             <ul>
                 <li>MacBook Pro (13-inch, 2016)</li>
                 <li>3.3 GHz Dual-Core Intel Core i7</li>
-                <li>6 GB 2133 MHz LPDDR3</li>
+                <li>16 GB 2133 MHz LPDDR3</li>
                 <li>It still works quite good but gets slow sometimes</li>
                 <li>I will probably soon look for a new one</li>
             </ul>
