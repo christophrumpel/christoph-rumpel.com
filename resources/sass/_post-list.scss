@@ -3,10 +3,14 @@
     list-style: none !important;
 
     li {
-        @apply .relative .transition-all;
+        @apply .relative;
 
-        &:hover {
-            @apply text-center;
+        a {
+            transition: all 375ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:hover {
+                transform: translateX(30px);
+            }
         }
 
         &:after {
