@@ -1,7 +1,7 @@
 <x-main-layout>
     <main>
 
-        <h1 class="page-h1">These are my posts with the cateogry <code class="page-code">{{ $category }}</code></h1>
+        <h1 class="page-h1">These are my posts with the category <code class="page-code">{{ $category }}</code></h1>
         <ul class="post-list">
             @foreach($posts as $post)
                 <li class="my-8 bg-white border-textBlue border-2">
