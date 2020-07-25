@@ -160,6 +160,12 @@
                 </li>
             </ul>
 
+            <h3>Website Analytics</h3>
+            <ul>
+                <li><a href="https://usefathom.com/ref/MOGXZ4">Fathom</a> - simple, fast and privacy-focused website analytics</li>
+                <li>With this link you will receive a $10 discount if you decide to use Fathom</li>
+            </ul>
+
             <h3>MacOS Window Manager</h3>
             <ul>
                 <li>I need to move and resize windows all the time</li>
