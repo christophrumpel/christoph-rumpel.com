@@ -9,7 +9,6 @@ use Illuminate\Support\Str;
 
 class PostFactory
 {
-
     private string $title = 'My Blog Title';
 
     private array $categories = [];
