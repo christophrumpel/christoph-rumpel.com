@@ -29,6 +29,8 @@ class Post implements Feedable
 
     public $old;
 
+    public bool $hidden;
+
     public function __construct()
     {
     }
@@ -45,6 +47,7 @@ class Post implements Feedable
         $this->slug = $attributes['slug'] ?? '';
         $this->summary = $attributes['summary'] ?? '';
         $this->old = $attributes['old'] ?? false;
+        $this->hidden = $attributes['hidden'] ?? false;
 
         return $this;
     }

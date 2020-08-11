@@ -28,6 +28,23 @@ class PostCollectorTest extends TestCase
     }
 
     /** @test * */
+    public function it_skips_unlisted_posts_when_collecting_post_from_filesystem(): void
+    {
+        Storage::fake('posts');
+
+        PostFactory::new()
+            ->hidden()
+            ->create();
+
+        PostFactory::new()
+            ->create();
+
+        $posts = PostCollector::all();
+
+        $this->assertCount(1, $posts);
+    }
+
+    /** @test * */
     public function it_finds_a_specific_post_by_slug(): void
     {
         Storage::fake('posts');

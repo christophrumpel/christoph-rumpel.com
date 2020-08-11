@@ -21,4 +21,35 @@
         background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
         overflow-wrap: break-word;
     }
+
+    table {
+        @apply w-full my-12 rounded-sm overflow-auto block;
+
+        @screen md {
+            @apply table;
+        }
+
+        th {
+            @apply px-6 py-3 text-left font-display text-sm leading-4 font-medium text-white uppercase tracking-wider bg-highlightPurple;
+
+            @screen md {
+                @apply .text-lg;
+            }
+        }
+
+        td {
+            @apply px-6 py-4 whitespace-no-wrap text-lg leading-5 font-medium text-gray-900;
+        }
+
+        tr {
+            &:nth-child(even) {
+                @apply bg-gray-100;
+            }
+
+            &:nth-child(odd) {
+                @apply bg-gray-300;
+            }
+        }
+    }
+
 }

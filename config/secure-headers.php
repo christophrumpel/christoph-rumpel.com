@@ -146,6 +146,19 @@ return [
         'enable' => true,
 
         /*
+         * Feature-Policy was renamed to Permissions-Policy.
+         *
+         * In order to prevent breaking change, before 7.0 version,
+         * it will use this config to choose use `Permissions-Policy`
+         * header name or `Feature-Policy` header name.
+         *
+         * Set `use-permissions-policy-header` to `true` to use `Permissions-Policy` header name.
+         *
+         * Reference: https://github.com/w3c/webappsec-permissions-policy/issues/359
+         */
+        'use-permissions-policy-header' => true,
+
+        /*
          * Each directive details can be found on:
          *
          * https://github.com/w3c/webappsec-feature-policy/blob/master/features.md
@@ -328,8 +341,7 @@ return [
         'report-to' => '',
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri
-        'report-uri' => [
-            // uri
+        'report-uri' => [// uri
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
@@ -339,58 +351,47 @@ return [
         'upgrade-insecure-requests' => false,
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri
-        'base-uri' => [
-            //
+        'base-uri' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/child-src
-        'child-src' => [
-            //
+        'child-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src
-        'connect-src' => [
-            //
+        'connect-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src
-        'default-src' => [
-            //
+        'default-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src
-        'font-src' => [
-            //
+        'font-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action
-        'form-action' => [
-            //
+        'form-action' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
-        'frame-ancestors' => [
-            //
+        'frame-ancestors' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src
-        'frame-src' => [
-            //
+        'frame-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src
-        'img-src' => [
-            //
+        'img-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/manifest-src
-        'manifest-src' => [
-            //
+        'manifest-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/media-src
-        'media-src' => [
-            //
+        'media-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to
@@ -399,18 +400,15 @@ return [
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/object-src
-        'object-src' => [
-            //
+        'object-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types
-        'plugin-types' => [
-            // 'application/pdf',
+        'plugin-types' => [// 'application/pdf',
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/prefetch-src
-        'prefetch-src' => [
-            //
+        'prefetch-src' => [//
         ],
 
         // https://w3c.github.io/webappsec-trusted-types/dist/spec/#integration-with-content-security-policy
@@ -457,8 +455,7 @@ return [
 
             'report-sample' => false,
 
-            'allow' => [
-                // 'url',
+            'allow' => [// 'url',
             ],
 
             'schemes' => [
@@ -481,43 +478,35 @@ return [
             'strict-dynamic' => false,
 
             'hashes' => [
-                'sha256' => [
-                    // 'sha256-hash-value-with-base64-encode',
+                'sha256' => [// 'sha256-hash-value-with-base64-encode',
                 ],
 
-                'sha384' => [
-                    // 'sha384-hash-value-with-base64-encode',
+                'sha384' => [// 'sha384-hash-value-with-base64-encode',
                 ],
 
-                'sha512' => [
-                    // 'sha512-hash-value-with-base64-encode',
+                'sha512' => [// 'sha512-hash-value-with-base64-encode',
                 ],
             ],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr
-        'script-src-attr' => [
-            //
+        'script-src-attr' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem
-        'script-src-elem' => [
-            //
+        'script-src-elem' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src
-        'style-src' => [
-            //
+        'style-src' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr
-        'style-src-attr' => [
-            //
+        'style-src-attr' => [//
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem
-        'style-src-elem' => [
-            //
+        'style-src-elem' => [//
         ],
 
         // https://w3c.github.io/webappsec-trusted-types/dist/spec/#trusted-types-csp-directive
@@ -528,14 +517,12 @@ return [
 
             'default' => false,
 
-            'policies' => [
-                //
+            'policies' => [//
             ],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src
-        'worker-src' => [
-            //
+        'worker-src' => [//
         ],
     ],
 ];

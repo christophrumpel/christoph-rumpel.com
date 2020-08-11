@@ -3,7 +3,7 @@
         <div class="px-6 py-6 bg-textBlue rounded-lg md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
             <div class="xl:w-0 xl:flex-1">
                 <h2 class="text-2xl leading-8 font-display tracking-tight text-white sm:text-3xl sm:leading-9">
-                    Do you enjoy my articles?
+                    Did you enjoy this post?
                 </h2>
                 <p class="mt-3 max-w-3xl text-lg leading-6 text-indigo-200" id="newsletter-headline">
                     Sign up for my newsletter to stay up to date.

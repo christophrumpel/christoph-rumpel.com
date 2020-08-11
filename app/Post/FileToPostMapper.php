@@ -37,11 +37,12 @@ class FileToPostMapper
             'categories' => explode(', ', strtolower($postMetaData->matter('categories'))),
             'preview_image' => $postMetaData->matter('preview_image'),
             'preview_image_twitter' => $postMetaData->matter('preview_image_twitter'),
-            'content' => $commonMarkConverter->convertToHtml($postMetaData->body()),
+            'content' => (new \Parsedown())->text($postMetaData->body()),
             'date' => $date,
             'slug' => $slug,
             'summary' => $postMetaData->matter('summary'),
             'old' => $postMetaData->matter('old') ?? false,
+            'hidden' => $postMetaData->matter('hidden'),
         ]);
     }
 }

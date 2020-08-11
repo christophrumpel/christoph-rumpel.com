@@ -9,11 +9,14 @@ use Illuminate\Support\Str;
 
 class PostFactory
 {
+
     private string $title = 'My Blog Title';
 
     private array $categories = [];
 
     private string $content = '';
+
+    private bool $hidden = false;
 
     public static function new(): PostFactory
     {
@@ -46,19 +49,20 @@ class PostFactory
                 ->getPathPrefix().$path;
 
         copy(base_path('tests/dummy.md'), $destinationPath);
-        $this->replaceFileDummyContent($path, $title);
+        $this->replaceFileDummyContent($path, $title, $this->hidden);
 
         return $destinationPath;
     }
 
-    private function replaceFileDummyContent(string $path, string $title): void
+    private function replaceFileDummyContent(string $path, string $title, bool $listed): void
     {
         $fileContent = Storage::disk('posts')
             ->get($path);
         $replacedFileContent = Str::of($fileContent)
             ->replace('{{blog_title}}', $title)
             ->replace('{{categories}}', implode(', ', $this->categories))
-            ->replace('{{content}}', $this->content);
+            ->replace('{{content}}', $this->content)
+            ->replace('{{hidden}}', $listed ? 'true' : 'false');
         Storage::disk('posts')
             ->put($path, $replacedFileContent);
     }
@@ -80,6 +84,13 @@ class PostFactory
     public function content(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function hidden(): self
+    {
+        $this->hidden = true;
 
         return $this;
     }
