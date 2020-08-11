@@ -7,6 +7,7 @@ use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\IndentedCode;
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
+use League\CommonMark\Extension\Table\TableExtension;
 use Spatie\CommonMarkHighlighter\FencedCodeRenderer;
 use Spatie\CommonMarkHighlighter\IndentedCodeRenderer;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
@@ -28,6 +29,7 @@ class FileToPostMapper
         $environment = Environment::createCommonMarkEnvironment();
         $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer());
         $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer());
+        $environment->addExtension(new TableExtension());
 
         $commonMarkConverter = new CommonMarkConverter([], $environment);
 
@@ -37,7 +39,7 @@ class FileToPostMapper
             'categories' => explode(', ', strtolower($postMetaData->matter('categories'))),
             'preview_image' => $postMetaData->matter('preview_image'),
             'preview_image_twitter' => $postMetaData->matter('preview_image_twitter'),
-            'content' => (new \Parsedown())->text($postMetaData->body()),
+            'content' => $commonMarkConverter->convertToHtml($postMetaData->body()),
             'date' => $date,
             'slug' => $slug,
             'summary' => $postMetaData->matter('summary'),
