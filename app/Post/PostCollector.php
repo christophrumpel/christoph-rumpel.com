@@ -30,12 +30,12 @@ class PostCollector
             });
     }
 
-    public static function findBySlug(string $slug)
+    public static function findByPath(string $year, string $month, string $slug)
     {
         return collect(Storage::disk('posts')
             ->allFiles())
-            ->filter(function ($fileName) use ($slug) {
-                return Str::contains($fileName, $slug);
+            ->filter(function ($fileName) use ($year, $month, $slug) {
+                return Str::containsAll($fileName, [$year, $month, $slug]);
             })
             ->map(fn ($file) => FileToPostMapper::map($file))
             ->first();

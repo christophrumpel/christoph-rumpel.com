@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use App\Post\Post;
 use App\Post\PostCollector;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Tests\Factories\PostFactory;
 use Tests\TestCase;
@@ -45,7 +46,7 @@ class PostCollectorTest extends TestCase
     }
 
     /** @test * */
-    public function it_finds_a_specific_post_by_slug(): void
+    public function it_finds_a_specific_post_by_path(): void
     {
         Storage::fake('posts');
 
@@ -53,7 +54,9 @@ class PostCollectorTest extends TestCase
             ->title('My Company Of One Story - Episode 2 Motivation')
             ->create();
 
-        $post = PostCollector::findBySlug('my-company-of-one-story-episode-2-motivation');
+        $today = Carbon::today();
+
+        $post = PostCollector::findByPath($today->year, $today->month, 'my-company-of-one-story-episode-2-motivation');
 
         $this->assertInstanceOf(Post::class, $post);
         $this->assertEquals('My Company Of One Story - Episode 2 Motivation', $post->title);

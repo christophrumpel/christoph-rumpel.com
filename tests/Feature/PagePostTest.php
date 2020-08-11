@@ -26,4 +26,11 @@ class PagePostTest extends TestCase
             ->assertSee('laravel')
             ->assertSee('My blog content');
     }
+
+    /** @test */
+    public function it_returns_404_status_code_if_post_not_found(): void
+    {
+        $this->get('2020/03/test')
+            ->assertNotFound();
+    }
 }
