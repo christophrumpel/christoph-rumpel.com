@@ -10,20 +10,20 @@
     <meta name="author" content="Christoph Rumpel">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    @include('partials.favicon')
+@include('partials.favicon')
 
-    <!-- Styles -->
+<!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet"/>
-    @if($livewire)
-        @livewireStyles
-    @endif
-    @include('partials.loadPageMeta')
-    @include('partials.fontStyles')
-    <!-- Styles -->
+@if($livewire)
+    @livewireStyles
+@endif
+@include('partials.loadPageMeta')
+@include('partials.fontStyles')
+<!-- Styles -->
 
     <!-- Head Script -->
-    @production
-        <!-- Fathom - beautiful, simple website analytics -->
+@production
+    <!-- Fathom - beautiful, simple website analytics -->
         <script src="https://cdn.usefathom.com/script.js" site="DEPGUYJS" defer></script>
         <!-- / Fathom -->
     @endproduction
@@ -34,6 +34,10 @@
 </head>
 
 <body class="bg-bgBlue">
+
+@include('partials.promoNotification')
+
+
 <div class="container mx-auto  max-w-5xl p-8 md:p-12">
     <header class="flex flex-col lg:flex-row items-center mb-8 lg:mb-32">
         @include('partials.logo')
@@ -43,10 +47,10 @@
     {{ $slot }}
 </div>
 
-    @include('partials.footer')
-    @if($livewire)
-        @livewireScripts
-    @endif
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+@include('partials.footer')
+@if($livewire)
+    @livewireScripts
+@endif
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </body>
 </html>
