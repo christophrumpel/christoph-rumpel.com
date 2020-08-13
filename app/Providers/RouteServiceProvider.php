@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Spatie\ResponseCache\Facades\ResponseCache;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -42,8 +43,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        Route::mailcoach('mailcoach');
-        Route::mailcoachUnlayer('mailcoachUnlayer');
+        Route::group(['middleware' => ['doNotCacheResponse']], function () {
+            Route::mailcoach('mailcoach');
+            Route::mailcoachUnlayer('mailcoachUnlayer');
+        });
 
         $this->mapApiRoutes();
 
