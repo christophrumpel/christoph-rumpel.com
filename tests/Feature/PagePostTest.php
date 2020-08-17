@@ -2,6 +2,8 @@
 
 namespace Tests\Feature;
 
+use App\Post\PostCollector;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Tests\Factories\PostFactory;
 use Tests\TestCase;
@@ -19,7 +21,10 @@ class PagePostTest extends TestCase
             ->categories(['Business', 'Laravel'])
             ->create();
 
-        $this->get('2020/03/my-company-of-one-story-episode-3-the-transition')
+        $today = Carbon::today();
+        $pathDate = $today->format('y/m');
+
+        $this->get("$pathDate/my-company-of-one-story-episode-3-the-transition")
             ->assertSuccessful()
             ->assertSee('My Company Of One Story - Episode 3 The Transition')
             ->assertSee('business')
