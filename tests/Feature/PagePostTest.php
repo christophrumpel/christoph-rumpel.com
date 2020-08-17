@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Post\PostCollector;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Tests\Factories\PostFactory;
