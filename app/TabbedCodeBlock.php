@@ -8,18 +8,35 @@ use League\CommonMark\Cursor;
 class TabbedCodeBlock extends AbstractBlock
 {
 
+    private $objectId;
+
+    public function __construct($objectId)
+    {
+        $this->objectId = $objectId;
+    }
+
+    public function getObjectId()
+    {
+        return $this->objectId;
+    }
+
     public function canContain(AbstractBlock $block): bool
     {
-        // TODO: Implement canContain() method.
+        return true;
+    }
+
+    public function acceptsLines()
+    {
+        return false;
     }
 
     public function isCode(): bool
     {
-        // TODO: Implement isCode() method.
+        return false;
     }
 
     public function matchesNextLine(Cursor $cursor): bool
     {
-        // TODO: Implement matchesNextLine() method.
+        return true;
     }
 }

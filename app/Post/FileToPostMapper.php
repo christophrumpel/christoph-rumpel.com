@@ -2,7 +2,9 @@
 
 namespace App\Post;
 
+use App\TabbedCodeBlock;
 use App\TabbedCodeParser;
+use App\TabbedCodeRenderer;
 use Illuminate\Support\Facades\Storage;
 use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\IndentedCode;
@@ -15,6 +17,7 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 class FileToPostMapper
 {
+
     public static function map(string $fileName): Post
     {
         $filePath = Storage::disk('posts')
@@ -28,9 +31,9 @@ class FileToPostMapper
         ] = explode('.', $fileName);
 
         $environment = Environment::createCommonMarkEnvironment();
-            $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer());
+        $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer());
         $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer());
-        //$environment->addBlockParser(new TabbedCodeParser());
+        $environment->addBlockRenderer(TabbedCodeBlock::class, new TabbedCodeRenderer());
         $environment->addExtension(new TableExtension());
 
         $commonMarkConverter = new CommonMarkConverter([], $environment);
