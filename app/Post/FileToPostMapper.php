@@ -2,6 +2,7 @@
 
 namespace App\Post;
 
+use App\TabbedCodeParser;
 use Illuminate\Support\Facades\Storage;
 use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\IndentedCode;
@@ -27,8 +28,9 @@ class FileToPostMapper
         ] = explode('.', $fileName);
 
         $environment = Environment::createCommonMarkEnvironment();
-        $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer());
+            $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer());
         $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer());
+        //$environment->addBlockParser(new TabbedCodeParser());
         $environment->addExtension(new TableExtension());
 
         $commonMarkConverter = new CommonMarkConverter([], $environment);
