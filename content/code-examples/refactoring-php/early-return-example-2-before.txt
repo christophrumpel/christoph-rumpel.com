@@ -1,14 +1,9 @@
-public function calculateScore(User $user): int
+public function sendInvoice(Invoice $invoice): void
 {
-    if ($user->inactive) {
-        $score = 0;
+    if($user->notificationChannel === 'Slack')
+    {
+        $this->notifier->slack($invoice);
     } else {
-        if ($user->hasBonus) {
-            $score = $user->score + $this->bonus;
-        } else {
-            $score = $user->score;
-        }
+        $this->notifier->email($invoice);
     }
-
-    return $score;
 }

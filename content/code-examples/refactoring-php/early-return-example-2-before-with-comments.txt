@@ -1,16 +1,10 @@
-public function calculateScore(User $user): int
+public function sendInvoice(Invoice $invoice): void
 {
-    if ($user->inactive) {
-        $score = 0;
+    if($user->notificationChannel === 'Slack')
+    {
+        $this->notifier->slack($invoice);
     } else {
-        // ❌ What was "if" again?
-        if ($user->hasBonus) {
-            $score = $user->score + $this->bonus;
-        } else {
-            // ❌ Your 👀 are constantly moving due to the different idention levels
-            $score = $user->score;
-        }
+        // ❌ Even a simple ELSE effects the readability of your code
+        $this->notifier->email($invoice);
     }
-
-    return $score;
 }

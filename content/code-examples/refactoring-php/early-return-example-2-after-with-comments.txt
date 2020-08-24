@@ -1,14 +1,11 @@
-public function calculateScore(User $user): int
+public function sendInvoice(Invoice $invoice): bool
 {
-    // ✅ Edge-cases are checked first
-    if ($user->inactive) {
-        return 0;
+    // ✅ Every condition is easy to read
+    if($user->notificationChannel === 'Slack')
+    {
+        return $this->slackNotifier->send($invoice);
     }
 
-    // ✅ Every case has its own section which makes them easy to follow step by step
-    if ($user->hasBonus) {
-        return $user->score + $this->bonus;
-    }
-
-    return $user->score;
+    // ✅ No more thinking about what ELSE refers to
+    return $this->notifier->send($invoice);
 }

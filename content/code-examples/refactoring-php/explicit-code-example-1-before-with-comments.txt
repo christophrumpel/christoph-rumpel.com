@@ -1,0 +1,2 @@
+// ❌ It is unclear what this method is doing with the provided string
+$status = $user->status('pending');
