@@ -12,97 +12,29 @@
             <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
             <script>hljs.initHighlightingOnLoad();</script>
 
+            <div class="post-markdown-styles">
+                <h2>Early Returns</h2>
 
-            <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'description' }"
-                 id="tab_wrapper" class="my-12 post-markdown-styles">
-                <!-- The tabs navigation -->
-                <nav class="bg-highlightTurquoise flex flex-column items-center rounded-sm">
-                    <a :class="{ 'active bg-codeBackground rounded-t text-highlightBlue': tab === 'before' }"
-                       @click.prevent="tab = 'before'; window.location.hash = 'before'"
-                       href="#"
-                       class="block px-4 py-4"
-                    >
-                        Before
-                    </a>
-                    <a :class="{ 'active bg-codeBackground rounded-t text-highlightBlue': tab === 'after' }"
-                       @click.prevent="tab = 'after'; window.location.hash = 'after'"
-                       href="#"
-                       class="block px-4 py-4"
-                    >After</a>
-                    <a :class="{ 'active bg-codeBackground rounded-t text-highlightBlue': tab === 'both' }"
-                       @click.prevent="tab = 'both'; window.location.hash = 'both'"
-                       href="#"
-                       class="block px-4 py-4"
-                    >Both</a>
-                </nav>
+                <p>The concept of <code>early returns</code> refers to a practice where we try to void nesting by
+                    breaking a structure down to specific actions. In return we will get a more linear code which is
+                    much easier to grasp. Every case is separated and good to read by itself. Don't be afraid of using
+                    multiple return statements.</p>
 
+                <h3>Example #1</h3>
+                <x-code-tab
+                    codeBefore="early-return-example-1-before"
+                    codeBeforeWithComments="early-return-example-1-before-with-comments"
+                    codeAfter="early-return-example-1-after"
+                    codeAfterWithComments="early-return-example-1-after-with-comments"
+                ></x-code-tab>
 
-                <!-- The tabs content -->
-                <div x-show="tab === 'before'" class="">
-                    <pre><code class="php">
-public function calculateScore(User $user): int
-{
-    if ($user->inactive) {
-        $score = 0;
-    } else {
-        if ($user->hasBonus) {
-            $score = $user->score + $this->bonus;
-        } else {
-            $score = $user->score;
-        }
-    }
-
-    return $score;
-}
-                        </code></pre>
-                </div>
-                <div x-show="tab === 'after'">
-                   <pre><code class="php">
-public function calculateScore(User $user): int
-{
-    if ($user->inactive) {
-        return 0;
-    }
-
-    if ($user->hasBonus) {
-        return $user->score + $this->bonus;
-    }
-
-    return $user->score;
-}
-                        </code></pre>
-                </div>
-                <div x-show="tab === 'both'">
-                   <pre><code class="php">
-public function calculateScore(User $user): int
-{
-    if ($user->inactive) {
-        $score = 0;
-    } else {
-        if ($user->hasBonus) {
-            $score = $user->score + $this->bonus;
-        } else {
-            $score = $user->score;
-        }
-    }
-
-    return $score;
-}
-
-public function calculateScore(User $user): int
-{
-    if ($user->inactive) {
-        return 0;
-    }
-
-    if ($user->hasBonus) {
-        return $user->score + $this->bonus;
-    }
-
-    return $user->score;
-}
-                        </code></pre>
-                </div>
+                <h3>Example #2</h3>
+                <x-code-tab
+                    codeBefore="early-return-example-2-before"
+                    codeBeforeWithComments="early-return-example-2-before-with-comments"
+                    codeAfter="early-return-example-2-after"
+                    codeAfterWithComments="early-return-example-2-after-with-comments"
+                ></x-code-tab>
             </div>
 
 
