@@ -23,28 +23,28 @@
             btn-text="Show Comments"
             tabState="before-with-comments"
         ></x-code-tab-comment-btn>
-        <pre><code class="php">{{ $codeBefore }}</code></pre>
+        <pre><code class="php">{{ $codeExampleBefore() }}</code></pre>
     </div>
     <div x-show="tab === 'before-with-comments'" class="relative">
         <x-code-tab-comment-btn
             btn-text="Hide Comments"
             tabState="before"
         ></x-code-tab-comment-btn>
-        <pre><code class="php">{{ $codeBeforeWithComments }}</code></pre>
+        <pre><code class="php">{{ $codeExampleBeforeWithComments() }}</code></pre>
     </div>
     <div x-show="tab === 'after'" class="relative">
         <x-code-tab-comment-btn
             btn-text="Show Comments"
             tabState="after-with-comments"
         ></x-code-tab-comment-btn>
-        <pre><code class="php">{{ $codeAfter }}</code></pre>
+        <pre><code class="php">{{ $codeExampleAfter() }}</code></pre>
     </div>
     <div x-show="tab === 'after-with-comments'" class="relative">
         <x-code-tab-comment-btn
             btn-text="Hide Comments"
             tabState="after"
         ></x-code-tab-comment-btn>
-        <pre><code class="php">{{ $codeAfterWithComments }}</code></pre>
+        <pre><code class="php">{{ $codeExampleAfterWithComments() }}</code></pre>
     </div>
 
 </div>

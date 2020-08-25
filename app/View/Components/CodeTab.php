@@ -7,32 +7,16 @@ use Illuminate\View\Component;
 class CodeTab extends Component
 {
 
-    public string $codeBefore;
-
-    public string $codeBeforeWithComments;
-
-    public string $codeAfter;
-
-    public string $codeAfterWithComments;
+    public string $codeName;
 
     /**
      * Create a new component instance.
      *
-     * @param  string  $codeBefore
-     * @param  string  $codeBeforeWithComments
-     * @param  string  $codeAfter
-     * @param  string  $codeAfterWithComments
+     * @param  string  $codeName
      */
-    public function __construct(
-        string $codeBefore,
-        string $codeBeforeWithComments,
-        string $codeAfter,
-        string $codeAfterWithComments
-    ) {
-        $this->codeBefore = $this->getCodeExample($codeBefore);
-        $this->codeBeforeWithComments = $this->getCodeExample($codeBeforeWithComments);
-        $this->codeAfter = $this->getCodeExample($codeAfter);
-        $this->codeAfterWithComments = $this->getCodeExample($codeAfterWithComments);
+    public function __construct(string $codeName)
+    {
+        $this->codeName = $codeName;
     }
 
     /**
@@ -43,6 +27,26 @@ class CodeTab extends Component
     public function render()
     {
         return view('components.code-tab');
+    }
+
+    public function codeExampleBefore(): string
+    {
+        return $this->getCodeExample($this->codeName.'-before');
+    }
+
+    public function codeExampleBeforeWithComments(): string
+    {
+        return $this->getCodeExample($this->codeName.'-before-with-comments');
+    }
+
+    public function codeExampleAfter(): string
+    {
+        return $this->getCodeExample($this->codeName.'-after');
+    }
+
+    public function codeExampleAfterWithComments(): string
+    {
+        return $this->getCodeExample($this->codeName.'-after-with-comments');
     }
 
     private function getCodeExample(string $name): string

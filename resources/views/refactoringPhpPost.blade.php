@@ -1,5 +1,8 @@
 <h2>Explicit Code</h2>
 
+<p>This might be an easy tip, but giving good explicit names to variables and methods will improve your code a lot. But
+    then developers also say <code>naming</code> is one of the hardest things in programming.</p>
+
 <h3>Example #1</h3>
 
 <x-code-tab
