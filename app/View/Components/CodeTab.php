@@ -6,7 +6,6 @@ use Illuminate\View\Component;
 
 class CodeTab extends Component
 {
-
     public string $codeName;
 
     /**
