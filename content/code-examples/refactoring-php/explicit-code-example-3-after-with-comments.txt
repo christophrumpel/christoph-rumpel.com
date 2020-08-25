@@ -1,5 +1,5 @@
 // ✅ Our code now tells what we are doing: getting a code example (we do not care how)
-// ✅ The new method can used twice which means less code
+// ✅ The new method can be used twice which means less code
 public function __construct(string $exampleCodeBeforeName, string $exampleCodeAfterName)
 {
     $this->exampleCodeBefore = $this->getCodeExample($exampleCodeBeforeName, 'before');

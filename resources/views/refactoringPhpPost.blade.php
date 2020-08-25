@@ -1,7 +1,6 @@
 <h2>Explicit Code</h2>
 
-<p>This might be an easy tip, but giving good explicit names to variables and methods will improve your code a lot. But
-    then developers also say <code>naming</code> is one of the hardest things in programming. 🤷‍</p>
+<p>This might be an easy tip, but writing explicit code can improve it a lot. Give your variables and methods good names which describe what is happening. But then it might not be that easy because developers also say <code>naming</code> is one of the hardest things in programming. 🤷‍</p>
 
 <h3>Example #1 - Naming</h3>
 <x-code-tab code-name="explicit-code-example-1"></x-code-tab>
@@ -11,6 +10,9 @@
 
 <h3>Example #3 - Extracting</h3>
 <x-code-tab code-name="explicit-code-example-3"></x-code-tab>
+
+<h3>Example #4 - Extracting</h3>
+<x-code-tab code-name="explicit-code-example-4"></x-code-tab>
 
 
 <h2>Early Returns</h2>

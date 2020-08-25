@@ -16,7 +16,7 @@
                 @include('partials.blogOldNote')
             @endif
 
-            <p class="text-xl lg:text-2xl my-6 ">
+            <p class="text-xl lg:text-2xl p-8 my-8 italic rounded-lg bg-blue-100 border-b-2 border-highlightBlue">
                 {!! $post->summary !!}
             </p>
             <div class="post-markdown-styles">
