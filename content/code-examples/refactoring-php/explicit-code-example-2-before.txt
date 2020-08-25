@@ -1,1 +1,1 @@
-return $this->factoryCollection->factoryReloadedExists();
+return $factory->getTargetClass();

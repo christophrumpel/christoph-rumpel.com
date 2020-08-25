@@ -1,0 +1,5 @@
+public function __construct(string $exampleCodeBeforeName, string $exampleCodeAfterName)
+{
+    $this->exampleCodeBefore = file_get_contents(base_path("code-examples/$name-before.txt"));
+    $this->exampleCodeAfter = file_get_contents(base_path("code-examples/$name-after.txt"));
+}

@@ -1,1 +1,1 @@
-return $this->factoryCollection->atLeastOneFactoryReloadedExists();
+return $factory->getTargetClassPath();
