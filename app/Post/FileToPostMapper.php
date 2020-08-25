@@ -3,10 +3,12 @@
 namespace App\Post;
 
 use App\HeadingRenderer;
+use App\QuoteRenderer;
 use App\TabbedCodeBlock;
 use App\TabbedCodeParser;
 use App\TabbedCodeRenderer;
 use Illuminate\Support\Facades\Storage;
+use League\CommonMark\Block\Element\BlockQuote;
 use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\Heading;
 use League\CommonMark\Block\Element\IndentedCode;
@@ -35,8 +37,6 @@ class FileToPostMapper
         $environment = Environment::createCommonMarkEnvironment();
         $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer());
         $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer());
-        $environment->addBlockRenderer(TabbedCodeBlock::class, new TabbedCodeRenderer());
-        $environment->addBlockRenderer(Heading::class, new HeadingRenderer());
         $environment->addExtension(new TableExtension());
 
         $commonMarkConverter = new CommonMarkConverter([], $environment);

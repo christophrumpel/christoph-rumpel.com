@@ -20,7 +20,13 @@
                 {!! $post->summary !!}
             </p>
             <div class="post-markdown-styles">
+                @if($post->slug === 'refactoring-php')
+                    @include('refactoringPhpPost')
+                @else
                     {!! $post->content !!}
+                @endif
+
+
             </div>
         </article>
 
