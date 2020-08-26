@@ -1,3 +1,4 @@
+```php
 public function __construct(string $exampleCodeBeforeName, string $exampleCodeAfterName)
 {
     $this->exampleCodeBefore = $this->getCodeExample($exampleCodeBeforeName, 'before');
@@ -6,5 +7,6 @@ public function __construct(string $exampleCodeBeforeName, string $exampleCodeAf
 
 private function getCodeExample(string $exampleName, string $type): string
 {
-    return file_get_contents(base_path("code-examples/$name-$type.txt"));
+    return file_get_contents(base_path("$name-$type.txt"));
 }
+```

@@ -1,1 +1,3 @@
+```php
 return $factory->getTargetClassPath();
+```

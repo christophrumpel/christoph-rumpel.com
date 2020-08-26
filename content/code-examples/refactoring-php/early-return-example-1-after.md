@@ -1,3 +1,4 @@
+```php
 public function calculateScore(User $user): int
 {
     if ($user->inactive) {
@@ -10,3 +11,4 @@ public function calculateScore(User $user): int
 
     return $user->score;
 }
+```

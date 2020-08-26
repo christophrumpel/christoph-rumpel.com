@@ -3,6 +3,12 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use League\CommonMark\Block\Element\FencedCode;
+use League\CommonMark\Block\Element\IndentedCode;
+use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Environment;
+use Spatie\CommonMarkHighlighter\FencedCodeRenderer;
+use Spatie\CommonMarkHighlighter\IndentedCodeRenderer;
 
 class CodeTab extends Component
 {
@@ -51,6 +57,16 @@ class CodeTab extends Component
 
     private function getCodeExample(string $name): string
     {
-        return file_get_contents(base_path("content/code-examples/refactoring-php/$name.txt"));
+        $environment = Environment::createCommonMarkEnvironment();
+        $languages = ['html', 'php', 'js', 'shell', 'shell'];
+
+        $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer($languages));
+        $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer($languages));
+
+        $commonMarkConverter = new CommonMarkConverter([], $environment);
+
+        $codeExample = file_get_contents(base_path("content/code-examples/refactoring-php/$name.md"));
+
+        return $commonMarkConverter->convertToHtml($codeExample);
     }
 }

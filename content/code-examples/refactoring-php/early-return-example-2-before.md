@@ -1,3 +1,4 @@
+```php
 public function sendInvoice(Invoice $invoice): void
 {
     if($user->notificationChannel === 'Slack')
@@ -7,3 +8,4 @@ public function sendInvoice(Invoice $invoice): void
         $this->notifier->email($invoice);
     }
 }
+```

@@ -20498,6 +20498,10 @@ video {
   padding: 1em;
 }
 
+.hljs .highlighted {
+  background: #f7fafc14;
+}
+
 .hljs-emphasis {
   font-style: italic;
 }

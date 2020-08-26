@@ -1,3 +1,4 @@
+```php
 public function calculateScore(User $user): int
 {
     // ✅ Edge-cases are checked first
@@ -12,3 +13,4 @@ public function calculateScore(User $user): int
 
     return $user->score;
 }
+```

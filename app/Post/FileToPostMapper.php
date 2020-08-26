@@ -35,8 +35,9 @@ class FileToPostMapper
         ] = explode('.', $fileName);
 
         $environment = Environment::createCommonMarkEnvironment();
-        $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer());
-        $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer());
+        $languages = ['html', 'php', 'js', 'shell', 'shell'];
+        $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer($languages));
+        $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer($languages));
         $environment->addExtension(new TableExtension());
 
         $commonMarkConverter = new CommonMarkConverter([], $environment);

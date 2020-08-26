@@ -1,1 +1,3 @@
+```php
 User::subscribed();
+```

@@ -1,3 +1,4 @@
+```php
 public function sendInvoice(Invoice $invoice): bool
 {
     // ✅ Every condition is easy to read
@@ -9,3 +10,4 @@ public function sendInvoice(Invoice $invoice): bool
     // ✅ No more thinking about what ELSE refers to
     return $this->notifier->send($invoice);
 }
+```
