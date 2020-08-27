@@ -13,12 +13,11 @@ use Spatie\CommonMarkHighlighter\IndentedCodeRenderer;
 
 class PagePostController extends Controller
 {
-
     public function __invoke(Request $request, $year, $month, $slug)
     {
         $post = PostCollector::findByPath($year, $month, $slug);
 
-        if ( ! $post) {
+        if (! $post) {
             abort(404);
         }
 

@@ -6,7 +6,6 @@ use Illuminate\View\Component;
 
 class CodeTabCommentBtn extends Component
 {
-
     public string $btnText;
 
     public string $tabState;

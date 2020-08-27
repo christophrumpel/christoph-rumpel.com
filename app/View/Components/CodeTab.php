@@ -13,7 +13,6 @@ use Spatie\CommonMarkHighlighter\IndentedCodeRenderer;
 
 class CodeTab extends Component
 {
-
     public string $codeName;
 
     /**
