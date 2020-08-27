@@ -8,7 +8,6 @@ use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\IndentedCode;
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
-use Spatie\CommonMarkHighlighter\FencedCodeRenderer;
 use Spatie\CommonMarkHighlighter\IndentedCodeRenderer;
 
 class CodeTab extends Component
