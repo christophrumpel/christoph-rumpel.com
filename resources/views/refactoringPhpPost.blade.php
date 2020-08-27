@@ -15,12 +15,13 @@
 
 <h2>#1 - Be Expressive</h2>
 
-<p>This might be an easy tip, but writing expressive code can improve it a lot. Give your variables and methods good names
-    which describe what is happening. But then it might not be that easy because developers also say <code>naming</code>
-    is one of the hardest things in programming. 🤷‍</p>
+<p>This might be an easy tip, but writing expressive code can improve it a lot. Give your variables and methods easy to understand names to better describe what your code does.</p>
 
-<div class="blognote"><strong>Note:</strong> Make sure to hit the "Show Comments" button on the code examples to get
-    details about why we changed the code.
+<p>But then developers also say <code>naming
+    is one of the hardest things in programming.</code> This is one reason why this is not as easy as it sounds. 🤷‍</p>
+
+<div class="blognote"><strong>Note:</strong> Make sure to hit the "Show/Hide Comments" buttons on the code examples to get
+    details about why we needed to chang the code.
 </div>
 
 <h3>Example #1 - Naming</h3>
