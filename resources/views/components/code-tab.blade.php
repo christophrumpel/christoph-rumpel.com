@@ -14,6 +14,11 @@
            href="#"
            class="block bg-gray-300 rounded-t ml-1 px-4 py-4"
         >After</a>
+        <a :class="{ 'active bg-codeBackground text-highlightBlue': tab === 'both'}"
+           @click.prevent="tab = 'both'"
+           href="#"
+           class="block bg-gray-300 rounded-t ml-1 px-4 py-4"
+        >Both</a>
     </nav>
 
 
@@ -48,6 +53,13 @@
                 tabState="after"
             ></x-code-tab-comment-btn>
             {!! $codeExampleAfterWithComments() !!}
+        </div>
+        <div x-show="tab === 'both'" class="relative">
+            Before
+
+            {!! $codeExampleBefore() !!}
+
+            {!! $codeExampleAfter() !!}
         </div>
     </div>
 
