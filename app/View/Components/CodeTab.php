@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Services\HighlightCodeBlockRenderer;
 use Illuminate\View\Component;
 use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\IndentedCode;
@@ -60,7 +61,7 @@ class CodeTab extends Component
         $environment = Environment::createCommonMarkEnvironment();
         $languages = ['html', 'php', 'js', 'shell', 'shell'];
 
-        $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer($languages));
+        $environment->addBlockRenderer(FencedCode::class, new HighlightCodeBlockRenderer($languages));
         $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer($languages));
 
         $commonMarkConverter = new CommonMarkConverter([], $environment);

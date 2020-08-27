@@ -20498,6 +20498,10 @@ video {
   padding: 1em;
 }
 
+.hljs .hljs-highlight.general {
+  background: #ab1291;
+}
+
 .hljs .highlighted {
   background: #f7fafc14;
 }

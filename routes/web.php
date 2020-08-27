@@ -24,19 +24,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::feeds();
 
-Route::get('/', '\\' . PageHomeController::class)->name('page.home');
-Route::get('speaking', '\\' . PageSpeakingController::class)->name('page.speaking');
-Route::get('/category/{category}', '\\' . PageCategoryController::class)->name('page.category');
+Route::get('/', PageHomeController::class)
+    ->name('page.home');
+Route::get('speaking', PageSpeakingController::class)
+    ->name('page.speaking');
+Route::get('/category/{category}', PageCategoryController::class)
+    ->name('page.category');
 
-Route::get('/{year}/{month}/{slug}', '\\' .PagePostController::class)->name('page.post');
-Route::get('/privacy-policy', '\\' .PagePrivacyPolicyController::class)->name('page.privacy-policy');
-Route::get('/privacy-policy-lca', '\\' .PagePrivacyLcaPolicyController::class)->name('page.privacy-policy-lca');
-Route::get('uses', '\\'. PageUsesController::class)->name('page.uses');
-Route::get('products', '\\'. PageProductsController::class)->name('page.products');
-Route::get('build-chatbots-with-php', '\\'. PageBcwpController::class)->name('page.bcwp');
-
+Route::get('/{year}/{month}/{slug}', PagePostController::class)
+    ->name('page.post');
+Route::get('/privacy-policy', PagePrivacyPolicyController::class)
+    ->name('page.privacy-policy');
+Route::get('/privacy-policy-lca', PagePrivacyLcaPolicyController::class)
+    ->name('page.privacy-policy-lca');
+Route::get('uses', PageUsesController::class)
+    ->name('page.uses');
+Route::get('products', PageProductsController::class)
+    ->name('page.products');
+Route::get('build-chatbots-with-php', PageBcwpController::class)
+    ->name('page.bcwp');
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')
+    ->name('home');
 

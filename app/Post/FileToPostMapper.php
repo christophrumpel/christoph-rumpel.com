@@ -4,6 +4,7 @@ namespace App\Post;
 
 use App\HeadingRenderer;
 use App\QuoteRenderer;
+use App\Services\HighlightCodeBlockRenderer;
 use App\TabbedCodeBlock;
 use App\TabbedCodeParser;
 use App\TabbedCodeRenderer;
@@ -36,7 +37,7 @@ class FileToPostMapper
 
         $environment = Environment::createCommonMarkEnvironment();
         $languages = ['html', 'php', 'js', 'shell', 'shell'];
-        $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer($languages));
+        $environment->addBlockRenderer(FencedCode::class, new HighlightCodeBlockRenderer());
         $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer($languages));
         $environment->addExtension(new TableExtension());
 
