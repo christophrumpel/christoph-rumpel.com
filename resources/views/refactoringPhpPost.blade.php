@@ -1,8 +1,6 @@
 <p class="text-xl lg:text-2xl p-4 lg:p-8 my-8 italic rounded-lg bg-blue-100 border-b-2 border-highlightBlue">
     I've been programming in PHP now for almost 10 years and if there is one thing I learned over this period, it's that
-    <b>readability</b> and
-    <b>simplicity</b> are the keys for maintainable and sustainable code. These are my goals when refactoring and is why
-    I see refactoring as one of my main skills today. In this post, I share with you my refactoring practices for PHP.
+    <b>readability</b> and <b>simplicity</b> are the keys for maintainable and sustainable code. Every first attempt to write code should be about <b>making it work</b>. Only after that, you should take some time to refactor. This is when I aim for readability and simplicity. Today I see refactoring as one of my main skills. In this post, I share with you my refactoring practices for PHP.
 </p>
 
 <p>Refactoring is the process of modifying and restructuring code without changing its functionality. When I first heard
@@ -39,9 +37,9 @@
 
 <h2>#2 - Return Early</h2>
 
-<p>The concept of <code>early returns</code> refers to a practice where we try to void nesting by
-    breaking a structure down to specific actions. In return we will get a more linear code which is
-    much easier to grasp. Every case is separated and good to read by itself. Don't be afraid of using
+<p>The concept of <code>early returns</code> refers to a practice where we try to avoid nesting by
+    breaking a structure down to specific cases. In return, we will get a more linear code which is
+    much easier to read and grasp. Every case is separated and good to follow. Don't be afraid of using
     multiple return statements.</p>
 
 <h3>Example #1</h3>
@@ -50,4 +48,3 @@
 <h3>Example #2</h3>
 <x-code-tab code-name="early-return-example-2"></x-code-tab>
 
-<div class="blognote"><strong>Note:</strong> Don't be afraid of using multiple return statements.</div>

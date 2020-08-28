@@ -1,4 +1,5 @@
 ```php
-// ❌ We do not care which steps are needed to check for a subscribed user
-User::whereNotNull('subscribed')->where('status', 'active');
+// ❌ Multiple where clauses make it difficult to read
+// ❌ What is the purpose?
+User::<hljs general>whereNotNull('subscribed')->where('status', 'active')</hljs>;
 ```

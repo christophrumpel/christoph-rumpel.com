@@ -1,7 +1,7 @@
 ```php
-public function __construct(string $exampleCodeBeforeName, string $exampleCodeAfterName)
+public function setCodeExamples(string $exampleBefore, string $exampleAfter)
 {
-    $this->exampleCodeBefore = file_get_contents(base_path("$name-before.txt"));
-    $this->exampleCodeAfter = file_get_contents(base_path("$name-after.txt"));
+    $this->exampleBefore = file_get_contents(base_path("$exampleBefore.md"));
+    $this->exampleAfter = file_get_contents(base_path("$exampleAfter.md"));
 }
 ```
