@@ -13,6 +13,7 @@ use Spatie\CommonMarkHighlighter\IndentedCodeRenderer;
 
 class CodeTab extends Component
 {
+
     public string $codeName;
 
     /**
@@ -57,16 +58,8 @@ class CodeTab extends Component
 
     private function getCodeExample(string $name): string
     {
-        $environment = Environment::createCommonMarkEnvironment();
-        $languages = ['html', 'php', 'js', 'shell', 'shell'];
-
-        $environment->addBlockRenderer(FencedCode::class, new HighlightCodeBlockRenderer($languages));
-        $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer($languages));
-
-        $commonMarkConverter = new CommonMarkConverter([], $environment);
-
         $codeExample = file_get_contents(base_path("content/code-examples/refactoring-php/$name.md"));
 
-        return $commonMarkConverter->convertToHtml($codeExample);
+        return app(CommonMarkConverter::class)->convertToHtml($codeExample);
     }
 }

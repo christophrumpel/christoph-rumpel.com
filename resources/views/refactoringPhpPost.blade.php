@@ -15,7 +15,7 @@
 
 <h2>#1 - Be Expressive</h2>
 
-<p>This might be an easy tip, but writing expressive code can improve it a lot. Give your variables and methods easy to understand names to better describe what your code does.</p>
+<p>This might be an easy tip, but writing expressive code can improve it a lot. Always try to make your code self-explaining so that you, your future self or any other developers who stumbles over your code knows what is going on.</p>
 
 <p>But then developers also say <code>naming
     is one of the hardest things in programming.</code> This is one reason why this is not as easy as it sounds. 🤷‍</p>
