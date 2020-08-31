@@ -48,3 +48,18 @@
 <h3>Example #2</h3>
 <x-code-tab code-name="early-return-example-2"></x-code-tab>
 
+<div class="blognote"><strong>Note:</strong> You sometimes also hear the term "guard-clauses" which is what you can achieve with early returns. You are guarding your method from special conditions.</div>
+
+<h2>#3 - Refactor To Collections</h2>
+
+<p>In PHP, we work a lot with arrays of different data. The available features to handle and transform those arrays are quite limited in PHP and always with made developer experience in mind. (array_walk, usort, etc.)</p>
+
+<p>To tackle this problem there is this concept of Collection classes, which help you to handle arrays. Most known is the <a href="https://laravel.com/docs/master/collections">implementation in Laravel</a>, where a collection class provides you with dozens of useful features to work with arrays.</p>
+
+<div class="blognote"><strong>Note:</strong> For the following examples, I will use Laravel's collect() helper, but the approach is very similar with other available collection classes from other frameworks or libraries.</div>
+
+<h3>Example #1</h3>
+<x-code-tab code-name="collections-example-1"></x-code-tab>
+
+
+
