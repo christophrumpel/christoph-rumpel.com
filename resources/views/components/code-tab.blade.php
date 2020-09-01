@@ -23,28 +23,28 @@
         <div x-show="tab === 'before'"
              class="relative bg-codeBackground ">
             <x-code-tab-comment-btn
-                btn-text="Show Comments"
+                btn-text="Show Notes"
                 tabState="before-with-comments"
             ></x-code-tab-comment-btn>
             {!! $codeExampleBefore() !!}
         </div>
         <div x-show="tab === 'before-with-comments'" class="relative">
             <x-code-tab-comment-btn
-                btn-text="Hide Comments"
+                btn-text="Hide Notes"
                 tabState="before"
             ></x-code-tab-comment-btn>
             {!! $codeExampleBeforeWithComments() !!}
         </div>
         <div x-show="tab === 'after'" class="relative">
             <x-code-tab-comment-btn
-                btn-text="Show Comments"
+                btn-text="Show Notes"
                 tabState="after-with-comments"
             ></x-code-tab-comment-btn>
             {!! $codeExampleAfter() !!}
         </div>
         <div x-show="tab === 'after-with-comments'" class="relative">
             <x-code-tab-comment-btn
-                btn-text="Hide Comments"
+                btn-text="Hide Notes"
                 tabState="after"
             ></x-code-tab-comment-btn>
             {!! $codeExampleAfterWithComments() !!}

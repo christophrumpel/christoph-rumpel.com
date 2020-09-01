@@ -1,8 +1,8 @@
 ```php
 public function setCodeExamples(string $exampleBefore, string $exampleAfter)
 {
-    $this->exampleBefore = getCodeExample($exampleBefore);
-    $this->exampleAfter = getCodeExample($exampleAfter);
+    $this->exampleBefore = $this->getCodeExample($exampleBefore);
+    $this->exampleAfter = $this->getCodeExample($exampleAfter);
 }
 
 private function getCodeExample(string $exampleName): string
