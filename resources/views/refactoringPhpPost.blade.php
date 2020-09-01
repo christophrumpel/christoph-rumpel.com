@@ -60,5 +60,7 @@
 <h3>Example #1</h3>
 <x-code-tab code-name="collections-example-1"></x-code-tab>
 
+<h3>Example #2 <div id="2"></div></h3>
+<x-code-tab code-name="collections-example-2"></x-code-tab>
 
 

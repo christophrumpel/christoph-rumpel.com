@@ -9,8 +9,10 @@ $users = [
 
 $users = array_filter($users, fn ($user) => $user['active']);
 
+// ❌ Which is "usort" again? How does the condition work?
 usort($users, fn($a, $b) => $a['score'] < $b['score']);
 
+// ❌ All the transformations are separated, still they all are about users
 $userHighScoreTitles = array_map(fn($user) => $user['name'] . '(' . $user['score'] . ')', $users);
 
 return $userHighScoreTitles;
