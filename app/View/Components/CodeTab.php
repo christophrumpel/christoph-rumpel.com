@@ -2,18 +2,11 @@
 
 namespace App\View\Components;
 
-use App\Services\HighlightCodeBlockRenderer;
 use Illuminate\View\Component;
-use League\CommonMark\Block\Element\FencedCode;
-use League\CommonMark\Block\Element\IndentedCode;
 use League\CommonMark\CommonMarkConverter;
-use League\CommonMark\Environment;
-use Spatie\CommonMarkHighlighter\FencedCodeRenderer;
-use Spatie\CommonMarkHighlighter\IndentedCodeRenderer;
 
 class CodeTab extends Component
 {
-
     public string $codeName;
 
     /**

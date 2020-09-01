@@ -28,7 +28,6 @@ class MarkdownConverterProvider extends ServiceProvider
             $environment->addExtension(new TableExtension());
 
             return new CommonMarkConverter([], $environment);
-
         });
     }
 
