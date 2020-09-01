@@ -63,6 +63,14 @@
     background: #2b303b;
     color: #c0c5ce;
     padding: 1em;
+
+    .hljs-highlight.general {
+        background: #dbd3d938;
+    }
+
+    .highlighted {
+        background: #f7fafc14;
+    }
 }
 
 .hljs-emphasis {

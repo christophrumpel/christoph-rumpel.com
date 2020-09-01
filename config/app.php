@@ -2,6 +2,7 @@
 
 use App\Providers\BladeServiceProvider;
 use App\Providers\CustomMailcoachProvider;
+use App\Providers\MarkdownConverterProvider;
 
 return [
 
@@ -182,6 +183,8 @@ return [
         BladeServiceProvider::class,
 
         CustomMailcoachProvider::class,
+
+        MarkdownConverterProvider::class,
 
     ],
 

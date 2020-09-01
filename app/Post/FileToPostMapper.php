@@ -2,13 +2,13 @@
 
 namespace App\Post;
 
+use App\Services\HighlightCodeBlockRenderer;
 use Illuminate\Support\Facades\Storage;
 use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\IndentedCode;
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
 use League\CommonMark\Extension\Table\TableExtension;
-use Spatie\CommonMarkHighlighter\FencedCodeRenderer;
 use Spatie\CommonMarkHighlighter\IndentedCodeRenderer;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
@@ -26,20 +26,13 @@ class FileToPostMapper
             $slug,
         ] = explode('.', $fileName);
 
-        $environment = Environment::createCommonMarkEnvironment();
-        $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer());
-        $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer());
-        $environment->addExtension(new TableExtension());
-
-        $commonMarkConverter = new CommonMarkConverter([], $environment);
-
         return (new Post)->create([
             'path' => $filePath,
             'title' => $postMetaData->matter('title'),
             'categories' => explode(', ', strtolower($postMetaData->matter('categories'))),
             'preview_image' => $postMetaData->matter('preview_image'),
             'preview_image_twitter' => $postMetaData->matter('preview_image_twitter'),
-            'content' => $commonMarkConverter->convertToHtml($postMetaData->body()),
+            'content' => app(CommonMarkConverter::class)->convertToHtml($postMetaData->body()),
             'date' => $date,
             'slug' => $slug,
             'summary' => $postMetaData->matter('summary'),

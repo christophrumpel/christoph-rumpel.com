@@ -16,11 +16,19 @@
                 @include('partials.blogOldNote')
             @endif
 
+            @if($post->summary)
             <p class="text-xl lg:text-2xl p-4 lg:p-8 my-8 italic rounded-lg bg-blue-100 border-b-2 border-highlightBlue">
                 {!! $post->summary !!}
             </p>
+            @endif
             <div class="post-markdown-styles">
-                {!! $post->content !!}
+                @if($post->slug === 'refactoring-php')
+                    @include('refactoringPhpPost')
+                @else
+                    {!! $post->content !!}
+                @endif
+
+
             </div>
         </article>
 
