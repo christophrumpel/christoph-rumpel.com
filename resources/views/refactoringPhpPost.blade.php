@@ -11,8 +11,8 @@
 <p>But then developers also say <code>naming
         is one of the hardest things in programming.</code> This is one reason why this is not as easy as it sounds. 🤷‍</p>
 
-<div class="blognote"><strong>Note:</strong> Make sure to hit the "Show/Hide Comments" buttons on the code examples to get
-    details about why we needed to chang the code.
+<div class="blognote"><strong>Note:</strong> Make sure to hit the "Show/Hide Notes" buttons on the code examples to get
+    details about why we needed to change the code.
 </div>
 
 <h3>Example #1 - Naming</h3>
@@ -54,6 +54,9 @@
 
 <h3>Example #2 <div id="2"></div></h3>
 <x-code-tab code-name="collections-example-2"></x-code-tab>
+
+<div class="blognote"><strong>Note:</strong> Adam Wathan wrote a <a href="https://adamwathan.me/refactoring-to-collections/">book</a>
+ about how to use collections to never write a loop again which I can highly recommend.</div>
 
 <h2>Refactoring ❤️ Tests</h2>
 
