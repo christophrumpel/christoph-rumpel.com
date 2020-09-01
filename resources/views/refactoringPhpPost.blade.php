@@ -61,4 +61,4 @@
 
 <h2>Conclusion</h2>
 
-This is how I refactor PHP. In the end, you and your team have to decided how you want your code to be. Just make sure to save enough time to make it happen after your code is working. I started with my main principles and I plan to cover more topics soon. If you have refactoring tips you'd like to share, just ping me on <a href="https://twitter.com/christophrumpel">Twitter</a>.
+<p>This is how I refactor PHP. In the end, you and your team have to decided how you want your code to be. Just make sure to save enough time to make it happen after your code is working. I started with my main principles and I plan to cover more topics soon. If you have refactoring tips you'd like to share, just ping me on <a href="https://twitter.com/christophrumpel">Twitter</a>.</p>
