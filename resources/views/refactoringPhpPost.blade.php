@@ -1,8 +1,3 @@
-<p class="text-xl lg:text-2xl p-4 lg:p-8 my-8 italic rounded-lg bg-blue-100 border-b-2 border-highlightBlue">
-    I've been programming in PHP now for almost ten years, and if there is one thing I learned over this period, it's that
-    <b>readability</b> and <b>simplicity</b> are the keys for maintainable and sustainable code. Every first attempt to write code should be about <b>making it work</b>. Only after that, you should take some time to refactor. This is when I aim for readability and simplicity. Today I see refactoring as one of my main skills. In this post, I share with you my refactoring practices for PHP.
-</p>
-
 <p>Refactoring is the process of modifying and restructuring code without changing its functionality. When I first heard
     about it, I was like:
     <code>Why would anyone do that?</code> It took some years until I fully understood the concept and that the working code is not always good. So with refactoring, you can make working code better, and what better means is something developers will argue for hours. In the end, you have to define it for yourself.</p>
@@ -60,4 +55,10 @@
 <h3>Example #2 <div id="2"></div></h3>
 <x-code-tab code-name="collections-example-2"></x-code-tab>
 
+<h2>Refactoring ❤️ Tests</h2>
 
+<p>I already mentioned that refactoring doesn't change the functionality of your code. This comes handy when running tests, because they should work after refactoring too. This is why I only start to refactor my code, when there are tests. They will assure that I don't unintentionally chang the behaviour of my code. So don't forget to write tests or even go TDD.</p>
+
+<h2>Conclusion</h2>
+
+This is how I refactor PHP. In the end, you and your team have to decided how you want your code to be. Just make sure to save enough time to make it happen after your code is working. I started with my main principles and I plan to cover more topics soon. If you have refactoring tips you'd like to share, just ping me on <a href="https://twitter.com/christophrumpel">Twitter</a>.
