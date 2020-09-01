@@ -6,8 +6,7 @@
 <p>Refactoring is the process of modifying and restructuring code without changing its functionality. When I first heard
     about it, I was like:
     <code>Why would anyone do that?</code> It took some years until I fully understand the concept and that working code
-    is not always good code too. So with refactoring you are able to make working code better, and what better means is
-    something you have to define yourself.</p>
+    is not always good code too. So with refactoring you are able to make working code better, and what better means is something developers will argue for hours. In the end, you have to define it for yourself.</p>
 
 <p>In the following examples, I will show you how I define better code.</p>
 
@@ -52,7 +51,7 @@
 
 <h2>#3 - Refactor To Collections</h2>
 
-<p>In PHP, we work a lot with arrays of different data. The available features to handle and transform those arrays are quite limited in PHP and always with made developer experience in mind. (array_walk, usort, etc.)</p>
+<p>In PHP, we work a lot with arrays of different data. The available features to handle and transform those arrays are quite limited in PHP and don't provide a good experience while using them. (array_walk, usort, etc.)</p>
 
 <p>To tackle this problem there is this concept of Collection classes, which help you to handle arrays. Most known is the <a href="https://laravel.com/docs/master/collections">implementation in Laravel</a>, where a collection class provides you with dozens of useful features to work with arrays.</p>
 
