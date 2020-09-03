@@ -52,11 +52,24 @@
 <h3>Example #1</h3>
 <x-code-tab code-name="collections-example-1"></x-code-tab>
 
-<h3>Example #2 <div id="2"></div></h3>
+<h3>Example #2</h3>
 <x-code-tab code-name="collections-example-2"></x-code-tab>
 
 <div class="blognote"><strong>Note:</strong> Adam Wathan wrote a <a href="https://adamwathan.me/refactoring-to-collections/">book</a>
  about how to use collections to never write a loop again which I can highly recommend.</div>
+
+<h2>Consistency</h2>
+
+<p>Every line of code adds a little amount of visual noise. The more code, the more difficult it gets to read. This is why it is essential to set rules. Keeping similar things consistent will help you recognize code and patterns. It will result in less noise and more readable code.</p>
+
+<h3>Example #1</h3>
+<x-code-tab code-name="consistency-example-2"></x-code-tab>
+
+<h3>Example #2</h3>
+<x-code-tab code-name="consistency-example-1"></x-code-tab>
+
+
+
 
 <h2>Refactoring ❤️ Tests</h2>
 
