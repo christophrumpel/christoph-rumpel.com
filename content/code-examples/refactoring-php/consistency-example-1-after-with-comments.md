@@ -13,7 +13,7 @@ class PdfExporter implements Exporter
     }
 }
 
-class CavExporter implements Exporter
+class CsvExporter implements Exporter
 {
     public function export(Collection $items): void
     {
