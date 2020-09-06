@@ -4,13 +4,13 @@
     @apply .relative .italic;
 
     &:after {
+        @apply bg-highlightYellow;
         content: "";
         position: absolute;
         transform: rotate(-2deg);
         width: 100%;
         height: 6px;
         border-radius: 3px;
-        background: #f4e04d;
         left: 0;
         bottom: 3px;
         z-index: -1;

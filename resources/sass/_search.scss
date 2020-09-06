@@ -10,14 +10,15 @@
 
 #search {
     @apply .relative .border-2 .border-textBlue rounded;
+
     &:after {
+        @apply .bg-highlightTurquoise;
         content: "";
         position: absolute;
         transform: rotate(-1deg);
         width: 101%;
         height: 101%;
         border-radius: 3px;
-        background: #A2F7B6;
         left: 0;
         bottom: 6px;
         z-index: -1;
@@ -25,13 +26,13 @@
     }
 
     &:before {
+        @apply .bg-highlightPurple;
         content: "";
         position: absolute;
         transform: rotate(1deg);
         width: 101%;
         height: 101%;
         border-radius: 3px;
-        background: #c841e9;
         left: -15px;
         bottom: -6px;
         z-index: -1;

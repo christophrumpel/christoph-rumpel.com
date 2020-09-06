@@ -47,14 +47,13 @@
             @apply .relative .ml-12 .text-xl;
 
             &:before {
-                @apply .rounded-full;
+                @apply .rounded-full .bg-gradient-to-r .from-highlightTurquoise .to-highlightBlue;
                 content: '';
                 position: absolute;
                 width: 20px;
                 height: 20px;
                 left: -50px;
                 top: 10px;
-                background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
             }
 
             @screen lg {
@@ -71,13 +70,13 @@
         @apply .relative .italic;
 
         &:after {
+            @apply .bg-highlightYellow;
             content: "";
             position: absolute;
             transform: rotate(-2deg);
             width: 100%;
             height: 6px;
             border-radius: 3px;
-            background: #f4e04d;
             left: 0;
             bottom: 3px;
             z-index: -1;
@@ -90,8 +89,7 @@
     }
 
     p code, ul code {
-        @apply .px-4 .py-1 .rounded-sm;
-        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        @apply .px-4 .py-1 .rounded-sm .bg-gradient-to-r .from-highlightTurquoise .to-highlightBlue;
     }
 
     blockquote {
@@ -99,6 +97,7 @@
         @apply .my-12 .p-12 .relative .font-display .italic .text-2xl;
 
         &:before {
+            @apply .rounded-sm .bg-gradient-to-r .from-highlightTurquoise .to-highlightBlue;
             content: "";
             position: absolute;
             width: 130%;
@@ -106,24 +105,22 @@
             top: 0%;
             left: -30%;
             z-index: -1;
-            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
             transform: rotate(2deg);
-            @apply .rounded-sm;
         }
     }
 
     .blognote {
-        @apply .bg-highlightYellow .px-4 py-2 .my-12 .relative .rounded-sm;;
+        @apply .bg-highlightYellow .px-4 py-2 .my-12 .relative .rounded-sm;
 
         &:before {
+            @apply .rounded-sm .bg-gradient-to-r .from-highlightTurquoise .to-highlightBlue;
             content: "";
             position: absolute;
             width: 90%;
             height: 100%;
-            top: 0%;
+            top: 0;
             right: -1%;
             z-index: -1;
-            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
             transform: rotate(2deg);
             @apply .rounded-sm;
 

@@ -14,12 +14,12 @@
         }
 
         &:after {
+            @apply bg-highlightYellow;
             content: "";
             position: absolute;
             width: 100%;
             height: 100%;
             border-radius: 3px;
-            background-image: linear-gradient(120deg, #f4e04d 0%, rgb(238, 226, 124) 100%);
             left: 8px;
             bottom: -8px;
             z-index: -1;

@@ -1,7 +1,7 @@
 .post {
 
     .title-highlight-underline {
-        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        @apply .bg-gradient-to-r .from-highlightTurquoise .to-highlightBlue;
         background-repeat: no-repeat;
         background-size: 100% 0.3em;
         background-position: 0 88%;
@@ -17,8 +17,7 @@
     }
 
     p code {
-        @apply .px-4 .py-1 .text-lg .rounded-sm;
-        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        @apply .px-4 .py-1 .text-lg .rounded-sm .bg-gradient-to-r .from-highlightTurquoise .to-highlightBlue;
         overflow-wrap: break-word;
     }
 
