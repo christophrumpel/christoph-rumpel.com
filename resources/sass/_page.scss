@@ -1,5 +1,5 @@
 .page-h1 {
-    @apply .font-display .text-3xl .text-textBlue .mb-16;
+    @apply .font-display .font-bold .text-3xl .text-textBlue .mb-16;
 
     @screen lg {
         @apply .text-5xl;
