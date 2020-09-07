@@ -11,8 +11,8 @@ module.exports = {
             colors: {
                 bgBlue: '#f4f9fc',
                 textBlue: '#0f1b61',
-                highlightYellow: '#f4e04d',
                 highlightBlue: '#8fd3f4',
+                highlightYellow: '#f4e04d',
                 highlightTurquoise: '#A2F7B6',
                 highlightPurple: '#D631E9',
                 codeBackground: '#2C303A'

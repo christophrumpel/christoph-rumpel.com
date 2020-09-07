@@ -53,10 +53,5 @@
 @endif
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-{{--@if(isset($post) && $post->slug === 'refactoring-php')--}}
-{{--    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>--}}
-{{--    <script>hljs.initHighlightingOnLoad();</script>--}}
-{{--@endif--}}
-
 </body>
 </html>
