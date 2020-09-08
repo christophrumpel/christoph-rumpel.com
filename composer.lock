@@ -1753,16 +1753,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.0.0",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "38efc158e227a864c21bac907a94d80128d50fbf"
+                "reference": "ba05ed71346b0af3abdf49664e512d54a9f56637"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/38efc158e227a864c21bac907a94d80128d50fbf",
-                "reference": "38efc158e227a864c21bac907a94d80128d50fbf",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/ba05ed71346b0af3abdf49664e512d54a9f56637",
+                "reference": "ba05ed71346b0af3abdf49664e512d54a9f56637",
                 "shasum": ""
             },
             "require": {
@@ -1808,7 +1808,7 @@
                 }
             ],
             "description": "A front-end framework for Laravel.",
-            "time": "2020-09-07T04:28:01+00:00"
+            "time": "2020-09-08T03:27:50+00:00"
         },
         {
             "name": "maennchen/zipstream-php",

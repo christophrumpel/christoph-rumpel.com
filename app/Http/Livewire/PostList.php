@@ -17,6 +17,8 @@ class PostList extends Component
 
     public string $searchTerm = '';
 
+    protected $queryString = ['searchTerm'];
+
     public function mount(): void
     {
         $this->pagesCount = ceil(PostCollector::count() / $this->postPerPage);
