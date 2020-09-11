@@ -10,7 +10,7 @@ $users = [
 return collect($users)
   ->filter(fn($user) => $user['active'])
   ->sortBy('score')
-  ->transform(fn($user) => $user['name']. ' ('.$user['score'].')')
+  ->transform(fn($user) => "{$user['name']} ({$user['score']})"
   ->values()
   ->toArray();
 ```
