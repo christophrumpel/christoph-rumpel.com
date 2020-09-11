@@ -12,7 +12,7 @@ return collect($users)
     // ✅ We are piping them through all methods
   ->filter(fn($user) => $user['active'])
   ->sortBy('score')
-  ->transform(fn($user) => $user['name']. ' ('.$user['score'].')')
+  ->map(fn($user) => "{$user['name']} ({$user['score']})"
   ->values()
     // ✅ At the end, we return an array
   ->toArray();
