@@ -9,6 +9,7 @@ use Livewire\Component;
 
 class PostList extends Component
 {
+
     public int $currentPage = 1;
 
     public int $pagesCount;
@@ -17,6 +18,8 @@ class PostList extends Component
 
     public string $searchTerm = '';
 
+    protected $queryString = ['searchTerm' => ['except' => '']];
+
     public function mount(): void
     {
         $this->pagesCount = ceil(PostCollector::count() / $this->postPerPage);
@@ -24,10 +27,8 @@ class PostList extends Component
 
     public function render()
     {
-        $results = $this->searchTerm ? $this->searchResults() : PostCollector::paginate(
-            $this->postPerPage,
-            $this->currentPage
-        );
+        $results = $this->searchTerm ? $this->searchResults() : PostCollector::paginate($this->postPerPage,
+            $this->currentPage);
 
         return view('livewire.postList', ['results' => $results]);
     }
@@ -40,7 +41,7 @@ class PostList extends Component
         $searchTerm = strtolower($this->searchTerm);
 
         return PostCollector::all()
-            ->filter(fn ($post) => Str::of($post->title)
+            ->filter(fn($post) => Str::of($post->title)
                     ->lower()
                     ->contains($searchTerm) || Str::of(implode(',', $post->categories))
                     ->contains($searchTerm));
