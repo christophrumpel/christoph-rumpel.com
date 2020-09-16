@@ -22,11 +22,13 @@
 <!-- Styles -->
 
     <!-- Head Script -->
-@production
+    @production
     <!-- Fathom - beautiful, simple website analytics -->
         <script src="https://cdn.usefathom.com/script.js" site="DEPGUYJS" defer></script>
         <!-- / Fathom -->
     @endproduction
+
+    <script defer src="{{ mix('js/app.js') }}"></script>
 
     <!-- Head Script -->
 
@@ -45,7 +47,6 @@
 
     {{ $slot }}
 </div>
-<script defer src="{{ mix('js/app.js') }}"></script>
 
 @include('partials.footer')
 @if($livewire)
