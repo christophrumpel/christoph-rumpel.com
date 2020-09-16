@@ -6,7 +6,6 @@ use Livewire\Component;
 
 class Demo extends Component
 {
-
     public $demo = '';
 
     protected $queryString = ['demo'];
