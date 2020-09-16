@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ open: false }">
+    <div x-data="{ open: new URLSearchParams(location.search).get('searchTerm') ?? false }">
         <div class="flex flex-col lg:flex-row items-center lg:justify-between mb-16">
             <h2 class="font-display text-4xl text-textBlue">From the blog:</h2>
 
