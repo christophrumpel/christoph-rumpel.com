@@ -10,6 +10,7 @@
 
         </div>
 
+{{--        @livewire('demo')--}}
 
         @livewire('post-list')
 
