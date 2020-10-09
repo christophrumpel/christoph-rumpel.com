@@ -83,8 +83,8 @@
 
 <h2>Refactoring ❤️ Tests</h2>
 
-<p>I already mentioned that refactoring doesn't change the functionality of your code. This comes handy when running tests, because they should work after refactoring too. This is why I only start to refactor my code, when there are tests. They will assure that I don't unintentionally chang the behaviour of my code. So don't forget to write tests or even go TDD.</p>
+<p>I already mentioned that refactoring doesn't change the functionality of your code. This comes handy when running tests, because they should work after refactoring too. This is why I only start to refactor my code, when there are tests. They will assure that I don't unintentionally change the behaviour of my code. So don't forget to write tests or even go TDD.</p>
 
 <h2>Conclusion</h2>
 
-<p>This is how I refactor PHP. In the end, you and your team have to decided how you want your code to be. Just make sure to define it, write it down, and save enough time to make it happen after your code is working. I started with my main principles and I plan to cover more topics soon. If you have refactoring tips you'd like to share, just ping me on <a href="https://twitter.com/christophrumpel">Twitter</a>.</p>
+<p>This is how I refactor PHP. In the end, you and your team have to decide how you want your code to be. Just make sure to define it, write it down, and save enough time to make it happen after your code is working. I started with my main principles and I plan to cover more topics soon. If you have refactoring tips you'd like to share, just ping me on <a href="https://twitter.com/christophrumpel">Twitter</a>.</p>
