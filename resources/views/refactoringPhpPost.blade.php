@@ -22,16 +22,20 @@
 </div>
 
 <h3>Example #1 - Naming</h3>
-<x-code-tab code-name="expressive-code-example-1"></x-code-tab>
+<x-code-tab code-name="expressive-code-example-1" />
 
 <h3>Example #2 - Naming</h3>
-<x-code-tab code-name="expressive-code-example-2"></x-code-tab>
+<x-code-tab code-name="expressive-code-example-2"/>
 
 <h3>Example #3 - Extracting</h3>
-<x-code-tab code-name="expressive-code-example-3"></x-code-tab>
+<x-code-tab code-name="expressive-code-example-3"/>
 
 <h3>Example #4 - Extracting</h3>
 <x-code-tab code-name="expressive-code-example-4"></x-code-tab>
+
+<h3>Example #5 - Extracting</h3>
+<p>This is an example of one of my projects from last year. We had a command-line command to import users. The class <code>ImportUsersCommand</code> contains a <code>handle</code> method to perform the tasks.</p>
+<x-code-tab code-name="expressive-code-example-5"></x-code-tab>
 
 
 <h2 id="return-early">#2 - Return Early</h2>
