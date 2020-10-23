@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Post\PostCollector;
 use Illuminate\Support\Facades\Storage;
 use Tests\Factories\PostFactory;
 use Tests\TestCase;

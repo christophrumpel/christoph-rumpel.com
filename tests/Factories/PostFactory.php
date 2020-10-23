@@ -15,7 +15,7 @@ class PostFactory
 
     private string $content = '';
 
-    private bool $hidden = true;
+    private bool $hidden = false;
 
     public static function new(): PostFactory
     {
