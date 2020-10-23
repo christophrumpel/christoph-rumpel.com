@@ -2,16 +2,23 @@
     "upcoming": [],
     "past": [
         {
+            "date": "23.10.2020",
+            "event": "PHPFest",
+            "location": "Worldwide 🌏",
+            "title": "The Laravel Core — Demystify The Beast",
+            "url": "https://2020.phpfest.ru/"
+        },
+        {
             "date": "19.07.2020",
             "event": "Full-stack Utrecht",
-            "location": "All Over The World 🌏",
+            "location": "Worldwide 🌏",
             "title": "PhpStorm - A Master Setup",
             "url": "https://www.meetup.com/Full-stack-Utrecht/events/271029100"
         },
         {
             "date": "26.02.2020",
             "event": "Laracon Online",
-            "location": "All Over The World 🌏",
+            "location": "Worldwide 🌏",
             "title": "Laravel Factories Reloaded",
             "slides": "https://speakerdeck.com/christophrumpel/laravel-factories-reloaded-laracon-online",
             "url": "https://laracon.net"

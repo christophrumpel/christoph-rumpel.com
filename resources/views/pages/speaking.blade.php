@@ -44,13 +44,7 @@
             @foreach($talks->past as $talk)
                 <li>
                     <h3>{{ $talk->date }} - {{ $talk->event }}</h3>
-                    <p>
-
-                        {{ $talk->title }}
-
-                        {{ $talk->location }}
-
-                    </p>
+                    <p>{{ $talk->title }} ({{ $talk->location }})</p>
                 </li>
             @endforeach
         </ul>
