@@ -2,6 +2,13 @@
     "upcoming": [],
     "past": [
         {
+            "date": "25.11.2020",
+            "event": "We Are Developers Live",
+            "location": "Worldwide 🌏",
+            "title": "The Laravel Core — Demystify The Beast",
+            "url": "https://wearedevelopers.com/sessions/the-laravel-core-demystify-the-beast?utm_content=146623598&utm_medium=social&utm_source=twitter&hss_channel=tw-3318642904"
+        },
+        {
             "date": "23.10.2020",
             "event": "PHPFest",
             "location": "Worldwide 🌏",
