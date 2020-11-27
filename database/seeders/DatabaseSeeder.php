@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +13,5 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
     }
 }
