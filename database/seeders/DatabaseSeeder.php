@@ -14,12 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::truncate();
 
-        User::create([
-           'name' => 'Christoph',
-           'email' => 'christoph@christoph-rumpel.com',
-           'password' => bcrypt('this-is-my-password-2020'),
-       ]);
     }
 }

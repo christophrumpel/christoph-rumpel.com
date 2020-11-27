@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageBcwpController;
 use App\Http\Controllers\PageCategoryController;
 use App\Http\Controllers\PageHomeController;
@@ -46,6 +47,6 @@ Route::get('build-chatbots-with-php', PageBcwpController::class)
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index')
+Route::get('/home', [HomeController::class, 'index'])
     ->name('home');
 
