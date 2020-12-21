@@ -29,7 +29,14 @@ Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/subscribe', 
     Subscriber::createWithEmail($attributes['email'])
         ->syncTags($attributes['tags'])
         ->subscribeTo($emailList);
+});
 
+Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/confirmed', function (Request $request) {
+
+    $emailList = EmailList::findByUuid(getenv('MAILCOACH_MASTERING_PHPSTORM_LIST_UUID'));
+    $subscriber = Subscriber::findForEmail($request->get('email'), $emailList);
+
+    return response()->json(['confirmed' => $subscriber->status === 'subscribed']);
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
