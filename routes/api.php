@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Spatie\Mailcoach\Models\EmailList;
@@ -23,14 +24,11 @@ Route::middleware('api')->get('/newsletter/mastering-phpstorm/count', function (
 
 Route::middleware('api')->post('/newsletter/mastering-phpstorm/subscribe', function (Request $request) {
 
-
     $attributes = $request->only(['email', 'tags']);
     $emailList = EmailList::findByUuid(getenv('MAILCOACH_MASTERING_PHPSTORM_LIST_ID'));
-    $subscriber = Subscriber::createWithEmail($attributes['email'])
+    Subscriber::createWithEmail($attributes['email'])
         ->syncTags($attributes['tags'])
         ->subscribeTo($emailList);
-
-    dd($subscriber);
 
 });
 
