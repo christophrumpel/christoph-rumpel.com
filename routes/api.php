@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Spatie\Mailcoach\Models\EmailList;
+use Spatie\Mailcoach\Models\Subscriber;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,24 @@ use Spatie\Mailcoach\Models\EmailList;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::middleware('api')->get('/newsletter/mastering-phpstorm/count', function (Request $request) {
+    $emailList = EmailList::findByUuid(getenv('MAILCOACH_MASTERING_PHPSTORM_LIST_ID'));
+    return response()->json(['count' => $emailList->subscribers()->count()]);
+});
+
+Route::middleware('api')->post('/newsletter/mastering-phpstorm/subscribe', function (Request $request) {
+
+
+    $attributes = $request->only(['email', 'tags']);
+    $emailList = EmailList::findByUuid(getenv('MAILCOACH_MASTERING_PHPSTORM_LIST_ID'));
+    $subscriber = Subscriber::createWithEmail($attributes['email'])
+        ->syncTags($attributes['tags'])
+        ->subscribeTo($emailList);
+
+    dd($subscriber);
+
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
