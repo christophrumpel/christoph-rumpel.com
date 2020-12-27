@@ -33,7 +33,8 @@
         "spatie/laravel-mailcoach-unlayer": "^1.0",
         "spatie/laravel-responsecache": "^6.6",
         "spatie/laravel-sitemap": "^5.7",
-        "spatie/yaml-front-matter": "^2.0"
+        "spatie/yaml-front-matter": "^2.0",
+        "wildbit/swiftmailer-postmark": "^3.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.3",
