@@ -13,7 +13,7 @@
             <p>Christoph Rumpel may change this policy from time to time by updating this page. You should check this
                 page
                 from time to time to ensure that you are happy with any changes. This policy is effective from
-                25.05.2018.</p>
+                28.12.2020.</p>
 
             <h2>What We Collect</h2>
 
