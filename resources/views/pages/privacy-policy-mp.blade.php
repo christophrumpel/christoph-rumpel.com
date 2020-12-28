@@ -4,7 +4,8 @@
 
             <h1>Business Privacy Policy - masteringphpstorm.com</h1>
 
-            <p>This privacy policy sets out how Christoph Rumpel uses and protects any information that you give Christoph Rumpel when you visit masteringphpstorm.com</p>
+            <p>This privacy policy sets out how Christoph Rumpel uses and protects any information that you give Christoph Rumpel when you visit <a href="https://masteringphpstorm.com/">masteringphpstorm.com</a>.
+            </p>
 
             <p>Christoph Rumpel is committed to ensuring that your privacy is protected. Should we ask you to provide
                 certain information by which you can be identified when using masteringphpstorm.com, then you can be
