@@ -36,7 +36,7 @@ Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/confirmed', 
     $emailList = EmailList::findByUuid(getenv('MAILCOACH_MASTERING_PHPSTORM_LIST_UUID'));
     $subscriber = Subscriber::findForEmail($request->get('email'), $emailList);
 
-    return response()->json(['confirmed' => $subscriber->status === 'subscribed']);
+    return response()->json(['confirmed' => ($subscriber->status === 'subscribed') ?? false]);
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
