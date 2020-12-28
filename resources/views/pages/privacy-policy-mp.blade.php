@@ -1,11 +1,10 @@
-<x-main-layout title="Privacy Policy Laravel Core Adventures" page="privacy-policy-lca">
+<x-main-layout title="Privacy Policy Mastering PhpStorm" page="privacy-policy-mp">
     <main class="post-markdown-styles">
         <article>
 
-            <h1>Business Privacy Policy - laravelcoreadventures.com</h1>
+            <h1>Business Privacy Policy - masteringphpstorm.com</h1>
 
-            <p>This privacy policy sets out how Christoph Rumpel uses and protects any information that you give
-                Christoph Rumpel when you visit laravelcoreadventures.com</p>
+            <p>This privacy policy sets out how Christoph Rumpel uses and protects any information that you give Christoph Rumpel when you visit masteringphpstorm.com</p>
 
             <p>Christoph Rumpel is committed to ensuring that your privacy is protected. Should we ask you to provide
                 certain information by which you can be identified when using laravelcoreadventures.com, then you can be
@@ -18,28 +17,25 @@
 
             <h2>What We Collect</h2>
 
-            <p>We may collect the following information:</p>
+            <p>We may collect the following information if you subscribe to the newsletter:</p>
             <ul>
                 <li>Email address</li>
-                <li>Name</li>
-                <li>Address</li>
             </ul>
 
             <h2>What We Do with the Information We Gather</h2>
 
             <p>We do need this information in order to:</p>
             <ul>
-                <li>Send news about Laravel Core Adventure Videos</li>
+                <li>Send news about the video course Mastering PhpStorm</li>
                 <li>To log you in</li>
-                <li>If you purchase LCA, we need to send you your invoice.</li>
+                <li>If you purchase Mastering PhpStorm, we need to send you your invoice.</li>
 
             </ul>
             <p>Who the data is shared with:</p>
             <ul>
                 <li>The application is deployed on servers from <a href="https://www.digitalocean.com/security/gdpr/">DigitalOcean</a>
                     and <a href="https://all-inkl.com/datenschutz/">ALL-INKL.COM</a></li>
-                <li>The email is sent to ConverKit. It gets added to the newsletter list there. You can find ConverKit's
-                    <a href="https://convertkit.com/privacy/">privacy policy here</a>.
+                <li>The email is sent through <a href="https://mailcoach.app/privacy">Mailcoach</a> and <a href="https://postmarkapp.com/eu-privacy">Postmark</a>.
                 </li>
                 <li>The payment process is done via <a href="https://paddle.com/privacy/">Paddle</a>.
                 </li>
@@ -47,7 +43,7 @@
             <h2>How Long the Information Is Stored</h2>
             <p>If you are only subscribed to the newsletter, the information is stored as long as you are subscribed to
                 one of the newsletters. When you end the subscription, it will automatically be deleted.</p>
-            <p>If you need to delete your LCA account, just contact me at christoph@christoph-rumpel.com. Then we will
+            <p>If you need to delete your Mastering PhpStorm account, just contact me at christoph@christoph-rumpel.com. Then we will
                 delete are of your data.</p>
             <h2>Security</h2>
 
@@ -74,8 +70,8 @@
 
 
             <h2>Our Details</h2>
-            <p>Laravel Core Adventures is owned and operated by Christoph Rumpel.
-            <p>You can contact us at: christoph@laravelcoreadventures.com
+            <p>Mastering PhpStorm is owned and operated by Christoph Rumpel.</p>
+            <p>You can contact us at: christoph@christoph-rumpel.com</p>
 
             <p>Our business is located at:<br>
 
