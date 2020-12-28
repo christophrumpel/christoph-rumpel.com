@@ -7,7 +7,7 @@
             <p>This privacy policy sets out how Christoph Rumpel uses and protects any information that you give Christoph Rumpel when you visit masteringphpstorm.com</p>
 
             <p>Christoph Rumpel is committed to ensuring that your privacy is protected. Should we ask you to provide
-                certain information by which you can be identified when using laravelcoreadventures.com, then you can be
+                certain information by which you can be identified when using masteringphpstorm.com, then you can be
                 assured that it will only be used in accordance with this privacy statement.</p>
 
             <p>Christoph Rumpel may change this policy from time to time by updating this page. You should check this
