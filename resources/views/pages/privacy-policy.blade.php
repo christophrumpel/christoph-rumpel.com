@@ -1,5 +1,5 @@
-<x-main-layout>
-    <main class="page">
+<x-main-layout title="Privacy Policy" page="privacy-policy">
+    <main class="post-markdown-styles">
         <article>
 
             <h1>Business Privacy Policy - Blog
@@ -30,14 +30,13 @@
 
             <p>We do need this information in order to:</p>
             <ul>
-                <li>Send you blog newsletters</li>
-                <li>Send you Build Chatbots with PHP newsletters</li>
+                <li>Send you updates on the blog and Christoph Rumpel</li>
             </ul>
             <p>Who the data is shared with:</p>
             <ul>
                 <li>The application is deployed on servers from <a href="https://www.digitalocean.com/security/gdpr/">DigitalOcean</a>
                     and <a href="https://all-inkl.com/datenschutz/">ALL-INKL.COM</a></li>
-                <li>The emails are in a database on the same server.
+                <li>The emails are in a database on the same server
                 </li>
             </ul>
             <h2>How Long the Information Is Stored</h2>
@@ -54,33 +53,17 @@
 
             <p>You may choose to restrict the collection or use of your personal information in the following ways:</p>
             <ul>
-                <li>Don't subscribe to one of the newsletters.</li>
-                <li>Unsubscribe from one of the newsletters. (unsubscribe link in the newsletter)</li>
+                <li>Don't subscribe to one of the newsletters</li>
+                <li>Unsubscribe from one of the newsletters (unsubscribe link in the newsletter)</li>
             </ul>
 
             <p>We will not sell, distribute or lease your personal information to third parties unless we have your
                 permission or are required by law to do so.</p>
 
             <h2>Website analytics</h2>
-            <p>To improve your experience on our site, we may use 'cookies'. Cookies are an industry standard and most
-                major web sites use them. A cookie is a small text file that our site may place on your computer as a
-                tool to remember your preferences. You may refuse the use of cookies by selecting the appropriate
-                settings on your browser, however please note that if you do this you may not be able to use the full
-                functionality of this website.</p>
+            <p>We are using the privacy-focused analytics tool <a href="https://usefathom.com/">fathom</a> which is NOT using any cookies.</p>
 
-            <p>Our website may contain links to other websites. Please be aware that we are not responsible for the
-                privacy practices of such other sites. When you go to other websites from here, we advise you to be
-                aware and read their privacy policy.</p>
-
-            <p>Our website uses Google Analytics, a service which transmits website traffic data to Google servers in
-                the United States. Google Analytics does not identify individual users or associate your IP address with
-                any other data held by Google. We use reports provided by Google Analytics to help us understand website
-                traffic and webpage usage.</p>
-
-            <p>By using this website, you consent to the processing of data about you by Google in the manner described
-                in <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> - external site and for the
-                purposes set out above. You can opt out of Google Analytics if you disable or refuse the cookie, disable
-                JavaScript, or use the opt-out service provided by Google - external site.</p>
+            <p>No personal data is being stored, so we only get an overview of how many people visited which site.</p>
 
             <h2>Our Details</h2>
             <p>This blog is owned and operated by Christoph Rumpel.
