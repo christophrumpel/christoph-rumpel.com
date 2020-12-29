@@ -13,6 +13,8 @@ use App\Http\Controllers\PageProductsController;
 use App\Http\Controllers\PageSpeakingController;
 use App\Http\Controllers\PageUsesController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
+use Spatie\Mailcoach\Http\Front\Controllers\SubscribeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,4 +57,10 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', [HomeController::class, 'index'])
     ->name('home');
+
+// Mailcoach
+Route::post('mailcoach-subscribe/{emailListUuid}', '\\' . SubscribeController::class)
+    ->name('cr.mailcoach.subscribe')
+    ->middleware(ProtectAgainstSpam::class);
+
 

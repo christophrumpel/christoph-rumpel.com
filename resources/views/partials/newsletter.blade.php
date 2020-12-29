@@ -11,7 +11,9 @@
             </div>
             <div class="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
                 <form class="sm:flex" aria-labelledby="newsletter-headline" method="POST"
-                      action="{{ route('mailcoach.subscribe', ['emailListUuid' => getenv('MAILCOACH_CRBLOG_LIST_UUID')]) }}">
+                      action="{{ route('cr.mailcoach.subscribe', ['emailListUuid' => getenv('MAILCOACH_CRBLOG_LIST_UUID')]) }}">
+                    @csrf
+                    <x-honeypot />
                     <input aria-label="Email address" type="email" name="email" required
                            class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out"
                            placeholder="Enter your email"/>

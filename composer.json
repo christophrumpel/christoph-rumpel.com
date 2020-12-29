@@ -29,6 +29,7 @@
         "spatie/commonmark-highlighter": "^2.1",
         "spatie/laravel-backup": "^6.11",
         "spatie/laravel-feed": "^2.7",
+        "spatie/laravel-honeypot": "^3.0",
         "spatie/laravel-mailcoach": "^3.0.0",
         "spatie/laravel-mailcoach-unlayer": "^1.0",
         "spatie/laravel-responsecache": "^6.6",
