@@ -57,6 +57,16 @@ return [
             'transport' => 'postmark',
         ],
 
+        'postmark_transx' => [
+            'transport' => 'postmark',
+            'message_stream_id' => env('POSTMARK_MESSAGE_STREAM_ID_TRANSX')
+        ],
+
+        'postmark_broadcast' => [
+            'transport' => 'postmark',
+            'message_stream_id' => env('POSTMARK_MESSAGE_STREAM_ID_BROADCAST')
+        ],
+
         'sendmail' => [
             'transport' => 'sendmail',
             'path' => '/usr/sbin/sendmail -bs',

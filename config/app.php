@@ -2,6 +2,7 @@
 
 use App\Providers\BladeServiceProvider;
 use App\Providers\CustomMailcoachProvider;
+use App\Providers\CustomPostMarkMailManagerProvider;
 use App\Providers\MarkdownConverterProvider;
 
 return [
@@ -179,6 +180,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\HorizonServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        CustomPostMarkMailManagerProvider::class,
 
         BladeServiceProvider::class,
 
