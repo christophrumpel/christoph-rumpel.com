@@ -18,8 +18,7 @@ class CustomMailManager extends BaseMailManager
         ] : [];
 
         return tap(new Transport(
-            $config['token'] ?? $this->app['config']->get('services.postmark.token'),
-           $headers
+            $config['token'], $headers
         ), function ($transport) {
             $transport->registerPlugin(new ThrowExceptionOnFailurePlugin());
         });
