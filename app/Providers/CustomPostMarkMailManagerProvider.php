@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\Support\CustomMailManager;
 use Illuminate\Mail\MailServiceProvider;
-use Illuminate\Support\ServiceProvider;
 
 class CustomPostMarkMailManagerProvider extends MailServiceProvider
 {
@@ -15,7 +14,7 @@ class CustomPostMarkMailManagerProvider extends MailServiceProvider
      */
     protected function registerIlluminateMailer()
     {
-        $this->app->singleton('mail.manager', function($app) {
+        $this->app->singleton('mail.manager', function ($app) {
             return new CustomMailManager($app);
         });
 

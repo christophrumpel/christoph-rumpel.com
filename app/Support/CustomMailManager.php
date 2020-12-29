@@ -2,9 +2,9 @@
 
 namespace App\Support;
 
-use Postmark\Transport;
-use Postmark\ThrowExceptionOnFailurePlugin;
 use Illuminate\Mail\MailManager as BaseMailManager;
+use Postmark\ThrowExceptionOnFailurePlugin;
+use Postmark\Transport;
 
 class CustomMailManager extends BaseMailManager
 {
@@ -13,7 +13,7 @@ class CustomMailManager extends BaseMailManager
      */
     protected function createPostmarkTransport(array $config)
     {
-        $headers =  isset($config['message_stream_id']) ? [
+        $headers = isset($config['message_stream_id']) ? [
             'X-PM-Message-Stream' => $config['message_stream_id'],
         ] : [];
 
