@@ -19,14 +19,14 @@ class PageSpeakingController extends Controller
 
     private function preparePastTalksDetails($talks)
     {
-        $pastTalks = collect($talks->past)->transform(function($talk){
+        $pastTalks = collect($talks->past)->transform(function ($talk) {
             $details = Str::of($talk->location);
 
-            if(isset($talk->slides)) {
+            if (isset($talk->slides)) {
                 $details = $details->append(', <a href="'.$talk->slides.'">Slides</a>');
             }
 
-            if(isset($talk->video)) {
+            if (isset($talk->video)) {
                 $details = $details->append(", <a href='$talk->video'>Video</a>");
             }
 
@@ -34,9 +34,9 @@ class PageSpeakingController extends Controller
                 ->append(')');
 
 
-            return tap($talk, fn($talk) => $talk->details = $details);
+            return tap($talk, fn ($talk) => $talk->details = $details);
         });
 
-        return tap($talks, fn($talks) => $talks->past = $pastTalks);
+        return tap($talks, fn ($talks) => $talks->past = $pastTalks);
     }
 }
