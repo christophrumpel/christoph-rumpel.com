@@ -31,6 +31,7 @@
         "spatie/laravel-feed": "^3.0",
         "spatie/laravel-honeypot": "^3.0",
         "spatie/laravel-mailcoach": "^3.0.0",
+        "spatie/laravel-mailcoach-postmark-feedback": "^2.0",
         "spatie/laravel-mailcoach-unlayer": "^1.0",
         "spatie/laravel-responsecache": "^6.6",
         "spatie/laravel-sitemap": "^5.7",

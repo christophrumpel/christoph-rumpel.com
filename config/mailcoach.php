@@ -170,4 +170,8 @@ return [
         'subscriber' => Spatie\Mailcoach\Models\Subscriber::class,
 
     ],
+
+    'postmark_feedback' => [
+        'signing_secret' => env('POSTMARK_SIGNING_SECRET'),
+    ],
 ];

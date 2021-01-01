@@ -41,11 +41,14 @@ class RouteServiceProvider extends ServiceProvider
      * @return void
      */
     public function map()
+
     {
         Route::group(['middleware' => ['doNotCacheResponse']], function () {
             Route::mailcoach('mailcoach');
             Route::mailcoachUnlayer('mailcoachUnlayer');
         });
+
+        Route::postmarkFeedback('postmark-feedback-hook');
 
         $this->mapApiRoutes();
 

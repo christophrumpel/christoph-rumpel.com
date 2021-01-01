@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be8db1dfc0724d94032c833a6fc1692c",
+    "content-hash": "c04f0a5bff97dee2172c89ce980bc2b2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4294,6 +4294,86 @@
                 "spatie"
             ],
             "time": "2020-12-28T08:23:24+00:00"
+        },
+        {
+            "name": "spatie/laravel-mailcoach-postmark-feedback",
+            "version": "2.4.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:spatie/laravel-mailcoach-postmark-feedback.git",
+                "reference": "510be7e3f4b4b1fbeeb3a37a7f5840906bcc93aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://satis.mailcoach.app/dist/spatie/laravel-mailcoach-postmark-feedback/spatie-laravel-mailcoach-postmark-feedback-510be7e3f4b4b1fbeeb3a37a7f5840906bcc93aa-zip-764603.zip",
+                "reference": "510be7e3f4b4b1fbeeb3a37a7f5840906bcc93aa",
+                "shasum": "9d922a99001821b19382d168dc65a9f38c23e203"
+            },
+            "require": {
+                "illuminate/http": "^7.0|^8.0",
+                "php": "^8.0|^7.4",
+                "spatie/laravel-mailcoach": "^2.9|^3.0",
+                "spatie/laravel-webhook-client": "^2.2"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "fzaninotto/faker": "^1.9",
+                "laravel/legacy-factories": "^1.0.4",
+                "orchestra/testbench": "^5.0|^6.0",
+                "phpunit/phpunit": "^9.4",
+                "symfony/var-dumper": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\MailcoachPostmarkFeedback\\MailcoachPostmarkFeedbackServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\MailcoachPostmarkFeedback\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Spatie\\MailcoachPostmarkFeedback\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test-coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage"
+                ],
+                "format": [
+                    "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Process feedback for email campaigns sent using Postmark",
+            "homepage": "https://mailcoach.app",
+            "keywords": [
+                "laravel-mailcoach-postmark-feedback",
+                "spatie"
+            ],
+            "time": "2020-12-14T16:22:48+00:00"
         },
         {
             "name": "spatie/laravel-mailcoach-unlayer",
