@@ -26,9 +26,16 @@ Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/subscribe', 
 
     $attributes = $request->only(['email', 'tags']);
     $emailList = EmailList::findByUuid(getenv('MAILCOACH_MASTERING_PHPSTORM_LIST_UUID'));
+
+    if($emailList->isSubscribed($attributes['email'])) {
+        return response()->json(['already_subscribed' => true]);
+    }
+
     Subscriber::createWithEmail($attributes['email'])
         ->syncTags($attributes['tags'])
         ->subscribeTo($emailList);
+
+    return response()->json(['already_subscribed' => false]);
 });
 
 Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/confirmed', function (Request $request) {
