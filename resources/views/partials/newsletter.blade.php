@@ -6,7 +6,7 @@
                     Did you enjoy this post?
                 </h2>
                 <p class="mt-3 max-w-3xl text-lg leading-6 text-indigo-200" id="newsletter-headline">
-                    Sign up for my newsletter to stay up to date.
+                    Sign up for my newsletter to receive updates on ym content.
                 </p>
             </div>
             <div class="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
