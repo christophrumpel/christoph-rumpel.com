@@ -55,6 +55,7 @@ return [
 
         'postmark' => [
             'transport' => 'postmark',
+            'token' => env('POSTMARK_SERVER_CRBLOG_TOKEN')
         ],
 
         'postmark_transx_crblog' => [
