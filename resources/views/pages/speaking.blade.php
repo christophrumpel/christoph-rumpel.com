@@ -30,14 +30,8 @@
             <ul>
                 @foreach($talks->upcoming as $talk)
                     <li>
-                        <h3>{{ $talk->date }}</h3>
-                        <p>
-
-                            {{ $talk->title }}
-
-                            {{ $talk->location }}
-                            {{ $talk->event }}
-                        </p>
+                        <h3><a href="{{ $talk->url }}">{{ $talk->date }} - {{ $talk->event }}</a></h3>
+                        <p>{{ $talk->title }} {!! $talk->details !!}</p>
                     </li>
                 @endforeach
             </ul>
@@ -49,7 +43,7 @@
         <ul>
             @foreach($talks->past as $talk)
                 <li>
-                    <h3>{{ $talk->date }} - {{ $talk->event }}</h3>
+                    <h3><a href="{{ $talk->url }}">{{ $talk->date }} - {{ $talk->event }}</a></h3>
                     <p>{{ $talk->title }} {!! $talk->details !!}</p>
                 </li>
             @endforeach
