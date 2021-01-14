@@ -17,12 +17,14 @@ class PageSpeakingTest extends TestCase
                     'date' => '20.02.2020',
                     'location' => 'Talk Location',
                     'event' => 'Event Name',
+                    'url' => 'https://test.at'
                 ],
                 [
                     'title' => 'Talk Title 2',
                     'date' => '21.02.2020',
                     'location' => 'Talk Location 2',
                     'event' => 'Event Name 2',
+                    'url' => 'https://test.at'
                 ],
             ],
             'past' => [
@@ -31,12 +33,14 @@ class PageSpeakingTest extends TestCase
                     'date' => '20.02.2020',
                     'location' => 'Talk Location',
                     'event' => 'Event Name',
+                    'url' => 'https://test.at'
                 ],
                 [
                     'title' => 'Talk Title 2',
                     'date' => '21.02.2020',
                     'location' => 'Talk Location 2',
                     'event' => 'Event Name 2',
+                    'url' => 'https://test.at'
                 ],
             ],
         ]);
@@ -72,6 +76,7 @@ class PageSpeakingTest extends TestCase
                     'date' => '20.02.2020',
                     'location' => 'Talk Location',
                     'event' => 'Event Name',
+                    'url' => 'https://test.at'
                 ],
             ],
         ]);
