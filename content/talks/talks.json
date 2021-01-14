@@ -1,14 +1,14 @@
 {
     "upcoming": [
+    ],
+    "past": [
         {
             "date": "14.01.2021",
             "event": "NomadPHP",
             "location": "Worldwide 🌏",
             "title": "The Laravel Core — Demystify The Beast",
             "url": "https://nomadphp.com/live/5we3YcA3zsrcNzk9DYJdzz/The-Laravel-Core-----Demystify-The-Beast/"
-        }
-    ],
-    "past": [
+        },
         {
             "date": "25.11.2020",
             "event": "We Are Developers Live",
