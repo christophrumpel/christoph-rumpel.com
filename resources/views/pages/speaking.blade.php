@@ -5,13 +5,9 @@
 
         <img src="{{ asset('images/pages/speaking.jpg') }}" alt="Christoph speaking at a conference.">
 
-        <p>In 2015, I gave my first talk ever, and it was terrifying! I will never forget how nervous I was and how
-            terrible I felt. But I also remember the feeling afterward; I felt relieved, proud, and got in touch with
-            some attendees to discuss my topic.</p>
-        <p>
-            I kept on doing talks, and some years later, I eventually was able to speak at international conferences and
-            also get paid. Being able to talk about code and my business has become a valuable skill for me and I
-            wouldn't want to miss it.</p>
+        <p>In 2015, I gave my first talk ever, and it was terrifying! I will never forget how nervous I was and how terrible I felt. But I also remember the feeling afterward; I felt relieved, proud and got in touch with some attendees to discuss my topic.</p>
+
+        <p>I kept on doing talks, and some years later, I eventually was able to speak at international conferences and get paid. Talking about code and my business has become a valuable skill for me, and I wouldn't want to miss it.</p>
 
         <p>Currently I speak about:</p>
         <ul>
