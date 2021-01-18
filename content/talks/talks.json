@@ -3,6 +3,13 @@
     ],
     "past": [
         {
+            "date": "18.01.2021",
+            "event": "Laracon EU Online",
+            "location": "Worldwide 🌏",
+            "title": "10 Tips To Be More Productive with PhpStorm",
+            "url": "https://www.laracon.eu"
+        },
+        {
             "date": "14.01.2021",
             "event": "NomadPHP",
             "location": "Worldwide 🌏",
