@@ -1,5 +1,12 @@
 {
     "upcoming": [
+        {
+            "date": "17.03.2021",
+            "event": "Laracon Online",
+            "location": "Worldwide 🌏",
+            "title": "The final Laravel Service Container talk",
+            "url": "https://laracon.net/"
+        }
     ],
     "past": [
         {
