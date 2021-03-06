@@ -13,11 +13,9 @@
 
             <h3>Laptop</h3>
             <ul>
-                <li>MacBook Pro (13-inch, 2016)</li>
-                <li>3.3 GHz Dual-Core Intel Core i7</li>
-                <li>16 GB 2133 MHz LPDDR3</li>
-                <li>It still works quite good but gets slow sometimes</li>
-                <li>I will probably soon look for a new one</li>
+                <li>MacBook Air (M1, 2020)</li>
+                <li>Apple M1</li>
+                <li>16 GB</li>
             </ul>
 
             <h3>Mouse / Keyboard</h3>
@@ -35,7 +33,7 @@
             <h3>Display</h3>
             <ul>
                 <li>LG UltraFine 5K Display</li>
-                <li>It gets charged through the USB-Ca connection</li>
+                <li>It gets charged through the USB-C connection</li>
                 <li>I was looking for a cheaper option, but none of them had a beautiful clean design</li>
                 <li>I didn't regret it</li>
             </ul>
@@ -93,12 +91,6 @@
                 try a gaming chair, but I'm pretty satisfied. Especially the pillows for your head and back are
                 comfortable and support your body.</p>
 
-            <h3>Gaming</h3>
-            <ul>
-                <li>Playstation 4</li>
-                <li>Sony Bravia TV 40" (10 years old)</li>
-            </ul>
-
             <h2>Software</h2>
 
             <h3>Operating System</h3>
@@ -113,12 +105,9 @@
             <ul>
                 <li>PhpStorm is my favorite IDE</li>
                 <li>In <a href="/2019/01/my-current-dark-and-light-theme">this post</a>, I share my current light and
-                    dark
-                    theme
-                </li>
+                    dark theme </li>
 
-                <li>I share all my favorite 🧪 PhpStorm Tips & Tricks on this <a
-                        href="https://twitter.com/i/events/1268886882013917184">Twitter Moment</a></li>
+                <li>I share all my favorite 🧪 PhpStorm Tips & Tricks <a href="https://masteringphpstorm.com/tips-and-tricks">here</a></li>
                 <li>I recorded <a href="https://www.youtube.com/playlist?list=PLQ176FUIyIUZjFbdm7Ux3Okalij5jMAgw">some
                         videos</a> for JetBrains to share my PhpStorm setup
                 </li>
