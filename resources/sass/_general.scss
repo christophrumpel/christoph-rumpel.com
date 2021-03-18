@@ -1,7 +1,7 @@
 [x-cloak] { display: none }
 
 .text-link {
-    @apply .relative .italic;
+    @apply .relative;
 
     &:after {
         @apply bg-highlightYellow;
