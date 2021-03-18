@@ -33,10 +33,10 @@
     }
 
     p {
-        @apply .text-xl .my-6;
+        @apply .text-xl .my-6 .leading-7;
 
         @screen lg {
-            @apply .text-2xl;
+            @apply .text-2xl .leading-9;
         }
     }
 
