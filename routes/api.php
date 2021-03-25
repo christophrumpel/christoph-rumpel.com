@@ -1,10 +1,9 @@
 <?php
 
-use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Spatie\Mailcoach\Models\EmailList;
-use Spatie\Mailcoach\Models\Subscriber;
+use Spatie\Mailcoach\Domain\Audience\Models\EmailList;
+use Spatie\Mailcoach\Domain\Audience\Models\Subscriber;
 
 /*
 |--------------------------------------------------------------------------

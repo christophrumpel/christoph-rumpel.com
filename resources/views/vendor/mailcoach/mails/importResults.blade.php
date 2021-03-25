@@ -1,4 +1,4 @@
-@component('mail::message')
+@component('mailcoach::mails.layout.message')
 {{ __('Good news!') }}
 
 {{ __('Your import was processed') }}.
@@ -7,7 +7,7 @@
 
 {{ trans_choice(__('There was 1 error.|There were :count errors.'), $subscriberImport->error_count) }}
 
-@component('mail::button', ['url' => $subscriberImport->emailList->url])
+@component('mailcoach::mails.layout.button', ['url' => $subscriberImport->emailList->url])
     {{ __('View list') }}
 @endcomponent
 

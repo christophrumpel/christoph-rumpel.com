@@ -1,7 +1,4 @@
 <div>
-    @error($name)
-        <p class="form-error mb-1" role="alert">{{ $message }}</p>
-    @enderror
     <div class="flex items-center">
         <x-mailcoach::date-field
             :name="$name . '[date]'"
@@ -23,4 +20,7 @@
             required
         />
     </div>
+    @error($name)
+        <p class="form-error mb-1" role="alert">{{ $message }}</p>
+    @enderror
 </div>

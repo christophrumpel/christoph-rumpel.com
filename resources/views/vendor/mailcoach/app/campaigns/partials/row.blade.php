@@ -12,7 +12,7 @@
                 {{ $campaign->name }}
             </a>
         @else
-            <a href="{{ route('mailcoach.campaigns.settings', $campaign) }}">
+            <a href="{{ route('mailcoach.campaigns.content', $campaign) }}">
                 {{ $campaign->name }}
             </a>
         @endif
@@ -38,7 +38,7 @@
             {{ number_format($campaign->sent_to_number_of_subscribers) ?: '–' }}
         @endif
     </td>
-    <td class="td-numeric hidden | md:table-cell">
+    <td class="td-numeric hidden | xl:table-cell">
         @if($campaign->open_rate)
             {{ number_format($campaign->unique_open_count) }}
             <div class="td-secondary-line">{{ $campaign->open_rate / 100 }}%</div>
@@ -46,14 +46,14 @@
             –
         @endif
     </td>
-    <td class="td-numeric hidden | md:table-cell">
+    <td class="td-numeric hidden | xl:table-cell">
         @if($campaign->click_rate)
             {{ number_format($campaign->unique_click_count) }}
             <div class="td-secondary-line">{{ $campaign->click_rate / 100 }}%</div>
         @else
             –
         @endif
-    <td class="td-numeric hidden | md:table-cell">
+    <td class="td-numeric hidden | xl:table-cell">
         @if($campaign->isSent())
             {{ optional($campaign->sent_at)->toMailcoachFormat() }}
         @elseif($campaign->isSending())
@@ -72,16 +72,13 @@
     </td>
 
     <td class="td-action">
-        <div class="dropdown" data-dropdown>
-            <button class="icon-button" data-dropdown-trigger>
-                <i class="fas fa-ellipsis-v | dropdown-trigger-rotate"></i>
-            </button>
-            <ul class="dropdown-list dropdown-list-left | hidden" data-dropdown-list>
+         <x-mailcoach::dropdown direction="left">
+            <ul>
                 <li>
                     <x-mailcoach::form-button
                         :action="route('mailcoach.campaigns.duplicate', $campaign)"
                     >
-                        <x-mailcoach::icon-label icon="fa-random" :text="__('Duplicate')" />
+                        <x-mailcoach::icon-label icon="fas fa-random" :text="__('Duplicate')" />
                     </x-mailcoach::form-button>
                 </li>
                 <li>
@@ -91,10 +88,10 @@
                         data-confirm="true"
                         :data-confirm-text="__('Are you sure you want to delete campaign :campaignName?', ['campaignName' => $campaign->name])"
                     >
-                        <x-mailcoach::icon-label icon="fa-trash-alt" :text="__('Delete')" :caution="true" />
+                        <x-mailcoach::icon-label icon="far fa-trash-alt" :text="__('Delete')" :caution="true" />
                     </x-mailcoach::form-button>
                 </li>
             </ul>
-        </div>
+        </x-mailcoach::dropdown>
     </td>
 </tr>

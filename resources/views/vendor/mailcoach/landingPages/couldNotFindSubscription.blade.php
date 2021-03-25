@@ -1,6 +1,6 @@
 @extends('mailcoach::landingPages.layouts.landingPage', ['title' => __('Could not find subscription')])
 
-@section('content')
+@section('landing')
     <p>
         {{ __('We could not find your subscription to this list.') }}
     </p>

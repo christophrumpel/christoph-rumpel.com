@@ -176,7 +176,7 @@ return [
             ],
             'mailcoach-general' => [
                 'connection' => 'mailcoach-redis',
-                'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail'],
+                'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail', 'send-automation-mail'],
                 'balance' => 'auto',
                 'processes' => 10,
                 'tries' => 2,
@@ -203,7 +203,7 @@ return [
             ],
             'mailcoach-general' => [
                 'connection' => 'mailcoach-redis',
-                'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail'],
+                'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail', 'send-automation-mail'],
                 'balance' => 'auto',
                 'processes' => 10,
                 'tries' => 2,

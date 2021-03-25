@@ -1,4 +1,4 @@
-@component('mail::message')
+@component('mailcoach::mails.layout.message')
 {{ __('Hi') }},
 
 {{ __('You are now subscribed to list :emailListName', ['emailListName'=>$subscriber->emailList->name]) }}.
