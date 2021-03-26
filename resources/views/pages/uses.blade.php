@@ -158,9 +158,9 @@
             <h3>MacOS Window Manager</h3>
             <ul>
                 <li>I need to move and resize windows all the time</li>
-                <li><a href="https://www.spectacleapp.com/">Spectacle</a> is my app of choice</li>
-                <li>Unfortunately, it is <a href="https://github.com/eczarny/spectacle#important-note">not maintained
-                        anymore</a>.
+                <li><a href="https://rectangleapp.com/">Rectanlge</a> is my app of choice</li>
+                <li>
+                    It lets you use the shortcuts of "Spectacle", if you have used that before like I did.
                 </li>
             </ul>
 
