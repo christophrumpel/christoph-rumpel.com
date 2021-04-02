@@ -2,7 +2,6 @@
 
 namespace App\Console;
 
-use App\Console\Commands\SendMissingEmailsCrUpdates4;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
