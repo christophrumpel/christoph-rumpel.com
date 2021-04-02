@@ -201,7 +201,7 @@ return [
          * Here you can configure which transactional mail template editor Mailcoach uses.
          * By default this is a text editor that highlights HTML.
          */
-        'editor' => \Spatie\Mailcoach\Domain\Shared\Support\Editor\TextEditor::class,
+        'editor' => UnlayerEditor::class,
     ],
 
     'shared' => [
