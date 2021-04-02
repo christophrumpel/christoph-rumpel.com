@@ -5,14 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="referrer" content="always">
 
-        <title>{{ isset($title) ? "{$title} | Mailcoach" : 'Mailcoach' }}</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
 
-        <link rel="stylesheet" href="{{ asset('vendor/mailcoach/app.css') }}?t={{ app(\Spatie\Mailcoach\Support\Version::class)->getHashedFullVersion() }}">
+        <title>{{ isset($title) ? "{$title} |" : '' }} {{ isset($originTitle) ? "{$originTitle} |" : '' }} Mailcoach</title>
+
+        <link rel="stylesheet" href="{{ asset('vendor/mailcoach/app.css') }}?t={{ app(\Spatie\Mailcoach\Domain\Shared\Support\Version::class)->getHashedFullVersion() }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
         <meta name="turbolinks-cache-control" content="no-preview">
 
+        {!! \Livewire\Livewire::styles() !!}
         <script type="text/javascript">
             window.__ = function (key) {
                 return {
@@ -24,45 +27,49 @@
                 }[key];
             };
         </script>
-        <script type="text/javascript" src="{{ asset('vendor/mailcoach/app.js') }}?t={{ app(\Spatie\Mailcoach\Support\Version::class)->getHashedFullVersion() }}" defer></script>
+        <script type="text/javascript" src="{{ asset('vendor/mailcoach/app.js') }}?t={{ app(\Spatie\Mailcoach\Domain\Shared\Support\Version::class)->getHashedFullVersion() }}" defer></script>
 
         @include('mailcoach::app.layouts.partials.endHead')
         @stack('endHead')
     </head>
-    <body class="bg-blue-100">
+    <body class="bg-gray-100">
         <script>/**/</script><!-- Empty script to prevent FOUC in Firefox -->
 
-        @include('mailcoach::app.layouts.partials.startBody')
+        <div class="mx-auto grid w-full max-w-layout min-h-screen p-6 z-auto"
+         style="grid-template-rows: auto 1fr auto">
+            <aside>
+                @include('mailcoach::app.layouts.partials.startBody')
+            </aside>
 
-        @include('mailcoach::app.layouts.partials.background')
 
-        @include('mailcoach::app.layouts.partials.flash')
+            <div>
+                @include('mailcoach::app.layouts.partials.flash')
 
-        <div class="layout">
-            <header class="layout-header text-white">
-                <a href="{{ route('mailcoach.home') }}" class="hidden h-8 opacity-50 mr-1 | hover:opacity-75 | lg:block">
-                    @include('mailcoach::app.layouts.partials.logoSvg')
-                </a>
+                <div class="h-full card card-split">
+                    <nav class="card-nav">
+                        {{ $nav ?? '' }}
+                    </nav>
 
-                <div>
-                    @yield('header')
+                    <main class="card-main">
+
+                        <h1 class="markup-h1">
+                            @isset($originTitle)
+                                <div class="markup-h1-sub">
+                                    @isset($originHref)
+                                        <a class="text-blue-500" href="{{ $originHref }}">{{ $originTitle }}</a>
+                                    @else
+                                        {{ $originTitle }}
+                                    @endif
+                                </div>
+                            @endif
+                            {{ $title ?? '' }}
+                        </h1>
+                        {{ $slot }}
+                    </main>
                 </div>
+            </div>
 
-            </header>
-
-            <nav class="layout-header-right">
-                @include('mailcoach::app.layouts.partials.headerRight')
-            </nav>
-
-            <nav class="layout-nav text-white">
-                @include('mailcoach::app.layouts.partials.navigation')
-            </nav>
-
-            <main class="layout-main">
-                @yield('content')
-            </main>
-
-            <footer class="layout-footer">
+            <footer class="px-6 pt-6">
                 @include('mailcoach::app.layouts.partials.footer')
             </footer>
         </div>
@@ -71,12 +78,8 @@
             <span data-confirm-modal-text>{{ __('Are you sure?') }}</span>
 
             <div class="form-buttons">
-                <button type="button" class="button" data-modal-confirm>
-                    {{ __('Confirm') }}
-                </button>
-                <button type="button" class="button-cancel" data-modal-dismiss>
-                    {{ __('Cancel') }}
-                </button>
+                <x-mailcoach::button type="button" data-modal-confirm :label=" __('Confirm')" />
+                <x-mailcoach::button-cancel :label=" __('Cancel')" />
             </div>
         </x-mailcoach::modal>
 
@@ -84,15 +87,13 @@
             {{ __('There are unsaved changes. Are you sure you want to continue?') }}
 
             <div class="form-buttons">
-                <button type="button" class="button" data-modal-confirm>
-                    {{ __('Continue') }}
-                </button>
-                <button type="button" class="button-cancel" data-modal-dismiss>
-                    {{ __('Cancel') }}
-                </button>
+                <x-mailcoach::button type="button" data-modal-confirm :label=" __('Confirm')" />
+                <x-mailcoach::button-cancel :label=" __('Cancel')" />
             </div>
         </x-mailcoach::modal>
 
         @stack('modals')
+        {!! \Livewire\Livewire::scripts() !!}
+        <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script>
     </body>
 </html>

@@ -4,33 +4,39 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+
         <title>{{ isset($title) ? "{$title} | Mailcoach" : 'Mailcoach' }}</title>
 
         <link rel="stylesheet" href="{{ asset('vendor/mailcoach/app.css') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
-    <body class="bg-blue-100">
-        <div class="min-h-screen flex flex-col p-6">
-            <div class="flex-grow flex items-center justify-center">
-                <div class="w-full max-w-xl">
-                    <div class="card shadow-2xl border-l-8 border-blue-500">
-                        <div class="text-lg md:text-xl lg:text-2xl">
-                            @yield('content')
+    <body class="bg-gray-100">
+    <img style="mix-blend-mode: multiply;" class="fixed w-full bottom-0 opacity-10" src="{{ asset('vendor/mailcoach/images/auth-footer.jpg') }}">
+
+    <div id="app">
+        <div class="min-h-screen flex flex-col">
+            <div class="flex-grow flex items-center justify-center mx-12 my-4">
+                @include('mailcoach::app.layouts.partials.flash')
+                <div class="w-full max-w-md">
+                    <div class="flex justify-center -mb-4 z-10">
+                        <a href="/" class="group w-16 h-16 flex items-center justify-center bg-gradient-to-b from-blue-500 to-blue-600 text-white rounded-full shadow-lg">
+                            <span class="w-10 h-10 transform group-hover:scale-90 transition-transform duration-150">
+                                @include('mailcoach::app.layouts.partials.logoSvg')
+                            </span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="card-main text-xl">
+                            @yield('landing')
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pt-8 text-gray-400 text-xs text-center">
-                {{ __('Powered by') }}
-                <a class="link-dimmed inline-flex items-center" href="https://mailcoach.app">
-                    Mailcoach
-                    <span class="h-5 ml-1">
-                        @include('mailcoach::app.layouts.partials.logoSvg')
-                    </span>
-                </a>
-            </div>
+            @include('mailcoach::app.layouts.partials.footer')
         </div>
+    </div>
 
-    </body>
+</body>
 </html>

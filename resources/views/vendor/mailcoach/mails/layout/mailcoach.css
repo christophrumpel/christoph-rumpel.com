@@ -8,18 +8,16 @@ body *:not(html):not(style):not(br):not(tr):not(code) {
 }
 
 body {
-    background-color: #e8eff6;
+    background-color: rgb(243,244,246);
     color: #3d3c3b;
     height: 100%;
     hyphens: auto;
     line-height: 1.4;
     margin: 0;
     -moz-hyphens: auto;
-    -ms-word-break: break-all;
     width: 100% !important;
     -webkit-hyphens: auto;
     -webkit-text-size-adjust: none;
-    word-break: break-all;
     word-break: break-word;
 }
 
@@ -33,7 +31,7 @@ blockquote {
 }
 
 a {
-    color: #3399ff;
+    color: rgb(59,130,246);
 }
 
 a img {
@@ -89,7 +87,7 @@ strong {
 /* Layout */
 
 .wrapper {
-    background-color: #e8eff6;
+    background-color: rgb(243,244,246);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -142,7 +140,7 @@ strong {
 
 .inner-body {
     background-color: #ffffff;
-    border-left: 8px solid #3399ff;
+    border-left: 8px solid rgb(59,130,246);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
     padding: 0;
@@ -235,16 +233,15 @@ strong {
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    background-color: #3399ff;
+    background-image:linear-gradient(180deg,#3b82f6, #2563eb);
+    background-color: rgb(59,130,246);
     border-width: 1px;
     border-color: transparent;
     white-space: nowrap;
-    border-radius: 0.125rem;
-    box-shadow: 0 2px 2px #f8f7f6;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 2px #e5e3e1;
     font-weight: 600;
 }
-
-/* Panels */
 
 .panel {
     margin: 0 0 21px;
@@ -268,7 +265,7 @@ strong {
 
 .promotion {
     background-color: #ffffff;
-    border: 2px dashed #3399ff;
+    border: 2px dashed rgb(59,130,246);
     margin: 0;
     margin-bottom: 25px;
     margin-top: 25px;

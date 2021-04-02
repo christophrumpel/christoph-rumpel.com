@@ -10,13 +10,14 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://satis.mailcoach.app"
+            "url": "https://satis.spatie.be"
         }
     ],
     "require": {
         "php": "^8.0",
         "ext-json": "*",
         "bepsvpt/secure-headers": "^6.0",
+        "doctrine/dbal": "^3.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
@@ -30,11 +31,12 @@
         "spatie/laravel-backup": "^6.11",
         "spatie/laravel-feed": "^3.0",
         "spatie/laravel-honeypot": "^3.0",
-        "spatie/laravel-mailcoach": "^3.0.0",
-        "spatie/laravel-mailcoach-postmark-feedback": "^2.0",
-        "spatie/laravel-mailcoach-unlayer": "^1.0",
+        "spatie/laravel-mailcoach": "^4.0",
+        "spatie/laravel-mailcoach-postmark-feedback": "^3.0",
+        "spatie/laravel-mailcoach-unlayer": "^2.0",
         "spatie/laravel-responsecache": "^6.6",
         "spatie/laravel-sitemap": "^5.7",
+        "spatie/laravel-welcome-notification": "^2.0",
         "spatie/yaml-front-matter": "^2.0",
         "wildbit/swiftmailer-postmark": "^3.3"
     },

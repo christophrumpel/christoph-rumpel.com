@@ -1,4 +1,4 @@
-<svg  class="h-full w-auto mr-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24">
+<svg  class="h-full w-full" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24">
 	<title>Mailcoach</title>
 	<path class="fill-current" d="M4.5,15.1c1.4,0,2.6,1.2,2.6,2.6s-1.2,2.6-2.6,2.6s-2.6-1.2-2.6-2.6S3.1,15.1,4.5,15.1 M4.5,13.2
 					c-2.5,0-4.5,2-4.5,4.5s2,4.5,4.5,4.5s4.5-2,4.5-4.5S7,13.2,4.5,13.2L4.5,13.2z" />
