@@ -20,7 +20,7 @@ Artisan::command('inspire', function () {
 
 use Spatie\Mailcoach\Domain\Campaign\Models\Campaign;
 
-Artisan::command('migrate-mailcoach', function () {
+Artisan::command('migrate-mailcoach-segments-for-v4', function () {
     Campaign::each(function (Campaign $campaign) {
         if ($campaign->segment_class === 'Spatie\Mailcoach\Support\Segments\SubscribersWithTagsSegment') {
             $campaign->update([
