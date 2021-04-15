@@ -53,7 +53,7 @@ Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/add-bought-t
     $subscriber = Subscriber::findForEmail($request->get('email'), $emailList);
 
     if (!$subscriber) {
-        return response()->json([], 404);
+        return response()->json(['email not found'], 404);
     }
 
     $subscriber->addTag('purchased');
