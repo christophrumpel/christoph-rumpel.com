@@ -26,7 +26,7 @@ Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/subscribe', 
     $attributes = $request->only(['email', 'tags']);
     $emailList = EmailList::findByUuid(getenv('MAILCOACH_MASTERING_PHPSTORM_LIST_UUID'));
 
-    if($emailList->isSubscribed($attributes['email'])) {
+    if ($emailList->isSubscribed($attributes['email'])) {
         return response()->json(['already_subscribed' => true]);
     }
 
@@ -45,6 +45,20 @@ Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/confirmed', 
     $confirmed = $subscriber && $subscriber->status === 'subscribed';
 
     return response()->json(['confirmed' => $confirmed]);
+});
+
+Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/add-bought-tag', function (Request $request) {
+
+    $emailList = EmailList::findByUuid(getenv('MAILCOACH_MASTERING_PHPSTORM_LIST_UUID'));
+    $subscriber = Subscriber::findForEmail($request->get('email'), $emailList);
+
+    if (!$subscriber) {
+        return response()->json([], 404);
+    }
+
+    $subscriber->addTag('purchased');
+
+    return response()->json(['']);
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
