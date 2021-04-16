@@ -23,7 +23,7 @@ Route::middleware('auth:api')->get('/newsletter/mastering-phpstorm/count', funct
 
 Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/subscribe', function (Request $request) {
 
-    $attributes = $request->only(['email', 'tags']);
+    $attributes = $request->only(['email']);
     $emailList = EmailList::findByUuid(getenv('MAILCOACH_MASTERING_PHPSTORM_LIST_UUID'));
 
     if ($emailList->isSubscribed($attributes['email'])) {
@@ -31,7 +31,6 @@ Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/subscribe', 
     }
 
     Subscriber::createWithEmail($attributes['email'])
-        ->syncTags($attributes['tags'])
         ->subscribeTo($emailList);
 
     return response()->json(['already_subscribed' => false]);
