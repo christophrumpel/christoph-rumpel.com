@@ -135,6 +135,14 @@
                 <li>Quicktime to record little code videos for Twitter</li>
             </ul>
 
+            <h3>Streaming</h3>
+            <img class="blogimage" alt="Photo showing Christoph's streaming setup with microphone, lights and monitors." src="/images/blog/2021/streaming_setup.png" />
+
+            <ul>
+                <li><a href="https://streamyard.com/">StreamYard</a> for broadcasting</li>
+                <li>I wrote a blog post about my <a href="https://christoph-rumpel.com/2021/4/what-I-learned-from-my-first-12-live-streams">whole streaming setup and experience.</a></li>
+            </ul>
+
             <h3>Email</h3>
             <ul>
                 <li>Spark on my laptop</li>
