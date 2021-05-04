@@ -32,11 +32,7 @@ return $config
         ],
         'phpdoc_single_line_var_spacing' => true,
         'phpdoc_var_without_name' => true,
-        'class_attributes_separation' => [
-            'elements' => [
-                'method', 'property',
-            ],
-        ],
+        'class_attributes_separation' => ['const' => 'one', 'method' => 'one', 'property' => 'one'],
         'method_argument_space' => [
             'on_multiline' => 'ensure_fully_multiline',
             'keep_multiple_spaces_after_comma' => true,
