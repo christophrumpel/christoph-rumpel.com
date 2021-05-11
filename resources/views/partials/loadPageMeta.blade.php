@@ -6,4 +6,6 @@
     @include('partials.metaSpeaking')
 @elseif($page === 'uses')
     @include('partials.metaUses')
+@elseif($page === 'products')
+    @include('partials.metaProducts')
 @endif
