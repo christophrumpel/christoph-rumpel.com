@@ -31,6 +31,8 @@ Route::feeds();
 
 Route::get('/', PageHomeController::class)
     ->name('page.home');
+Route::get('products', PageProductsController::class)
+    ->name('page.products');
 Route::get('speaking', PageSpeakingController::class)
     ->name('page.speaking');
 Route::get('/category/{category}', PageCategoryController::class)
@@ -48,8 +50,6 @@ Route::get('/imprint', PageImprint::class)
     ->name('page.imprint');
 Route::get('uses', PageUsesController::class)
     ->name('page.uses');
-Route::get('products', PageProductsController::class)
-    ->name('page.products');
 Route::get('build-chatbots-with-php', PageBcwpController::class)
     ->name('page.bcwp');
 
