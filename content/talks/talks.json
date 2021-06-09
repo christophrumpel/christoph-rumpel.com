@@ -1,6 +1,13 @@
 {
     "upcoming": [
-
+        {
+            "date": "09.06.2021",
+            "event": "phpday 21",
+            "location": "Worldwide 🌏",
+            "title": "Debugging with PhpStorm & XDebug",
+            "url": "https://2021.phpday.it/",
+            "slides": "https://speakerdeck.com/christophrumpel/debugging-with-phpstorm-and-xdebug"
+        }
     ],
     "past": [
         {
