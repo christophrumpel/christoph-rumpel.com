@@ -1,5 +1,7 @@
 {
     "upcoming": [
+    ],
+    "past": [
         {
             "date": "09.06.2021",
             "event": "phpday 21",
@@ -7,9 +9,7 @@
             "title": "Debugging with PhpStorm & XDebug",
             "url": "https://2021.phpday.it/",
             "slides": "https://speakerdeck.com/christophrumpel/debugging-with-phpstorm-and-xdebug"
-        }
-    ],
-    "past": [
+        },
         {
             "date": "17.03.2021",
             "event": "Laracon Online",
