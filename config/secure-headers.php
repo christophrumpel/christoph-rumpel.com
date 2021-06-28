@@ -53,12 +53,17 @@ return [
     'x-permitted-cross-domain-policies' => 'none',
 
     /*
-     * X-Power-By
+     * X-Powered-By
      *
      * Note: it will not add to response header if the value is empty string.
+     *
+     * Also, verify that expose_php is turned Off in php.ini.
+     * Otherwise the header will still be included in the response.
+     *
+     * Reference: https://github.com/bepsvpt/secure-headers/issues/58#issuecomment-782332442
      */
 
-    'x-power-by' => '',
+    'x-powered-by' => '',
 
     /*
      * X-XSS-Protection
@@ -79,7 +84,7 @@ return [
      *                  'same-origin', 'strict-origin', 'strict-origin-when-cross-origin', 'unsafe-url'
      */
 
-    'referrer-policy' => 'same-origin',
+    'referrer-policy' => 'no-referrer',
 
     /*
      * Clear-Site-Data
@@ -110,7 +115,7 @@ return [
      */
 
     'hsts' => [
-        'enable' => true,
+        'enable' => false,
 
         'max-age' => 31536000,
 
@@ -137,191 +142,298 @@ return [
     ],
 
     /*
-     * Feature Policy
+     * Permissions Policy
      *
-     * Reference: https://w3c.github.io/webappsec-feature-policy/
+     * Reference: https://w3c.github.io/webappsec-permissions-policy/
      */
 
-    'feature-policy' => [
+    'permissions-policy' => [
         'enable' => true,
-
-        /*
-         * Feature-Policy was renamed to Permissions-Policy.
-         *
-         * In order to prevent breaking change, before 7.0 version,
-         * it will use this config to choose use `Permissions-Policy`
-         * header name or `Feature-Policy` header name.
-         *
-         * Set `use-permissions-policy-header` to `true` to use `Permissions-Policy` header name.
-         *
-         * Reference: https://github.com/w3c/webappsec-permissions-policy/issues/359
-         */
-        'use-permissions-policy-header' => true,
-
-        /*
-         * Each directive details can be found on:
-         *
-         * https://github.com/w3c/webappsec-feature-policy/blob/master/features.md
-         *
-         * 'none', '*' and 'self allow' are mutually exclusive,
-         * the priority is 'none' > '*' > 'self allow'.
-         */
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/accelerometer
         'accelerometer' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/ambient-light-sensor
         'ambient-light-sensor' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay
         'autoplay' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/battery
         'battery' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/camera
         'camera' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
+        ],
+
+        // https://www.chromestatus.com/feature/5690888397258752
+        'cross-origin-isolated' => [
+            'none' => false,
+
+            '*' => false,
+
+            'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/display-capture
         'display-capture' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain
         'document-domain' => [
-            '*' => true,
-        ],
+            'none' => false,
 
-        // document-write (draft: https://github.com/w3c/webappsec-feature-policy/blob/master/policies/document-write.md)
+            '*' => true,
+
+            'self' => false,
+
+            'origins' => [],
+        ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/encrypted-media
         'encrypted-media' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
-        // https://wicg.github.io/page-lifecycle/#feature-policies
+        // https://wicg.github.io/page-lifecycle/#execution-while-not-rendered
         'execution-while-not-rendered' => [
+            'none' => false,
+
             '*' => true,
+
+            'self' => false,
+
+            'origins' => [],
         ],
 
-        // https://wicg.github.io/page-lifecycle/#feature-policies
+        // https://wicg.github.io/page-lifecycle/#execution-while-out-of-viewport
         'execution-while-out-of-viewport' => [
+            'none' => false,
+
             '*' => true,
+
+            'self' => false,
+
+            'origins' => [],
         ],
-
-        // focus-without-user-activation (draft: https://github.com/w3c/webappsec-feature-policy/blob/master/policies/focus-without-user-activation.md)
-
-        // font-display-late-swap (draft: https://github.com/w3c/webappsec-feature-policy/blob/master/policies/font-display-late-swap.md)
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/fullscreen
         'fullscreen' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/geolocation
         'geolocation' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/gyroscope
         'gyroscope' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
-
-        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/layout-animations
-        'layout-animations' => [
-            'self' => true,
-        ],
-
-        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/legacy-image-formats
-        'legacy-image-formats' => [
-            'self' => true,
-        ],
-
-        // loading-frame-default-eager (draft: https://github.com/w3c/webappsec-feature-policy/blob/master/policies/loading-frame-default-eager.md)
-
-        // loading-image-default-eager (draft: https://github.com/w3c/webappsec-feature-policy/blob/master/policies/loading-image-default-eager.md)
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/magnetometer
         'magnetometer' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/microphone
         'microphone' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/midi
         'midi' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
-        // https://drafts.csswg.org/css-nav-1/#policy-feature
+        // https://drafts.csswg.org/css-nav-1/
         'navigation-override' => [
-            'self' => true,
-        ],
+            'none' => false,
 
-        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/oversized-images
-        'oversized-images' => [
-            '*' => true,
+            '*' => false,
+
+            'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/payment
         'payment' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture
         'picture-in-picture' => [
+            'none' => false,
+
             '*' => true,
+
+            'self' => false,
+
+            'origins' => [],
         ],
 
-        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials
-        'publickey-credentials' => [
+        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
+        'publickey-credentials-get' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
+        ],
+
+        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/screen-wake-lock
+        'screen-wake-lock' => [
+            'none' => false,
+
+            '*' => false,
+
+            'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/sync-xhr
         'sync-xhr' => [
-            '*' => true,
-        ],
+            'none' => false,
 
-        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/unoptimized-images
-        'unoptimized-images' => [
-            'self' => true,
-        ],
-
-        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/unsized-media
-        'unsized-media' => [
             '*' => true,
+
+            'self' => false,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/usb
         'usb' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
-        // vertical-scroll (draft: https://github.com/w3c/webappsec-feature-policy/blob/master/policies/vertical_scroll.md)
+        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share
+        'web-share' => [
+            'none' => false,
 
-        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/wake-lock
-        'wake-lock' => [
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
         'xr-spatial-tracking' => [
+            'none' => false,
+
+            '*' => false,
+
             'self' => true,
+
+            'origins' => [],
         ],
     ],
 
@@ -341,7 +453,8 @@ return [
         'report-to' => '',
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri
-        'report-uri' => [// uri
+        'report-uri' => [
+            // uri
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
@@ -351,47 +464,58 @@ return [
         'upgrade-insecure-requests' => false,
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri
-        'base-uri' => [//
+        'base-uri' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/child-src
-        'child-src' => [//
+        'child-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src
-        'connect-src' => [//
+        'connect-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src
-        'default-src' => [//
+        'default-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src
-        'font-src' => [//
+        'font-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action
-        'form-action' => [//
+        'form-action' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
-        'frame-ancestors' => [//
+        'frame-ancestors' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src
-        'frame-src' => [//
+        'frame-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src
-        'img-src' => [//
+        'img-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/manifest-src
-        'manifest-src' => [//
+        'manifest-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/media-src
-        'media-src' => [//
+        'media-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to
@@ -400,15 +524,18 @@ return [
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/object-src
-        'object-src' => [//
+        'object-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types
-        'plugin-types' => [// 'application/pdf',
+        'plugin-types' => [
+            // 'application/pdf',
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/prefetch-src
-        'prefetch-src' => [//
+        'prefetch-src' => [
+            //
         ],
 
         // https://w3c.github.io/webappsec-trusted-types/dist/spec/#integration-with-content-security-policy
@@ -455,7 +582,8 @@ return [
 
             'report-sample' => false,
 
-            'allow' => [// 'url',
+            'allow' => [
+                // 'url',
             ],
 
             'schemes' => [
@@ -478,35 +606,43 @@ return [
             'strict-dynamic' => false,
 
             'hashes' => [
-                'sha256' => [// 'sha256-hash-value-with-base64-encode',
+                'sha256' => [
+                    // 'sha256-hash-value-with-base64-encode',
                 ],
 
-                'sha384' => [// 'sha384-hash-value-with-base64-encode',
+                'sha384' => [
+                    // 'sha384-hash-value-with-base64-encode',
                 ],
 
-                'sha512' => [// 'sha512-hash-value-with-base64-encode',
+                'sha512' => [
+                    // 'sha512-hash-value-with-base64-encode',
                 ],
             ],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr
-        'script-src-attr' => [//
+        'script-src-attr' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem
-        'script-src-elem' => [//
+        'script-src-elem' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src
-        'style-src' => [//
+        'style-src' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr
-        'style-src-attr' => [//
+        'style-src-attr' => [
+            //
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem
-        'style-src-elem' => [//
+        'style-src-elem' => [
+            //
         ],
 
         // https://w3c.github.io/webappsec-trusted-types/dist/spec/#trusted-types-csp-directive
@@ -517,12 +653,14 @@ return [
 
             'default' => false,
 
-            'policies' => [//
+            'policies' => [
+                //
             ],
         ],
 
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src
-        'worker-src' => [//
+        'worker-src' => [
+            //
         ],
     ],
 ];

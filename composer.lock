@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4797911888815d26f2d213b21d382e14",
+    "content-hash": "72abca5c8e04b7b9c2cf3bfeffc87ef2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,29 +64,31 @@
         },
         {
             "name": "bepsvpt/secure-headers",
-            "version": "6.3.0",
+            "version": "7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bepsvpt/secure-headers.git",
-                "reference": "be5948516c10dab75a863a98dabcc3cb151711aa"
+                "reference": "c80c5ff1357ab61495f168d560f12cc370d8b25b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bepsvpt/secure-headers/zipball/be5948516c10dab75a863a98dabcc3cb151711aa",
-                "reference": "be5948516c10dab75a863a98dabcc3cb151711aa",
+                "url": "https://api.github.com/repos/bepsvpt/secure-headers/zipball/c80c5ff1357ab61495f168d560f12cc370d8b25b",
+                "reference": "c80c5ff1357ab61495f168d560f12cc370d8b25b",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~5.1|~6.0|~7.0|~8.0",
-                "php": "^7.0|^8.0"
+                "illuminate/support": "~5.1 || ~6.0 || ~7.0 || ~8.0",
+                "php": "^7.0 || ^8.0"
             },
             "require-dev": {
                 "ext-json": "*",
                 "ext-xdebug": "*",
-                "friendsofphp/php-cs-fixer": "~2.2",
-                "orchestra/testbench": "~3.1|~4.0|~5.0|~6.0",
-                "phpstan/phpstan": "~0.7",
-                "phpunit/phpunit": "~5.7|~6.5|~7.5|~8.4|~9.0"
+                "orchestra/testbench": "~3.1 || ~4.0 || ~5.0 || ~6.0"
+            },
+            "suggest": {
+                "friendsofphp/php-cs-fixer": "Coding style fixer",
+                "phpstan/phpstan": "Static analysis tool",
+                "phpunit/phpunit": "PHP unit testing framework"
             },
             "type": "library",
             "extra": {
@@ -99,7 +101,10 @@
             "autoload": {
                 "psr-4": {
                     "Bepsvpt\\SecureHeaders\\": "src/"
-                }
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -127,7 +132,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bepsvpt/secure-headers/issues",
-                "source": "https://github.com/bepsvpt/secure-headers/tree/6.3.0"
+                "source": "https://github.com/bepsvpt/secure-headers/tree/7.1.0"
             },
             "funding": [
                 {
@@ -135,7 +140,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-09-07T10:43:49+00:00"
+            "time": "2020-12-12T07:01:56+00:00"
         },
         {
             "name": "blade-ui-kit/blade-icons",
