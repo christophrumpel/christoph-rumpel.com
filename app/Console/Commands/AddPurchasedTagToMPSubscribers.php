@@ -15,12 +15,12 @@ class AddPurchasedTagToMPSubscribers extends Command
     public function handle(): void
     {
         collect()->each(function ($email) {
-                $emailList = EmailList::findByUuid('aa3e9c66-331a-4fe5-9485-f9d93f873c8a');
-                $subscriber = Subscriber::findForEmail($email, $emailList);
+            $emailList = EmailList::findByUuid('aa3e9c66-331a-4fe5-9485-f9d93f873c8a');
+            $subscriber = Subscriber::findForEmail($email, $emailList);
 
-                if ($subscriber) {
-                    $subscriber->addTag('purchased');
-                }
-            });
+            if ($subscriber) {
+                $subscriber->addTag('purchased');
+            }
+        });
     }
 }
