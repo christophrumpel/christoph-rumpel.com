@@ -53,7 +53,7 @@ class PostFactory
         return $destinationPath;
     }
 
-    private function replaceFileDummyContent(string $path, string $title, bool $listed): void
+    private function replaceFileDummyContent(string $path, string $title, bool $hidden): void
     {
         $fileContent = Storage::disk('posts')
             ->get($path);
@@ -61,7 +61,7 @@ class PostFactory
             ->replace('{{blog_title}}', $title)
             ->replace('{{categories}}', implode(', ', $this->categories))
             ->replace('{{content}}', $this->content)
-            ->replace('{{hidden}}', $listed ? 'true' : 'false');
+            ->replace('{{hidden}}', $hidden ? 'true' : 'false');
         Storage::disk('posts')
             ->put($path, $replacedFileContent);
     }
