@@ -36,7 +36,7 @@
 
 <body class="bg-bgBlue">
 
-{{--@include('partials.promoNotification')--}}
+@include('partials.promoNotification')
 
 
 <div class="container mx-auto  max-w-5xl p-8 md:p-12">
