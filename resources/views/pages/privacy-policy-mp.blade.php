@@ -45,7 +45,7 @@
             <p>If you are only subscribed to the newsletter, the information is stored as long as you are subscribed to
                 one of the newsletters. When you end the subscription, it will automatically be deleted.</p>
             <p>If you need to delete your Mastering PhpStorm account, just contact me at christoph@christoph-rumpel.com. Then we will
-                delete are of your data.</p>
+                delete all of your data.</p>
             <h2>Security</h2>
 
             <p>We are committed to ensuring that your information is secure. In order to prevent unauthorised access or
