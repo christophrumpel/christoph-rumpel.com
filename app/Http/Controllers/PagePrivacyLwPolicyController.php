@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PagePrivacyLwPolicyController  extends Controller
+class PagePrivacyLwPolicyController extends Controller
 {
     public function __invoke(Request $request)
     {
