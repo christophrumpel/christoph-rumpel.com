@@ -3,6 +3,14 @@
     ],
     "past": [
         {
+            "date": "01.09.2021",
+            "event": "Laracon Online",
+            "location": "Worldwide 🌏",
+            "title": "Why Refactoring Is The Best Tool To Write Better Code",
+            "url": "https://laracon.net/",
+            "slides": "https://speakerdeck.com/christophrumpel/why-refactoring-is-the-best-tool-to-write-better-code"
+        },
+        {
             "date": "09.06.2021",
             "event": "phpday 21",
             "location": "Worldwide 🌏",
@@ -16,7 +24,8 @@
             "location": "Worldwide 🌏",
             "title": "The final Laravel Service Container talk",
             "url": "https://laracon.net/",
-            "slides": "https://speakerdeck.com/christophrumpel/the-final-laravel-service-container-talk-laracon-online"
+            "slides": "https://speakerdeck.com/christophrumpel/the-final-laravel-service-container-talk-laracon-online",
+            "video": "https://vimeo.com/showcase/7060635/video/525707748"
         },
         {
             "date": "18.01.2021",

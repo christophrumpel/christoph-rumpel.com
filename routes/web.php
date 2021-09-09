@@ -7,6 +7,7 @@ use App\Http\Controllers\PageHomeController;
 use App\Http\Controllers\PageImprint;
 use App\Http\Controllers\PagePostController;
 use App\Http\Controllers\PagePrivacyLcaPolicyController;
+use App\Http\Controllers\PagePrivacyLwPolicyController;
 use App\Http\Controllers\PagePrivacyMpPolicyController;
 use App\Http\Controllers\PagePrivacyPolicyController;
 use App\Http\Controllers\PageProductsController;
@@ -46,6 +47,8 @@ Route::get('/privacy-policy-lca', PagePrivacyLcaPolicyController::class)
     ->name('page.privacy-policy-lca');
 Route::get('/privacy-policy-mp', PagePrivacyMpPolicyController::class)
     ->name('page.privacy-policy-mp');
+Route::get('/privacy-policy-lw', PagePrivacyLwPolicyController::class)
+    ->name('page.privacy-policy-lw');
 Route::get('/imprint', PageImprint::class)
     ->name('page.imprint');
 Route::get('uses', PageUsesController::class)
