@@ -1,6 +1,6 @@
-<div x-data="{ show: true}">
+<div x-data="{ showPromoBanner: $persist(true)}">
     <div class="relative bg-highlightBlue"
-         x-show="show"
+         x-show="showPromoBanner"
          x-transition:enter="transition ease-out duration-300"
          x-transition:enter-start="opacity-0 transform"
          x-transition:enter-end="opacity-100 transform"
@@ -24,7 +24,7 @@
                 </p>
             </div>
             <div class="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
-                <button @click="show = false" type="button"
+                <button @click="showPromoBanner = false" type="button"
                         class="flex p-2 text-textBlue hover:text-white rounded-md hover:bg-textBlue focus:outline-none focus:bg-textBlue transition ease-in-out duration-150"
                         aria-label="Dismiss">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

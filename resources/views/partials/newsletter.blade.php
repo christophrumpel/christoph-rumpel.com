@@ -3,7 +3,7 @@
         <div class="px-6 py-6 bg-textBlue rounded-lg md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
             <div class="xl:w-0 xl:flex-1">
                 <h2 class="text-2xl leading-8 font-display tracking-tight text-white sm:text-3xl sm:leading-9">
-                    Did you enjoy this post?
+                    Do you enjoy my posts?
                 </h2>
                 <p class="mt-3 max-w-3xl text-lg leading-6 text-indigo-200" id="newsletter-headline">
                     Sign up for my newsletter to receive updates on my latest content.
@@ -19,7 +19,7 @@
                            placeholder="Enter your email"/>
                     <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                         <button type="submit"
-                                class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-400 focus:outline-none focus:bg-indigo-400 transition duration-150 ease-in-out">
+                                class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-highlightPurple hover:bg-high focus:outline-none focus:bg-indigo-400 transition duration-150 ease-in-out">
                             Let's do this
                         </button>
                     </div>
