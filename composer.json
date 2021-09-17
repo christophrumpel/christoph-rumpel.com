@@ -37,6 +37,7 @@
         "spatie/laravel-responsecache": "^6.6",
         "spatie/laravel-sitemap": "^5.7",
         "spatie/laravel-welcome-notification": "^2.0",
+        "spatie/schema-org": "^3.4",
         "spatie/yaml-front-matter": "^2.0",
         "wildbit/swiftmailer-postmark": "^3.3"
     },

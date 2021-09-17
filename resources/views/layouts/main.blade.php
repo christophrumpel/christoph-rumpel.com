@@ -10,23 +10,26 @@
     <meta name="author" content="Christoph Rumpel">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@include('partials.favicon')
+    @include('partials.favicon')
 
-<!-- Styles -->
+    <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet"/>
-@if($livewire)
-    @livewireStyles
-@endif
-@include('partials.loadPageMeta')
-@include('partials.fontStyles')
-<!-- Styles -->
+    @if($livewire)
+        @livewireStyles
+    @endif
+    @include('partials.loadPageMeta')
+    @include('partials.fontStyles')
+    <!-- Styles -->
 
     <!-- Head Script -->
     @production
-    <!-- Fathom - beautiful, simple website analytics -->
+        <!-- Fathom - beautiful, simple website analytics -->
         <script src="https://cdn.usefathom.com/script.js" site="DEPGUYJS" defer></script>
-        <!-- / Fathom -->
+        <!-- Fathom -->
+
+        @include('partials.schema')
     @endproduction
+
 
     <script defer src="{{ mix('js/app.js') }}"></script>
 
