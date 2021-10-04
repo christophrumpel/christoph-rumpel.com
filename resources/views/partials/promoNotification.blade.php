@@ -18,7 +18,7 @@
         </span>
                     <span class="block sm:ml-2 sm:inline-block">
           <a href="https://masteringphpstorm.com" class="text-textBlue font-bold underline">
-            Check my Mastering PhpStorm course &rarr;
+            &rarr; Check my Mastering PhpStorm video course
           </a>
         </span>
                 </p>
