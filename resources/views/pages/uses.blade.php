@@ -40,7 +40,7 @@
             <h3>Display</h3>
             <ul>
                 <li>LG UltraFine 5K Display</li>
-                <li>It gets charged through the USB-C connection</li>
+                <li>It gets powered through the USB-C connection</li>
                 <li>I was looking for a cheaper option, but none of them had a beautiful clean design</li>
                 <li>I didn't regret it</li>
             </ul>
@@ -137,7 +137,7 @@
 
             <h3>Cloud Storage</h3>
             <ul>
-                <li>I'm using <a href="https://www.dropbox.com/">Dropbox</a> to backup all my file</li>
+                <li>I'm using <a href="https://www.dropbox.com/">Dropbox</a> to backup all my files</li>
                 <li><a href="https://www.google.at/drive/about.html">Google Drive</a> is where I store all my documents
                 </li>
             </ul>
