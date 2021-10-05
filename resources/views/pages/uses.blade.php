@@ -3,13 +3,21 @@
         <article class="post-markdown-styles">
 
             <h1>The Tools That Help Me Create</h1>
+            <img src="{{ asset('images/pages/uses_desk_side.jpg') }}" alt="Christoph's working desk">
 
-            <img src="{{ asset('images/pages/uses_table.jpg') }}" alt="Christoph's working desk">
 
-            <p>This is my current development setup which includes all the hard- and software I need for my daily work
-                as a web developer and content creator.</p>
+            <p>This is my current development setup which includes all the hard- and software I need for my daily work as a web developer and content creator.</p>
 
-            <h2>Hardware</h2>
+            <p>Are you looking for something specific? Jump to one of the main topics:</p>
+            <ul>
+                <li><a href="#general">General</a></li>
+                <li><a href="#coding">Coding</a></li>
+                <li><a href="#recording">Recording & Streaming</a></li>
+            </ul>
+
+            <div class="blognote"><strong>Note:</strong> Some of the links on this page are affiliate links. This means I will get a commission if you sign up for a product using them. I share my setup because I believe in the tools I use. I would never mention a product to make money.</div>
+
+            <h2 id="general">General</h2>
 
             <h3>Laptop</h3>
             <ul>
@@ -22,7 +30,6 @@
             <ul>
                 <li>Apple Bluetooth Keyboard</li>
                 <li>Apple Magic Mouse 2</li>
-                <li>I'm at a point where I don't want to see any cables on my desk :-)</li>
             </ul>
 
             <h3>Laptop Stand</h3>
@@ -38,37 +45,13 @@
                 <li>I didn't regret it</li>
             </ul>
 
-            <h3>Microphone</h3>
-            <img src="{{ asset('images/pages/uses_mic.jpg') }}" alt="Hyper microphone">
-            <ul>
-                <li>HyperX QuadCast - USB Condenser Gaming Microphone</li>
-                <li>Blue Compass microphone arm</li>
-            </ul>
-            <p>I used an AKG Perception 220 professional studio microphone before, which I had at home since I was
-                recording music. This was pretty good, and I used it with an additional audio interface. Unfortunately,
-                lately, I had trouble with the audio quality and noise. I couldn't tell when and where it came from, so
-                I decided to give a USB microphone a try. It came with a beautiful desk stand which I loved. The HyperX
-                Quadcast is an excellent microphone, but you cannot compare it to my old one. I had to put up a lot of
-                acoustic foam in my office to make the sound ok. I also had to use the microphone arm because with the
-                HyperX desk stand, you are too far away from the microphone. With the right setup, I enjoy this new
-                microphone, and it was quite cheap compared to professional ones.</p>
-            <h3>Light</h3>
-            <ul>
-                <li>Elgato Key Light Air</li>
-            </ul>
-            <p>I do quite some video calls and now also more online conferences and so I decided to level up my video
-                quality. Light is an essential factor of that, and so I bought the Elgato Key Light Air. I first had the
-                more significant Elgato key Light, which is also more powerful. The downside is it comes only with a
-                mounting system which didn't fit my desk. So I switched to the smaller Light version, which is also more
-                beautiful. I like it a lot.</p>
-
             <h3>Desk Frame</h3>
             <ul>
                 <li>Fully Jarvis Frame Only</li>
                 <li>DIY adjustable height</li>
                 <li>Save different height settings</li>
             </ul>
-            <p>Since I spent so much time sitting in front of a computer, a standing desk was on my list for a long
+            <p>Since I spent hours sitting in front of a computer every day, a standing desk was on my list for a long
                 time. Since I moved last year, I finally had the chance and place to get one. I did a lot of research,
                 and I'm super happy with my choice. For me, it was important that I only get the frame so that I can use
                 a custom top.</p>
@@ -83,39 +66,33 @@
 
             <h3>Chair</h3>
             <ul>
-                <li>Secretlab OMEGA</li>
+                <li><a href="https://secretlab.co/collections/omega-series#omega_2020_softweave-charcoal_blue">Secretlab OMEGA</a></li>
                 <li>Charcoal Blue SoftWeave® Fabric</li>
             </ul>
 
-            <p>During the cyber week in December 2019, there was a good deal for this chair. I wasn't sure if I should
-                try a gaming chair, but I'm pretty satisfied. Especially the pillows for your head and back are
+            <p>During the cyber week in December 2019, there was a good deal for this chair. I wasn't sure if I should try a gaming chair, but I'm pretty satisfied. Especially the pillows for your head and back are
                 comfortable and support your body.</p>
-
-            <h2>Software</h2>
 
             <h3>Operating System</h3>
             <ul>
                 <li>MacOS latest version</li>
             </ul>
 
+            <h2 id="coding">Coding</h2>
+
             <h3>IDE</h3>
 
-            <img src="/images/blog/theme_both.png" alt="Light and dark IDE theme screenshot">
+            <img src="/images/pages/uses_ide.png" alt="My current dark PhpStorm IDE theme">
 
             <ul>
-                <li>PhpStorm is my favorite IDE</li>
-                <li>In <a href="/2019/01/my-current-dark-and-light-theme">this post</a>, I share my current light and
-                    dark theme </li>
-
-                <li>I share all my favorite 🧪 PhpStorm Tips & Tricks <a href="https://masteringphpstorm.com/tips-and-tricks">here</a></li>
-                <li>I recorded <a href="https://www.youtube.com/playlist?list=PLQ176FUIyIUZjFbdm7Ux3Okalij5jMAgw">some
-                        videos</a> for JetBrains to share my PhpStorm setup
-                </li>
+                <li>PhpStorm is the IDE of my choice</li>
+                <li>I use a dark theme called <code>RIOS</code> which is part of my <a href="https://masteringphpstorm.com">Mastering PhpStorm video course</a></li>
+                <li>Over 40 of my favorite 🧪 PhpStorm Tips & Tricks <a href="https://masteringphpstorm.com/tips-and-tricks">can be found here</a></li>
             </ul>
 
             <h3>Terminal</h3>
             <ul>
-                <li>When I'm not inside PhpStorm, I use <a href="https://www.iterm2.com/">iTerm</a></li>
+                <li>When I'm not inside PhpStorm, I use <a href="https://hyper.is/">Hyper</a></li>
                 <li>All my shell settings can be found inside my <a
                         href="https://github.com/christophrumpel/dotfiles">dotfiles repo</a></li>
             </ul>
@@ -129,23 +106,9 @@
                 </li>
             </ul>
 
-            <h3>Screencasts</h3>
-            <ul>
-                <li>Screenflow to record and edit audio and video for my videos</li>
-                <li>Quicktime to record little code videos for Twitter</li>
-            </ul>
-
-            <h3>Streaming</h3>
-            <img class="blogimage" alt="Photo showing Christoph's streaming setup with microphone, lights and monitors." src="/images/blog/2021/streaming_setup.png" />
-
-            <ul>
-                <li><a href="https://streamyard.com/">StreamYard</a> for broadcasting</li>
-                <li>I wrote a blog post about my <a href="https://christoph-rumpel.com/2021/4/what-I-learned-from-my-first-12-live-streams">whole streaming setup and experience.</a></li>
-            </ul>
-
             <h3>Email</h3>
             <ul>
-                <li>Spark on my laptop</li>
+                <li><a href="https://sparkmailapp.com/de">Spark</a> on my laptop</li>
                 <li>Apple Email on my phone</li>
             </ul>
 
@@ -160,7 +123,7 @@
             <h3>Website Analytics</h3>
             <ul>
                 <li><a href="https://usefathom.com/ref/MOGXZ4">Fathom</a> - simple, fast and privacy-focused website analytics</li>
-                <li>With this link you will receive a $10 discount if you decide to use Fathom</li>
+                <li>You will get a $10 discount when using the above link</li>
             </ul>
 
             <h3>MacOS Window Manager</h3>
@@ -168,7 +131,7 @@
                 <li>I need to move and resize windows all the time</li>
                 <li><a href="https://rectangleapp.com/">Rectanlge</a> is my app of choice</li>
                 <li>
-                    It lets you use the shortcuts of "Spectacle", if you have used that before like I did.
+                    It lets you use the shortcuts of <code>Spectacle</code> if you had used that before like I did
                 </li>
             </ul>
 
@@ -186,24 +149,72 @@
             </ul>
             <h3>Lists / Todos</h3>
             <ul>
-                <li>I used Wunderlist. RIP my friend!</li>
-                <li>Apple Reminders currently tries to fill Wunderlist's gap.</li>
-                <li><a href="https://trello.com/">Trello</a> for personal projects</li>
+                <li>I have a pinboard where I define tasks for today and this week</li>
+                <li>Apple Calendar & Reminders help me to not forget about important events</li>
             </ul>
 
-            <p>If you are interested, <a href="/2018/10/my-current-setup-in-2018">this was my setup in 2018.</a> Quite a
-                lot changed since then.</p>
+            <h3>Mac Bar Menu Management</h3>
 
-            <p>If you feel like I'm missing any important tools I didn't mention, please <a
-                    href="https://twitter.com/christophrumpel">let me know</a>.</p>
-
-            <h3>Mac Menu Bar Icons</h3>
             <ul>
-                <li>With <a href="https://www.macbartender.com/">Bartender</a> I customize my menu icons.</li>
+                <li>With <a href="https://www.macbartender.com/">Bartender</a> I customize the icons in the top menu</li>
             </ul>
-            <p>A lot of those icons you do not need to that regularly. So with Bartender, you can hide them and
-                everything
-                looks a little more cleaned up.</p>
+            <p>A lot of those icons you don't need regularly. So with Bartender, you can hide them and
+                everything looks a little more cleaned up.</p>
+            <img src="{{ asset('images/pages/uses_bartender.png') }}" alt="Bartender app inactive">
+            <img src="{{ asset('images/pages/uses_bartender_active.png') }}" alt="Bartender app active">
+
+            <h2 id="recording">Recording & Streaming</h2>
+            <h3>Microphone</h3>
+            <img src="{{ asset('images/pages/uses_mic_21.jpg') }}" alt="The Shure MV7 microphone">
+            <ul>
+                <li>Shure MV7 USB Podcast Microphone</li>
+                <li>I use the pop filter of the Shure SM7B which is better</li>
+                <li>Blue Compass microphone arm</li>
+            </ul>
+            <p class="post-markdown-styles">Before the Shure microphone, I was using the HyperX QuadCast. It was a good microphone, but I wanted to level up my audio game without investing ~$1.000 in the Shure SM7B. (which is currently the standard for a high-quality microphone) <br /><br />
+                The <code>MV7 ist like the little brother of the SM7B</code> and it supports both USB and XLR. I have it connected to the Elgato Wave XLR audio interface.
+            </p>
+
+            <h3>Lights</h3>
+            <img src="{{ asset('images/pages/uses_stream_image.jpg') }}" alt="Screenshot of Christoph's stream with his face">
+            <ul>
+                <li>2x Elgato Key Light Air</li>
+                <li>They are mounted to the wall, so I don't have them on my desk.</li>
+                <li>Philips Hue lights in the background</li>
+            </ul>
+            <p>I regularly have video calls, and I decided to level up my video quality. Light is an essential factor of that, and so I bought the Elgato Key Light Air. I first had the more significant Elgato key Light, which is also more powerful. The downside is it comes only with a
+                mounting system which didn't fit my desk. So I switched to the smaller Light version, which is also more beautiful. I like it a lot.</p>
+
+            <h3>Streaming Software</h3>
+            <img class="blogimage" alt="Ecamm Live in action screenshot" src="/images/pages/uses_stream_app.png" />
+
+            <ul>
+                <li><a href="https://www.ecamm.com/mac/ecammlive/?fp_ref=christoph93">Ecamm Live</a></li>
+            </ul>
+
+            <p>Before Ecamm Live, I was using StreamYard. I still recommend <a href="https://streamyard.com">StreamYard</a> to everyone who wants a quick start into the streaming world. It just works through your browser and is very simple to set up. I  also wrote a blog post about my <a href="https://christoph-rumpel.com/2021/4/what-I-learned-from-my-first-12-live-streams">whole streaming setup and experience.</a>
+            </p>
+
+            <h3>Editing Software</h3>
+            <ul>
+                <li>Podcast - <a href="https://www.telestream.net/screenflow/overview.htm">Screenflow</a></li>
+                <li>Video Course - <a href="https://www.telestream.net/screenflow/overview.htm">Screenflow</a></li>
+                <li>Private video editing - <a href="https://www.blackmagicdesign.com/at/products/davinciresolve/">DaVinci
+                        Resolve (free)</a></li>
+            </ul>
+
+
+            <h2>Everything covered?</h2>
+
+
+            <p>That's my current setup. It has come a long way and is still changing every year. If you feel like I'm missing any important tools I didn't mention, please <a
+                    href="https://twitter.com/christophrumpel">let me know</a>. <br /><br />Find some images of my older setups below or check <a href="/2018/10/my-current-setup-in-2018">my 2018's setup.</a></p>
+
+            <img src="{{ asset('images/pages/uses_table.jpg') }}" alt="Christoph's working desk">
+            <img src="{{ asset('images/pages/uses_desk_front_old.jpg') }}" alt="Hyper microphone">
+            <img class="blogimage" alt="Photo showing Christoph's streaming setup with microphone, lights and monitors." src="{{ asset('images/blog/2021/streaming_setup.png') }}" />
+            <img class="blogimage" alt="Christoph's setup in 2018 showing old MBP" src="{{ asset('images/blog/setup_office.jpg') }}" />
+
 
 
         </article>
