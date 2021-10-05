@@ -175,6 +175,21 @@
                 The <code>MV7 ist like the little brother of the SM7B</code> and it supports both USB and XLR. I have it connected to the Elgato Wave XLR audio interface.
             </p>
 
+            <h3>Camera</h3>
+            <img src="{{ asset('images/pages/uses_camera.jpg') }}" alt="Sony A6400 camera mounted behind the desk">
+
+            <ul>
+                <li>Sony Alpha 6400</li>
+                <li>Lens - Sigma 16mm 1.4</li>
+                <li>Mounted over a Rode Psa1 microphone boom</li>
+                <li>The camera is used as a webcam through <a href="https://www.elgato.com/de/cam-link-4k">the Elgaot Cam Link 4k</a></li>
+                <li>As a backup, I also have a <a
+                        href="https://www.amazon.de/gp/product/B088NWWSKN/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1">HDMI Video Capture Card</a></li>
+            </ul>
+
+            <div class="blognote"><strong>Note:</strong> I'm facing lots of issues with the Elgato Cam Link 4K where it freezes and can't be used anymore. That's why I need the backup capture card. This one is not capable of 4K though.</div>
+
+
             <h3>Lights</h3>
             <img src="{{ asset('images/pages/uses_stream_image.jpg') }}" alt="Screenshot of Christoph's stream with his face">
             <ul>
