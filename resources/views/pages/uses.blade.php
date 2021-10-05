@@ -205,6 +205,8 @@
 
             <ul>
                 <li><a href="https://www.ecamm.com/mac/ecammlive/?fp_ref=christoph93">Ecamm Live</a></li>
+                <li>In-stream-animations made with <a
+                        href="https://www.blackmagicdesign.com/at/products/davinciresolve/">DaVinci Resolve Fusion</a></li>
             </ul>
 
             <p>Before Ecamm Live, I was using StreamYard. I still recommend <a href="https://streamyard.com">StreamYard</a> to everyone who wants a quick start into the streaming world. It just works through your browser and is very simple to set up. I  also wrote a blog post about my <a href="https://christoph-rumpel.com/2021/4/what-I-learned-from-my-first-12-live-streams">whole streaming setup and experience.</a>
@@ -218,9 +220,7 @@
                         Resolve (free)</a></li>
             </ul>
 
-
             <h2>Everything covered?</h2>
-
 
             <p>That's my current setup. It has come a long way and is still changing every year. If you feel like I'm missing any important tools I didn't mention, please <a
                     href="https://twitter.com/christophrumpel">let me know</a>. <br /><br />Find some images of my older setups below or check <a href="/2018/10/my-current-setup-in-2018">my 2018's setup.</a></p>
