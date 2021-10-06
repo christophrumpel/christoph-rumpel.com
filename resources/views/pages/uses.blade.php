@@ -129,7 +129,7 @@
             <h3>MacOS Window Manager</h3>
             <ul>
                 <li>I need to move and resize windows all the time</li>
-                <li><a href="https://rectangleapp.com/">Rectanlge</a> is my app of choice</li>
+                <li><a href="https://rectangleapp.com/">Rectangle</a> is my app of choice</li>
                 <li>
                     It lets you use the shortcuts of <code>Spectacle</code> if you had used that before like I did
                 </li>
