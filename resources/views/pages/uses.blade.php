@@ -40,7 +40,7 @@
             <h3>Display</h3>
             <ul>
                 <li>LG UltraFine 5K Display</li>
-                <li>It gets charged through the USB-C connection</li>
+                <li>It gets powered through the USB-C connection</li>
                 <li>I was looking for a cheaper option, but none of them had a beautiful clean design</li>
                 <li>I didn't regret it</li>
             </ul>
@@ -129,7 +129,7 @@
             <h3>MacOS Window Manager</h3>
             <ul>
                 <li>I need to move and resize windows all the time</li>
-                <li><a href="https://rectangleapp.com/">Rectanlge</a> is my app of choice</li>
+                <li><a href="https://rectangleapp.com/">Rectangle</a> is my app of choice</li>
                 <li>
                     It lets you use the shortcuts of <code>Spectacle</code> if you had used that before like I did
                 </li>
@@ -137,7 +137,7 @@
 
             <h3>Cloud Storage</h3>
             <ul>
-                <li>I'm using <a href="https://www.dropbox.com/">Dropbox</a> to backup all my file</li>
+                <li>I'm using <a href="https://www.dropbox.com/">Dropbox</a> to backup all my files</li>
                 <li><a href="https://www.google.at/drive/about.html">Google Drive</a> is where I store all my documents
                 </li>
             </ul>
