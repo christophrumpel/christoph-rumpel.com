@@ -164,6 +164,7 @@
             <img src="{{ asset('images/pages/uses_bartender_active.png') }}" alt="Bartender app active">
 
             <h2 id="recording">Recording & Streaming</h2>
+            <div class="blognote"><strong>Note:</strong> In December 2021, I did a <a href="https://www.youtube.com/watch?v=5hzXlLHYsmg" target="_blank">livestream</a> where I showcased my whole streaming setup. Give it a look if you prefer a visual demo.</div>
             <h3>Microphone</h3>
             <img src="{{ asset('images/pages/uses_mic_21.jpg') }}" alt="The Shure MV7 microphone">
             <ul>
