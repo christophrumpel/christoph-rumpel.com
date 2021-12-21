@@ -8,4 +8,6 @@
     @include('partials.metaUses')
 @elseif($page === 'products')
     @include('partials.metaProducts')
+@elseif($page === 'newsletter')
+    @include('partials.metaNewsletter')
 @endif
