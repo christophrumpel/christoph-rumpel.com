@@ -1,4 +1,4 @@
-<meta property="og:url" content="{{ route('page.newsletter') }}"/>
+<meta property="og:url" content="{{ route('page.newsletter ') }}"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="Subscribe To My Newsletter"/>
 <meta property="og:description" content="Interested in my latest coding and business work?

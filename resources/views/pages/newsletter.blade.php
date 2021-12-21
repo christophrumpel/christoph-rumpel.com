@@ -1,4 +1,4 @@
-<x-main-layout title="Privacy Policy Laravel Core Adventures" page="privacy-policy-lca">
+<x-main-layout title="Welcome To My Newsletter" page="newsletter">
     <main class="">
         <article>
             @include('partials.newsletter', ['title' => 'Interested in my latest coding and business work?'])
