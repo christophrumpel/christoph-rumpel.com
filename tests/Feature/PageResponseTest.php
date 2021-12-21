@@ -56,4 +56,12 @@ class PageResponseTest extends TestCase
         $this->get('build-chatbots-with-php')
             ->assertSuccessful();
     }
+
+    /** @test * */
+    public function it_gives_successful_response_newsletter_page(): void
+    {
+        $this->withoutExceptionHandling();
+        $this->get(route('page.newsletter'))
+            ->assertSuccessful();
+    }
 }

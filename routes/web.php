@@ -5,6 +5,7 @@ use App\Http\Controllers\PageBcwpController;
 use App\Http\Controllers\PageCategoryController;
 use App\Http\Controllers\PageHomeController;
 use App\Http\Controllers\PageImprint;
+use App\Http\Controllers\PageNewsletterController;
 use App\Http\Controllers\PagePostController;
 use App\Http\Controllers\PagePrivacyLcaPolicyController;
 use App\Http\Controllers\PagePrivacyLwPolicyController;
@@ -53,6 +54,8 @@ Route::get('/imprint', PageImprint::class)
     ->name('page.imprint');
 Route::get('uses', PageUsesController::class)
     ->name('page.uses');
+Route::get('newsletter', PageNewsletterController::class)
+    ->name('page.newsletter');
 Route::get('build-chatbots-with-php', PageBcwpController::class)
     ->name('page.bcwp');
 
