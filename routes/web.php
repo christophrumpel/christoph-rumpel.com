@@ -55,7 +55,7 @@ Route::get('/imprint', PageImprint::class)
 Route::get('uses', PageUsesController::class)
     ->name('page.uses');
 Route::get('newsletter', PageNewsletterController::class)
-    ->name('page.newsletter ');
+    ->name('page.newsletter');
 Route::get('build-chatbots-with-php', PageBcwpController::class)
     ->name('page.bcwp');
 
