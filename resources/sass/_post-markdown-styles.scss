@@ -67,7 +67,7 @@
     }
 
     a {
-        @apply .relative .italic;
+        @apply .relative .italic .underline;
 
         &:after {
             @apply .bg-highlightYellow;
