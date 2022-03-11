@@ -3,6 +3,13 @@
     ],
     "past": [
         {
+            "date": "09.03.2022",
+            "event": "Laravel Dotbite Meetup",
+            "location": "Vienna 🇦🇹",
+            "title": "Why Refactoring Is The Best Tool To Write Better Code",
+            "url": "https://www.meetup.com/Laravel-Frameworkers-Vienna/events/284172716/"
+        },
+        {
             "date": "01.09.2021",
             "event": "Laracon Online",
             "location": "Worldwide 🌏",
