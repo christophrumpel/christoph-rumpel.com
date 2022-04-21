@@ -55,14 +55,14 @@
         @endif
     <td class="td-numeric hidden | xl:table-cell">
         @if($campaign->isSent())
-            {{ optional($campaign->sent_at)->toMailcoachFormat() }}
+            {{ $campaign->sent_at?->toMailcoachFormat() }}
         @elseif($campaign->isSending())
-            {{ optional($campaign->updated_at)->toMailcoachFormat() }}
+            {{ $campaign->updated_at?->toMailcoachFormat() }}
             <div class="td-secondary-line">
                 {{ __('In progress') }}
             </div>
         @elseif($campaign->isScheduled())
-            {{ optional($campaign->scheduled_at)->toMailcoachFormat() }}
+            {{ $campaign->scheduled_at?->toMailcoachFormat() }}
             <div class="td-secondary-line">
                 {{ __('Scheduled') }}
             </div>

@@ -256,7 +256,7 @@
                             >
                                 @csrf
                                 <div class="mt-6 flex items-end">
-                                    <x-mailcoach::date-time-field :name="'scheduled_at'" :value="optional($campaign->scheduled_at)->setTimezone(config('app.timezone'))" required />
+                                    <x-mailcoach::date-time-field :name="'scheduled_at'" :value="$campaign->scheduled_at?->setTimezone(config('app.timezone'))" required />
 
                                     <button type="submit" class="ml-6 button bg-orange-500 hover:bg-orange-600 focus:bg-orange-600">
                                         <x-mailcoach::icon-label icon="fa-clock" :text="__('Schedule delivery')"/>
@@ -270,7 +270,7 @@
                     @endif
 
                     <div
-                        class="mt-6 buttons | {{ (optional($campaign->scheduled_at)->setTimezone(config('app.timezone')) || $errors->first('scheduled_at')) ? 'hidden' : '' }}"
+                        class="mt-6 buttons | {{ ($campaign->scheduled_at?->setTimezone(config('app.timezone')) || $errors->first('scheduled_at')) ? 'hidden' : '' }}"
                         data-conditional-schedule="now"
                     >
                         <button class="button" data-modal-trigger="send-campaign">

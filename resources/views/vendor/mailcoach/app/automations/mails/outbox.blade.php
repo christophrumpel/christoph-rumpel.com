@@ -50,8 +50,8 @@
                         &lt;{{ __('deleted subscriber') }}&gt;
                     @endif
                 </td>
-                <td>{{ $send->failure_reason }}{{optional($send->latestFeedback())->formatted_type }}</td>
-                <td class="td-numeric hidden | xl:table-cell">{{ optional($send->sent_at)->toMailcoachFormat() ?? '-' }}</td>
+                <td>{{ $send->failure_reason }}{{$send->latestFeedback()?->formatted_type }}</td>
+                <td class="td-numeric hidden | xl:table-cell">{{ $send->sent_at?->toMailcoachFormat() ?? '-' }}</td>
             </tr>
         @endforeach
         </tbody>
