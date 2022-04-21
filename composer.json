@@ -39,9 +39,10 @@
         "spatie/laravel-welcome-notification": "^2.0",
         "spatie/schema-org": "^3.4",
         "spatie/yaml-front-matter": "^2.0",
-        "wildbit/swiftmailer-postmark": "^3.3",
         "league/flysystem-aws-s3-v3": "^3.0",
-        "league/flysystem-ftp": "^3.0"
+        "league/flysystem-ftp": "^3.0",
+        "symfony/postmark-mailer": "^6.0",
+        "symfony/http-client": "^6.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.3",
