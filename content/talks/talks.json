@@ -1,5 +1,12 @@
 {
     "upcoming": [
+        {
+            "date": "26.04.2022",
+            "event": "Laracon EU",
+            "location": "Amsterdam 🇳🇱",
+            "title": "Debugging with PhpStorm & XDebug",
+            "url": "https://laracon.eu"
+        }
     ],
     "past": [
         {
