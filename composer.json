@@ -20,7 +20,6 @@
         "doctrine/dbal": "^3.0",
         "facade/ignition": "^2.15",
         "fideloper/proxy": "^4.2",
-        "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^8.0",
         "laravel/horizon": "^5.0",
