@@ -3,8 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateWebhookCallsTable extends Migration
-{
+return new class extends Migration {
     public function up()
     {
         Schema::create('webhook_calls', function (Blueprint $table) {
@@ -22,4 +21,4 @@ class CreateWebhookCallsTable extends Migration
     {
         Schema::dropIfExists('webhook_calls');
     }
-}
+};

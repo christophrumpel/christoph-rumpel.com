@@ -237,7 +237,7 @@
                             @csrf
                             <div class="flex items-end">
                                 <x-mailcoach::date-time-field :name="'scheduled_at'"
-                                                              :value="optional($campaign->scheduled_at)->setTimezone(config('app.timezone'))"
+                                                              :value="$campaign->scheduled_at?->setTimezone(config('app.timezone'))"
                                                               required/>
 
                                 <button type="submit" class="ml-6 button">
