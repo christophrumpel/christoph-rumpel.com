@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpgradeMailCoachToVersionFour extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -312,4 +312,4 @@ class UpgradeMailCoachToVersionFour extends Migration
             $table->timestamps();
         });
     }
-}
+};

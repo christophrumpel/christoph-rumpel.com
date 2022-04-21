@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Spatie\Mailcoach\Domain\Campaign\Models\Campaign;
 
-class UpdateMailcoachTables extends Migration
+return new class extends Migration
 {
     public function up()
     {
@@ -59,4 +59,4 @@ class UpdateMailcoachTables extends Migration
             DB::statement('update webhook_calls set processed_at = NOW() where processed_at is null;');
         }
     }
-}
+};
