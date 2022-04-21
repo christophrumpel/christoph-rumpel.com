@@ -35,7 +35,6 @@ return [
     */
 
     'channels' => [
-
         'flare' => [
             'driver' => 'flare',
         ],

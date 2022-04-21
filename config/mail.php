@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'postmark'),
+    'default' => env('MAIL_MAILER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
 
         'postmark' => [
             'transport' => 'postmark',
-            'token' => env('POSTMARK_SERVER_CRBLOG_TOKEN')
+            'token' => env('POSTMARK_SERVER_CRBLOG_TOKEN'),
         ],
 
         'postmark_transx_crblog' => [
