@@ -10,9 +10,9 @@ class FileToPostMapper
 {
     public static function map(string $fileName): Post
     {
+
         $filePath = Storage::disk('posts')
-                ->getAdapter()
-                ->getPathPrefix().$fileName;
+                ->path($fileName);
 
         $postMetaData = YamlFrontMatter::parse(file_get_contents($filePath));
         [

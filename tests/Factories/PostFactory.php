@@ -44,8 +44,7 @@ class PostFactory
         $slug = Str::slug($title ?? $this->title);
         $path = "{$date->format('Y-m-d')}.{$slug}.md";
         $destinationPath = Storage::disk('posts')
-                ->getAdapter()
-                ->getPathPrefix().$path;
+                ->path($path);
 
         copy(base_path('tests/dummy.md'), $destinationPath);
         $this->replaceFileDummyContent($path, $title, $this->hidden);
