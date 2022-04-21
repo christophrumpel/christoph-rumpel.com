@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     public function up()
     {
         dd('here');
@@ -15,7 +14,7 @@ return new class extends Migration
             $table->timestamp('all_sends_dispatched_at')->nullable();
         });
 
-        Schema::table('mailcoach_email_lists', function(Blueprint $table) {
+        Schema::table('mailcoach_email_lists', function (Blueprint $table) {
             $table->string('automation_mailer')->after('campaign_mailer')->nullable();
         });
 

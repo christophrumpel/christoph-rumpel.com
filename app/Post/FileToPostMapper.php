@@ -10,7 +10,6 @@ class FileToPostMapper
 {
     public static function map(string $fileName): Post
     {
-
         $filePath = Storage::disk('posts')
                 ->path($fileName);
 
