@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -12,55 +13,31 @@ class PageSpeakingController extends Controller
     {
         $talks = json_decode(Storage::disk('talks')->get('talks.json'));
 
-        $talks = $this->preparePastTalksDetails($talks);
-        $talks = $this->prepareUpcomingTalksDetails($talks);
+        [$pastTalks, $futureTalks] = collect($talks)
+            ->transform(function ($talk) {
+                $details = Str::of($talk->location);
 
-        return view('pages.speaking', ['talks' => $talks]);
-    }
+                if (isset($talk->slides)) {
+                    $details = $details->append(', <a href="' . $talk->slides . '">Slides</a>');
+                }
 
-    private function preparePastTalksDetails($talks)
-    {
-        $pastTalks = collect($talks->past)->transform(function ($talk) {
-            $details = Str::of($talk->location);
+                if (isset($talk->video)) {
+                    $details = $details->append(", <a href='$talk->video'>Video</a>");
+                }
 
-            if (isset($talk->slides)) {
-                $details = $details->append(', <a href="'.$talk->slides.'">Slides</a>');
-            }
+                $details = $details->prepend('(')
+                    ->append(')');
 
-            if (isset($talk->video)) {
-                $details = $details->append(", <a href='$talk->video'>Video</a>");
-            }
-
-            $details = $details->prepend('(')
-                ->append(')');
+                $talk->date = Carbon::createFromFormat('d.m.Y', $talk->date);
 
 
-            return tap($talk, fn ($talk) => $talk->details = $details);
-        });
-
-        return tap($talks, fn ($talks) => $talks->past = $pastTalks);
-    }
-
-    private function prepareUpcomingTalksDetails($talks)
-    {
-        $upcomingTalks = collect($talks->upcoming)->transform(function ($talk) {
-            $details = Str::of($talk->location);
-
-            if (isset($talk->slides)) {
-                $details = $details->append(', <a href="'.$talk->slides.'">Slides</a>');
-            }
-
-            if (isset($talk->video)) {
-                $details = $details->append(", <a href='$talk->video'>Video</a>");
-            }
-
-            $details = $details->prepend('(')
-                ->append(')');
+                return tap($talk, fn($talk) => $talk->details = $details);
+            })
+            ->partition(function ($talk) {
+                return $talk->date->isPast();
+            });
 
 
-            return tap($talk, fn ($talk) => $talk->details = $details);
-        });
-
-        return tap($talks, fn ($talks) => $talks->upcoming = $upcomingTalks);
+        return view('pages.speaking', ['futureTalks' => $futureTalks, 'pastTalks' => $pastTalks]);
     }
 }

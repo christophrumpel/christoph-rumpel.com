@@ -22,9 +22,9 @@
                 contact me on Twitter</a>.</p>
 
         <h2>Upcoming</h2>
-        @if(count($talks->upcoming))
+        @if(count($futureTalks))
             <ul>
-                @foreach($talks->upcoming as $talk)
+                @foreach($futureTalks as $talk)
                     <li>
                         <h3><a href="{{ $talk->url }}">{{ $talk->date }} - {{ $talk->event }}</a></h3>
                         <p>{{ $talk->title }} {!! $talk->details !!}</p>
@@ -37,7 +37,7 @@
 
         <h2>Past</h2>
         <ul>
-            @foreach($talks->past as $talk)
+            @foreach($pastTalks as $talk)
                 <li>
                     <h3><a href="{{ $talk->url }}">{{ $talk->date }} - {{ $talk->event }}</a></h3>
                     <p>{{ $talk->title }} {!! $talk->details !!}</p>

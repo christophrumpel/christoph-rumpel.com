@@ -8,76 +8,43 @@ use Tests\TestCase;
 class PageSpeakingTest extends TestCase
 {
     /** @test * */
-    public function it_shows_upcoming_talks(): void
+    public function it_shows_past_and_upcoming_talks(): void
     {
         TalkFactory::create([
-            'upcoming' => [
-                [
-                    'title' => 'Talk Title',
-                    'date' => '20.02.2020',
-                    'location' => 'Talk Location',
-                    'event' => 'Event Name',
-                    'url' => 'https://test.at',
-                ],
-                [
-                    'title' => 'Talk Title 2',
-                    'date' => '21.02.2020',
-                    'location' => 'Talk Location 2',
-                    'event' => 'Event Name 2',
-                    'url' => 'https://test.at',
-                ],
+            [
+                'title' => 'Talk Upcoming',
+                'date' => '20.02.2029',
+                'location' => 'Talk Location',
+                'event' => 'Event Name',
+                'url' => 'https://test.at',
             ],
-            'past' => [
-                [
-                    'title' => 'Talk Title',
-                    'date' => '20.02.2020',
-                    'location' => 'Talk Location',
-                    'event' => 'Event Name',
-                    'url' => 'https://test.at',
-                ],
-                [
-                    'title' => 'Talk Title 2',
-                    'date' => '21.02.2020',
-                    'location' => 'Talk Location 2',
-                    'event' => 'Event Name 2',
-                    'url' => 'https://test.at',
-                ],
+            [
+                'title' => 'Talk Past',
+                'date' => '20.02.2020',
+                'location' => 'Talk Location',
+                'event' => 'Event Name',
+                'url' => 'https://test.at',
             ],
         ]);
 
         $this->get('/speaking')
             ->assertSuccessful()
-            ->assertSee('Talk Title')
-            ->assertSee('20.02.2020')
-            ->assertSee('Talk Location')
-            ->assertSee('Event Name')
-            ->assertSee('Talk Title 2')
-            ->assertSee('21.02.2020')
-            ->assertSee('Talk Location 2')
-            ->assertSee('Event Name 2')
-            ->assertSee('Talk Title')
-            ->assertSee('20.02.2020')
-            ->assertSee('Talk Location')
-            ->assertSee('Event Name')
-            ->assertSee('Talk Title 2')
-            ->assertSee('21.02.2020')
-            ->assertSee('Talk Location 2')
-            ->assertSee('Event Name 2');
+            ->assertSeeInOrder([
+                'Talk Upcoming',
+                'Talk Past'
+            ]);
     }
 
-    /** @test **/
+    /** @test * */
     public function it_works_with_no_upcoming_talks(): void
     {
         TalkFactory::create([
-            'upcoming' => [],
-            'past' => [
-                [
-                    'title' => 'Talk Title',
-                    'date' => '20.02.2020',
-                    'location' => 'Talk Location',
-                    'event' => 'Event Name',
-                    'url' => 'https://test.at',
-                ],
+            [
+                'title' => 'Talk Title',
+                'date' => '20.02.2020',
+                'location' => 'Talk Location',
+                'event' => 'Event Name',
+                'url' => 'https://test.at',
             ],
         ]);
 
