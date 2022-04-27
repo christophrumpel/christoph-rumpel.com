@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\Actions\GetTalksAction;
-use Tests\Factories\TalkFactory;
 use Tests\TestCase;
 
 class PageSpeakingTest extends TestCase
