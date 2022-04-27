@@ -13,6 +13,10 @@ class GetTalksAction
     {
         $talks = json_decode(Storage::disk('talks')->get('talks.json'));
 
+        if(empty($talks)) {
+            return collect([[], []]);
+        }
+
         return collect($talks)
             ->transform(function ($talk) {
 

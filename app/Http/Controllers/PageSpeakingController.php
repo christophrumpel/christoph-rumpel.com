@@ -9,7 +9,7 @@ class PageSpeakingController extends Controller
 {
     public function __invoke(Request $request)
     {
-        [$pastTalks, $futureTalks] = (new GetTalksAction())->handle();
+        [$pastTalks, $futureTalks] = resolve(GetTalksAction::class)->handle();
 
         return view('pages.speaking', ['futureTalks' => $futureTalks, 'pastTalks' => $pastTalks]);
     }

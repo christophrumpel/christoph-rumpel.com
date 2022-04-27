@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Actions\GetTalksAction;
 use Tests\Factories\TalkFactory;
 use Tests\TestCase;
 
@@ -11,10 +12,16 @@ class PageSpeakingTest extends TestCase
     public function it_calls_get_talks_action(): void
     {
     	// Arrange
+        $original = resolve(GetTalksAction::class);
 
+        $this->mock(GetTalksAction::class)
+            ->shouldReceive('handle')
+            ->once()
+        ->andReturnUsing([$original, 'handle']);
 
-    	// Act
+    	// Act && Assert
+        $this->get(route('page.speaking'))
+            ->assertOk();
 
-    	// Assert
     }
 }

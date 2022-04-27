@@ -40,4 +40,19 @@ class GetTalksActionTest extends TestCase
         $this->assertCount(1, $pastTalks);
         $this->assertCount(1, $futureTalks);
     }
+
+    /** @test */
+    public function it_returns_empty_array_if_no_talks_given(): void
+    {
+        // Arrange
+        Storage::fake('talks');
+        TalkFactory::create([]);
+
+        // Act
+        [$pastTalks, $futureTalks] = (new GetTalksAction)->handle();
+
+        // Assert
+        $this->assertEquals([], $futureTalks);
+
+    }
 }
