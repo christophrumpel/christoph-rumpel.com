@@ -7,10 +7,8 @@ use Illuminate\Support\Facades\Storage;
 use Tests\Factories\TalkFactory;
 use Tests\TestCase;
 
-
 class GetTalksActionTest extends TestCase
 {
-
     /** @test */
     public function it_gets_talks_from_json(): void
     {
@@ -53,6 +51,5 @@ class GetTalksActionTest extends TestCase
 
         // Assert
         $this->assertEquals([], $futureTalks);
-
     }
 }

@@ -13,13 +13,12 @@ class GetTalksAction
     {
         $talks = json_decode(Storage::disk('talks')->get('talks.json'));
 
-        if(empty($talks)) {
+        if (empty($talks)) {
             return collect([[], []]);
         }
 
         return collect($talks)
             ->transform(function ($talk) {
-
                 $talk->details = $this->createTalkDetails($talk);
                 $talk->date = Carbon::createFromFormat('d.m.Y', $talk->date);
 
@@ -35,10 +34,12 @@ class GetTalksAction
         return Str::of($talk->location)
             ->when(
                 isset($talk->slides),
-                fn($string) => $string->append(', <a href="' . $talk->slides . '">Slides</a>'))
+                fn ($string) => $string->append(', <a href="' . $talk->slides . '">Slides</a>')
+            )
             ->when(
                 isset($talk->video),
-                fn($string) => $string->append(", <a href='$talk->video'>Video</a>"))
+                fn ($string) => $string->append(", <a href='$talk->video'>Video</a>")
+            )
             ->prepend('(')
             ->append(')');
     }
