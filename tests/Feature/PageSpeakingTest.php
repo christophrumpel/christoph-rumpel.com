@@ -10,7 +10,7 @@ class PageSpeakingTest extends TestCase
     /** @test */
     public function it_calls_get_talks_action(): void
     {
-    	// Arrange
+        // Arrange
         $original = resolve(GetTalksAction::class);
 
         $this->mock(GetTalksAction::class)
@@ -18,9 +18,8 @@ class PageSpeakingTest extends TestCase
             ->once()
         ->andReturnUsing([$original, 'handle']);
 
-    	// Act && Assert
+        // Act && Assert
         $this->get(route('page.speaking'))
             ->assertOk();
-
     }
 }
