@@ -9,6 +9,19 @@
                 </div>
 
                 <ul class="post-list">
+
+                    <!-- Writing Readable PHP -->
+                    <li class="my-8 bg-white border-textBlue border-2">
+                        <a class="block p-8" href="https://writing-readable-php.com/">
+                            <img class="mb-4" src="/images/pages/products_wrp.png" alt="Banner of the video course Writing Readable PHP">
+                            <h2 class="font-display sm:text-xl lg:text-3xl text-textBlue mb-4">
+                                Writing Readable PHP
+                            </h2>
+                            <h3 class="text-xl">Learn how to write <strong>clean code</strong> that is simple, easy to read, update, and maintain. This is a course Spatie and I created together.</h3>
+                        </a>
+                    </li>
+                    <!-- Writing Readable PHP -->
+
                     <!-- Mastering PhpStorm -->
                     <li class="my-8 bg-white border-textBlue border-2">
                         <a class="block p-8"
