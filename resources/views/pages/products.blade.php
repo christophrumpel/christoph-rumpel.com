@@ -8,7 +8,7 @@
 
                 </div>
 
-                <div class="grid grid-cols-2 gap-4 post-list">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 post-list">
 
                     <!-- Writing Readable PHP -->
                     <div class="my-8 bg-white border-textBlue border-2">
