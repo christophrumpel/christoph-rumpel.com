@@ -24,6 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         dd(PostCollector::all());
+
         return view('home');
     }
 }
