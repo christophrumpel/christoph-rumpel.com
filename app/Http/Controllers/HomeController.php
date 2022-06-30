@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Post\PostCollector;
+
 class HomeController extends Controller
 {
     /**
@@ -21,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        dd(PostCollector::all());
         return view('home');
     }
 }
