@@ -17,7 +17,7 @@
             @endif
 
             @if($post->summary)
-            <p class="text-xl lg:text-2xl p-4 lg:p-8 my-8 italic rounded-lg bg-blue-100 border-b-2 border-highlightBlue">
+            <p class="text-xl lg:text-2xl p-4 lg:p-8 my-8 mb-16 italic rounded-lg bg-blue-100 border-b-2 border-highlightBlue">
                 {!! $post->summary !!}
             </p>
             @endif
