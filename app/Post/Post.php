@@ -70,6 +70,7 @@ class Post implements Feedable
             ->summary($this->summary)
             ->updated($this->date)
             ->link($this->link())
-            ->author('Christoph Rumpel');
+            ->authorName('Christoph Rumpel')
+            ->authorEmail('christoph@christoph-rumpel.com');
     }
 }

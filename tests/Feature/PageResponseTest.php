@@ -64,4 +64,11 @@ class PageResponseTest extends TestCase
         $this->get(route('page.newsletter'))
             ->assertSuccessful();
     }
+
+    /** @test * */
+    public function it_gives_successful_response_feed_page(): void
+    {
+        $this->get('feed')
+            ->assertSuccessful();
+    }
 }
