@@ -17,13 +17,6 @@ class PageResponseTest extends TestCase
     }
 
     /** @test * */
-    public function it_gives_successful_response_for_products_page(): void
-    {
-        $this->get(route('page.products'))
-            ->assertSuccessful();
-    }
-
-    /** @test * */
     public function it_gives_successful_response_for_privacy_policy_page(): void
     {
         $this->get('/privacy-policy')

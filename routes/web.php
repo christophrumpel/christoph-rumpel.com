@@ -34,8 +34,6 @@ Route::feeds();
 
 Route::get('/', PageHomeController::class)
     ->name('page.home');
-Route::get('products', PageProductsController::class)
-    ->name('page.products');
 Route::get('speaking', PageSpeakingController::class)
     ->name('page.speaking');
 Route::get('/category/{category}', PageCategoryController::class)
