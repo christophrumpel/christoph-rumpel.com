@@ -10,7 +10,6 @@ use Tests\TestCase;
 
 class SubscribeNewsletterApiTest extends TestCase
 {
-
     use RefreshDatabase;
 
     /** @test */
@@ -48,5 +47,4 @@ class SubscribeNewsletterApiTest extends TestCase
             ])->assertSuccessful()
             ->assertJsonFragment(['already_subscribed' => true]);
     }
-
 }
