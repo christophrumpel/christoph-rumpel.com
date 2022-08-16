@@ -21,6 +21,7 @@ Route::middleware('auth:api')->get('/newsletter/mastering-phpstorm/count', funct
     return response()->json(['count' => $emailList->subscribers()->count()]);
 });
 
+// Needs to be refactored to use the new api endpoint below
 Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/subscribe', function (Request $request) {
 
     $attributes = $request->only(['email']);
@@ -35,6 +36,20 @@ Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/subscribe', 
 
     return response()->json(['already_subscribed' => false]);
 });
+
+Route::middleware('auth:api')->post('/newsletter/subscribe', function (Request $request) {
+    $attributes = $request->only('email');
+    $emailList = EmailList::where('uuid', $request->only('list'))->firstOrFail();
+
+    if ($emailList->isSubscribed($attributes['email'])) {
+        return response()->json(['already_subscribed' => true]);
+    }
+
+    Subscriber::createWithEmail($attributes['email'])
+        ->subscribeTo($emailList);
+
+    return response()->json(['already_subscribed' => false]);
+})->name('api.newsletter.subscribe');
 
 Route::middleware('auth:api')->post('/newsletter/mastering-phpstorm/confirmed', function (Request $request) {
 
