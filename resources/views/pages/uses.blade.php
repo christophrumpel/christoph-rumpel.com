@@ -173,7 +173,7 @@
                 <li>Blue Compass microphone arm</li>
             </ul>
             <p class="post-markdown-styles">Before the Shure microphone, I was using the HyperX QuadCast. It was a good microphone, but I wanted to level up my audio game without investing ~$1.000 in the Shure SM7B. (which is currently the standard for a high-quality microphone) <br /><br />
-                The <code>MV7 ist like the little brother of the SM7B</code> and it supports both USB and XLR. I have it connected to the Elgato Wave XLR audio interface.
+                The <code>MV7 is like the little brother of the SM7B</code> and it supports both USB and XLR. I have it connected to the Elgato Wave XLR audio interface.
             </p>
 
             <h3>Camera</h3>
