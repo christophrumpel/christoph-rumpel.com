@@ -1,7 +1,7 @@
 ```php
 $users = [
     [ 'id' => 801, 'name' => 'Peter', 'score' => 505, 'active' => true],
-    [ 'id' => 844, 'name' => 'Mary', 'score' => 104, 'active' => true],
+    [ 'id' => 844, 'name' => 'Mary', 'score' => 704, 'active' => true],
     [ 'id' => 542, 'name' => 'Norman', 'score' => 104, 'active' => false],
 ];
 
