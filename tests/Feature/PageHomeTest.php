@@ -9,7 +9,6 @@ use Tests\TestCase;
 
 class PageHomeTest extends TestCase
 {
-
     use RefreshDatabase;
 
     /** @test * */
