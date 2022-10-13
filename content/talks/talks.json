@@ -1,11 +1,18 @@
 [
     {
+        "date": "13.10.2022",
+        "event": "Vienna PHP meetup",
+        "location": "Vienna",
+        "title": "Getting Started with TDD",
+        "url": "https://www.meetup.com/viennaphp/events/288325949/",
+    },
+    {
         "date": "14.09.2022",
         "event": "Laracon Online (Free)",
         "location": "Worldwide 🌍",
         "title": "Christoph Dreams of Simple Code",
         "url": "https://laracon.net",
-        "video": "https://www.youtube.com/watch?v=f4QShF42c6E&t=24330s"
+        "video": "https://www.youtube.com/watch?v=f4QShF42c6E&t=24330sw"
     },
     {
         "date": "26.04.2022",

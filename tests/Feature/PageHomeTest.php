@@ -2,12 +2,16 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Storage;
 use Tests\Factories\PostFactory;
 use Tests\TestCase;
 
 class PageHomeTest extends TestCase
 {
+
+    use RefreshDatabase;
+
     /** @test * */
     public function it_lists_latest_blog_posts(): void
     {
