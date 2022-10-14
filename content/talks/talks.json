@@ -4,7 +4,8 @@
         "event": "Vienna PHP meetup",
         "location": "Vienna",
         "title": "Getting Started with TDD",
-        "url": "https://www.meetup.com/viennaphp/events/288325949/"
+        "url": "https://www.meetup.com/viennaphp/events/288325949/",
+        "slides": "https://speakerdeck.com/christophrumpel/phpmeetup"
     },
     {
         "date": "14.09.2022",
