@@ -9,6 +9,9 @@
           content="Hi, I am Christoph Rumpel and this is my personal blog where I share my Laravel, PHP and business experiences.">
     <meta name="author" content="Christoph Rumpel">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml"
+          title="RSS Feed for christoph-rumpel.com"
+          href="/feed" />
 
     @include('partials.favicon')
 
