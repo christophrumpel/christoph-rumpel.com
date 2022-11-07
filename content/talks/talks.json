@@ -1,5 +1,12 @@
 [
     {
+        "date": "25.10.2022",
+        "event": "Laravel Meetup Groningen",
+        "location": "Groningen",
+        "title": "Why Refactoring Is The Best Tool To Write Better Code",
+        "url": "https://www.meetup.com/laravel-meetup-groningen/events/288324552/"
+    },
+    {
         "date": "13.10.2022",
         "event": "Vienna PHP meetup",
         "location": "Vienna",
@@ -20,7 +27,8 @@
         "event": "Laracon EU",
         "location": "Amsterdam 🇳🇱",
         "title": "Debugging with PhpStorm & XDebug",
-        "url": "https://laracon.eu"
+        "url": "https://laracon.eu",
+        "video": "https://www.youtube.com/watch?v=omKODW12Hhk"
     },
     {
         "date": "09.03.2022",
