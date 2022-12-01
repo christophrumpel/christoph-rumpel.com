@@ -114,10 +114,7 @@
 
             <h3>Productivity</h3>
             <ul>
-                <li><a href="https://www.alfredapp.com/">Alfred</a> is the best!</li>
-                <li>In <a href="https://www.youtube.com/watch?v=okb6GIKbHD8">this video</a>, I give a preview of all the
-                    Alfred workflows I am using
-                </li>
+                <li><a href="https://www.raycast.com/">Raycast</a> is productivity tool of choice!</li>
             </ul>
 
             <h3>Website Analytics</h3>
