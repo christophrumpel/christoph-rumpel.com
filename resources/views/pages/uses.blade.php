@@ -3,7 +3,7 @@
         <article class="post-markdown-styles">
 
             <h1>The Tools That Help Me Create</h1>
-            <img src="{{ asset('images/pages/uses_desk_side.jpg') }}" alt="Christoph's working desk">
+            <img src="{{ asset('images/pages/uses_desk_main.jpg') }}" alt="Christoph's working desk">
 
 
             <p>This is my current development setup which includes all the hard- and software I need for my daily work as a web developer and content creator.</p>
@@ -21,14 +21,14 @@
 
             <h3>Laptop</h3>
             <ul>
-                <li>MacBook Air (M1, 2020)</li>
-                <li>Apple M1</li>
-                <li>16 GB</li>
+                <li>MacBook Pro (16-inch, 2021)</li>
+                <li>Apple M1 Max</li>
+                <li>32 GB</li>
             </ul>
 
             <h3>Mouse / Keyboard</h3>
             <ul>
-                <li>Apple Bluetooth Keyboard</li>
+                <li>Keychron K3</li>
                 <li>Apple Magic Mouse 2</li>
             </ul>
 
@@ -87,7 +87,7 @@
             <ul>
                 <li>PhpStorm is the IDE of my choice</li>
                 <li>I use a dark theme called <code>RIOS</code> which is part of my <a href="https://masteringphpstorm.com">Mastering PhpStorm video course</a></li>
-                <li>Over 40 of my favorite 🧪 PhpStorm Tips & Tricks <a href="https://masteringphpstorm.com/tips-and-tricks">can be found here</a></li>
+                <li>Over 50 of my favorite 🧪 PhpStorm Tips & Tricks <a href="https://masteringphpstorm.com/tips-and-tricks">can be found here</a></li>
             </ul>
 
             <h3>Terminal</h3>
@@ -126,10 +126,7 @@
             <h3>MacOS Window Manager</h3>
             <ul>
                 <li>I need to move and resize windows all the time</li>
-                <li><a href="https://rectangleapp.com/">Rectangle</a> is my app of choice</li>
-                <li>
-                    It lets you use the shortcuts of <code>Spectacle</code> if you had used that before like I did
-                </li>
+                <li><a href="https://rectangleapp.com/">Rectangle</a> was my app of choice. I now use Raycast for that as well.</li>
             </ul>
 
             <h3>Cloud Storage</h3>
@@ -147,6 +144,7 @@
             <h3>Lists / Todos</h3>
             <ul>
                 <li>I have a pinboard where I define tasks for today and this week</li>
+                <li>Since 2022, I use <a href="https://height.app">Height</a> as a todo app as well</li>
                 <li>Apple Calendar & Reminders help me to not forget about important events</li>
             </ul>
 
