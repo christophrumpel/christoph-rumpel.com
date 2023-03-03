@@ -9,8 +9,6 @@ class CustomPostMarkMailManagerProvider extends MailServiceProvider
 {
     /**
      * Register the Illuminate mailer instance.
-     *
-     * @return void
      */
     protected function registerIlluminateMailer(): void
     {
@@ -26,8 +24,6 @@ class CustomPostMarkMailManagerProvider extends MailServiceProvider
 
     /**
      * Bootstrap services.
-     *
-     * @return void
      */
     public function boot(): void
     {
