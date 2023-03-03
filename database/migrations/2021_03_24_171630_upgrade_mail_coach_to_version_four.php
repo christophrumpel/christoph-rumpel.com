@@ -7,10 +7,8 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('mailcoach_campaigns', function (Blueprint $table) {
             $table->boolean('utm_tags')->default(false)->after('track_clicks');

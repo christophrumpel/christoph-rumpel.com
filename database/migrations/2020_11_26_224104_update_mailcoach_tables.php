@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 use Spatie\Mailcoach\Domain\Campaign\Models\Campaign;
 
 return new class extends Migration {
-    public function up()
+    public function up(): void
     {
         Schema::table('mailcoach_campaigns', function (Blueprint $table) {
             $table->string('reply_to_email')->nullable();

@@ -42,6 +42,7 @@ return [
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
+            'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
 
         'ses' => [
@@ -50,11 +51,17 @@ return [
 
         'mailgun' => [
             'transport' => 'mailgun',
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
         ],
 
         'postmark' => [
             'transport' => 'postmark',
             'token' => env('POSTMARK_SERVER_CRBLOG_TOKEN'),
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
         ],
 
         'postmark_transx_crblog' => [

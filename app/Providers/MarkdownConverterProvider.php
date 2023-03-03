@@ -17,10 +17,8 @@ class MarkdownConverterProvider extends ServiceProvider
 {
     /**
      * Register services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->app->singleton(CommonMarkConverter::class, function ($app) {
             $languages = ['html', 'php', 'js', 'shell', 'shell'];
@@ -38,10 +36,8 @@ class MarkdownConverterProvider extends ServiceProvider
 
     /**
      * Bootstrap services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         //
     }

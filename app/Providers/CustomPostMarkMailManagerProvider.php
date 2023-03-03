@@ -9,10 +9,8 @@ class CustomPostMarkMailManagerProvider extends MailServiceProvider
 {
     /**
      * Register the Illuminate mailer instance.
-     *
-     * @return void
      */
-    protected function registerIlluminateMailer()
+    protected function registerIlluminateMailer(): void
     {
         $this->app->singleton('mail.manager', function ($app) {
             return new CustomMailManager($app);
@@ -26,10 +24,8 @@ class CustomPostMarkMailManagerProvider extends MailServiceProvider
 
     /**
      * Bootstrap services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
     }
 }

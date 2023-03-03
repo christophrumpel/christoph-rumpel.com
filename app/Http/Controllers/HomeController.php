@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post\PostCollector;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
@@ -18,10 +19,8 @@ class HomeController extends Controller
 
     /**
      * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(): View
     {
         dd(PostCollector::all());
 

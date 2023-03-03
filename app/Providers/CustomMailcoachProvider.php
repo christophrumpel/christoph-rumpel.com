@@ -8,20 +8,16 @@ class CustomMailcoachProvider extends ServiceProvider
 {
     /**
      * Register services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         //
     }
 
     /**
      * Bootstrap services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         \Illuminate\Support\Facades\Gate::define('viewMailcoach', function ($user = null) {
             return $user;
