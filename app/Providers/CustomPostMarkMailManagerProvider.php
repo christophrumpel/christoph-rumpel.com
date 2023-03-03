@@ -12,7 +12,7 @@ class CustomPostMarkMailManagerProvider extends MailServiceProvider
      *
      * @return void
      */
-    protected function registerIlluminateMailer()
+    protected function registerIlluminateMailer(): void
     {
         $this->app->singleton('mail.manager', function ($app) {
             return new CustomMailManager($app);
@@ -29,7 +29,7 @@ class CustomPostMarkMailManagerProvider extends MailServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
     }
 }

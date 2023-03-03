@@ -13,7 +13,7 @@ class BladeServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Blade::component('layouts.main', MainLayout::class);
     }
