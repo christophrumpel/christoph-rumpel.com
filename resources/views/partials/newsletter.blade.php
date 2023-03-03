@@ -11,7 +11,7 @@
             </div>
             <div class="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
                 <form class="sm:flex" aria-labelledby="newsletter-headline" method="POST"
-                      action="{{ route('cr.mailcoach.subscribe', ['emailListUuid' => getenv('MAILCOACH_CRBLOG_LIST_UUID')]) }}">
+                      action="https://christophrumpel.mailcoach.app/subscribe/362d69c8-a896-44be-8568-6981787cc3a7" type="POST">
                     @csrf
                     <x-honeypot />
                     <input aria-label="Email address" type="email" name="email" required
