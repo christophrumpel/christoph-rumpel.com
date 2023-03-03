@@ -1,1 +1,0 @@
-{!! $mail->webview_html !!}

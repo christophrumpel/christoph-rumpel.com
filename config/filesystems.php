@@ -38,13 +38,6 @@ return [
             'throw' => false,
         ],
 
-        'mailcoach-uploads' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/mailcoach-uploads'),
-            'url' => env('APP_URL').'/storage/mailcoach-uploads',
-            'visibility' => 'public',
-        ],
-
         'backupFolder' => [
             'driver'   => 'ftp',
             'host'     => 'nomoreencore.com',

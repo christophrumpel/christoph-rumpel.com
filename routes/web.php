@@ -7,17 +7,9 @@ use App\Http\Controllers\PageHomeController;
 use App\Http\Controllers\PageImprint;
 use App\Http\Controllers\PageNewsletterController;
 use App\Http\Controllers\PagePostController;
-use App\Http\Controllers\PagePrivacyLcaPolicyController;
-use App\Http\Controllers\PagePrivacyLwPolicyController;
-use App\Http\Controllers\PagePrivacyMpPolicyController;
-use App\Http\Controllers\PagePrivacyPolicyController;
-use App\Http\Controllers\PagePrivacyRpPolicyController;
-use App\Http\Controllers\PageProductsController;
 use App\Http\Controllers\PageSpeakingController;
 use App\Http\Controllers\PageUsesController;
 use Illuminate\Support\Facades\Route;
-use Spatie\Honeypot\ProtectAgainstSpam;
-use Spatie\Mailcoach\Http\Front\Controllers\SubscribeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,10 +47,4 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', [HomeController::class, 'index'])
     ->name('home');
-
-// Mailcoach
-Route::post('mailcoach-subscribe/{emailListUuid}', '\\' . SubscribeController::class)
-    ->name('cr.mailcoach.subscribe')
-    ->middleware(ProtectAgainstSpam::class);
-
 

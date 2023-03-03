@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Facade;
 use App\Providers\BladeServiceProvider;
-use App\Providers\CustomMailcoachProvider;
-use App\Providers\CustomPostMarkMailManagerProvider;
 use App\Providers\MarkdownConverterProvider;
 
 return [
@@ -183,8 +181,6 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         BladeServiceProvider::class,
-
-        CustomMailcoachProvider::class,
 
         MarkdownConverterProvider::class,
 
