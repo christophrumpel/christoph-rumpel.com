@@ -40,7 +40,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map(): void
     {
-        Route::group(['middleware' => ['doNotCacheResponse']], function () {
+        Route::middleware('doNotCacheResponse')->group(function () {
             Route::mailcoach('mailcoach');
             Route::mailcoachUnlayer('mailcoachUnlayer');
         });
