@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Post\PostCollector;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {

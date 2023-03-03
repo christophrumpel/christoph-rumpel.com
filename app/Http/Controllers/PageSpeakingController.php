@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Actions\GetTalksAction;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class PageSpeakingController extends Controller
 {

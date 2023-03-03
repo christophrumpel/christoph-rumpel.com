@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Post\PostCollector;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class PageCategoryController extends Controller
 {
