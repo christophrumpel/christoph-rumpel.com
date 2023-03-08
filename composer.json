@@ -28,7 +28,6 @@
         "spatie/commonmark-highlighter": "^3.0",
         "spatie/laravel-backup": "^8.1",
         "spatie/laravel-feed": "^4.1",
-        "spatie/laravel-honeypot": "^4.2",
         "spatie/laravel-responsecache": "^7.2",
         "spatie/laravel-sitemap": "^6.1",
         "spatie/laravel-welcome-notification": "^2.3",
