@@ -11,9 +11,13 @@
             </div>
             <div class="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
                 <form class="sm:flex" aria-labelledby="newsletter-headline" method="POST"
-                      action="https://christophrumpel.mailcoach.app/subscribe/362d69c8-a896-44be-8568-6981787cc3a7" type="POST">
+                      action="https://christophrumpel.mailcoach.app/subscribe/362d69c8-a896-44be-8568-6981787cc3a7"
+                      type="POST">
                     @csrf
-                    <input type="text" name="phone" hidden />
+                    <div style="position: absolute; left: -9999px">
+                        <label for="website-phone">Your phone</label>
+                        <input type="text" id="website-phone" name="phone" tabindex="-1" autocomplete="nope"/>
+                    </div>
                     <input aria-label="Email address" type="email" name="email" required
                            class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out"
                            placeholder="Enter your email"/>
