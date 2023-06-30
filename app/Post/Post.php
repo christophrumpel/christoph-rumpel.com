@@ -31,6 +31,8 @@ class Post implements Feedable
 
     public bool $hidden;
 
+    public ?string $updated = null;
+
     public function __construct()
     {
     }
@@ -48,6 +50,7 @@ class Post implements Feedable
         $this->summary = $attributes['summary'] ?? '';
         $this->old = $attributes['old'] ?? false;
         $this->hidden = $attributes['hidden'] ?? false;
+        $this->updated = $attributes['updated'] ? 'Updated ' . $attributes['updated'] : null;
 
         return $this;
     }

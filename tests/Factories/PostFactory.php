@@ -15,6 +15,8 @@ class PostFactory
 
     private string $content = '';
 
+    private string $updated = '';
+
     private bool $hidden = false;
 
     public static function new(): PostFactory
@@ -60,7 +62,8 @@ class PostFactory
             ->replace('{{blog_title}}', $title)
             ->replace('{{categories}}', implode(', ', $this->categories))
             ->replace('{{content}}', $this->content)
-            ->replace('{{hidden}}', $hidden ? 'true' : 'false');
+            ->replace('{{hidden}}', $hidden ? 'true' : 'false')
+            ->replace('{{updated}}', $this->updated);
         Storage::disk('posts')
             ->put($path, $replacedFileContent);
     }
@@ -89,6 +92,13 @@ class PostFactory
     public function hidden(): self
     {
         $this->hidden = true;
+
+        return $this;
+    }
+
+    public function updated(string $updated): self
+    {
+        $this->updated = $updated;
 
         return $this;
     }

@@ -19,6 +19,7 @@ class FileToPostMapper
             $slug,
         ] = explode('.', $fileName);
 
+
         return (new Post)->create([
             'path' => $filePath,
             'title' => $postMetaData->matter('title'),
@@ -31,6 +32,7 @@ class FileToPostMapper
             'summary' => $postMetaData->matter('summary'),
             'old' => $postMetaData->matter('old') ?? false,
             'hidden' => $postMetaData->matter('hidden'),
+            'updated' => $postMetaData->matter('updated'),
         ]);
     }
 }

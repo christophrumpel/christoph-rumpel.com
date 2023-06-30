@@ -3,7 +3,7 @@
 
         <article class="post">
             <time class="text-textBlue font-bold"
-                  datetime="{{ $post->date->format('Y-m-d') }}">{{ $post->date->format('F Y') }}</time>
+                  datetime="{{ $post->date->format('Y-m-d') }}">{{ $post->updated ?: $post->date->format('F Y') }}</time>
             <h1 class="font-display font-bold text-3xl lg:text-5xl mb-8 text-textBlue"><span
                     class="title-highlight-underline">{{$post->title}}</span></h1>
 

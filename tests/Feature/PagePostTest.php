@@ -28,7 +28,8 @@ class PagePostTest extends TestCase
             ->assertSee('My Company Of One Story - Episode 3 The Transition')
             ->assertSee('business')
             ->assertSee('laravel')
-            ->assertSee('My blog content');
+            ->assertSee('My blog content')
+            ->assertSee($today->format('F Y'));
     }
 
     /** @test */
@@ -37,4 +38,25 @@ class PagePostTest extends TestCase
         $this->get('2020/03/test')
             ->assertNotFound();
     }
+
+    /** @test */
+    public function it_shows_updated_date(): void
+    {
+        Storage::fake('posts');
+
+        PostFactory::new()
+            ->title('Test Blog')
+            ->content('My blog content')
+            ->categories(['Business', 'Laravel'])
+            ->updated('2023')
+            ->create();
+
+        $today = Carbon::today();
+        $pathDate = $today->format('y/m');
+
+        $this->get("$pathDate/test-blog")
+            ->assertSuccessful()
+            ->assertSee('Updated 2023');
+    }
+
 }
