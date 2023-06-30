@@ -48,7 +48,7 @@ class PagePostTest extends TestCase
             ->title('Test Blog')
             ->content('My blog content')
             ->categories(['Business', 'Laravel'])
-            ->updated('2023')
+            ->updated('2023-01-01')
             ->create();
 
         $today = Carbon::today();
@@ -56,7 +56,7 @@ class PagePostTest extends TestCase
 
         $this->get("$pathDate/test-blog")
             ->assertSuccessful()
-            ->assertSee('Updated 2023');
+            ->assertSee('Updated January 2023');
     }
 
 }

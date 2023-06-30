@@ -31,7 +31,7 @@ class Post implements Feedable
 
     public bool $hidden;
 
-    public ?string $updated = null;
+    public ?\Carbon\Carbon $updated = null;
 
     public function __construct()
     {
@@ -50,7 +50,7 @@ class Post implements Feedable
         $this->summary = $attributes['summary'] ?? '';
         $this->old = $attributes['old'] ?? false;
         $this->hidden = $attributes['hidden'] ?? false;
-        $this->updated = $attributes['updated'] ? 'Updated ' . $attributes['updated'] : null;
+        $this->updated = $attributes['updated'] ? Carbon::createFromFormat('Y-m-d', $attributes['updated']) : null;
 
         return $this;
     }
