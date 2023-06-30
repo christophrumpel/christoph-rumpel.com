@@ -58,5 +58,4 @@ class PagePostTest extends TestCase
             ->assertSuccessful()
             ->assertSee('Updated 2023');
     }
-
 }
