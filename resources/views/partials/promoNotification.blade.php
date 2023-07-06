@@ -11,14 +11,14 @@
             <div class="pr-16 sm:text-center sm:px-16">
                 <p class="font-medium text-textBlue">
         <span class="md:hidden">
-         Working with PhpStorm?
+         Interested in testing?
         </span>
                     <span class="hidden md:inline">
-         Working with PhpStorm?
+         Interested in testing?
         </span>
                     <span class="block sm:ml-2 sm:inline-block">
-          <a href="https://masteringphpstorm.com" class="text-textBlue font-bold underline">
-            &rarr; Check my Mastering PhpStorm video course
+          <a href="hhttps://pestdrivenlaravel.com" class="text-textBlue font-bold underline">
+            &rarr; Check my TDD course Pest Driven Laravel
           </a>
         </span>
                 </p>
