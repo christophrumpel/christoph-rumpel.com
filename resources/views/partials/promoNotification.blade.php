@@ -17,7 +17,7 @@
          Interested in testing?
         </span>
                     <span class="block sm:ml-2 sm:inline-block">
-          <a href="hhttps://pestdrivenlaravel.com" class="text-textBlue font-bold underline">
+          <a href="https://pestdrivenlaravel.com" class="text-textBlue font-bold underline">
             &rarr; Check my TDD course Pest Driven Laravel
           </a>
         </span>
