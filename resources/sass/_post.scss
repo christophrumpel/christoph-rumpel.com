@@ -16,7 +16,7 @@
         @apply .p-12 .rounded-md;
     }
 
-    p code {
+    p code, ul code {
         @apply .px-2 .py-1 .text-lg .rounded-sm .bg-gradient-to-r .from-highlightTurquoise .to-highlightBlue;
         overflow-wrap: break-word;
     }
