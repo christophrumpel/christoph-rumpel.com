@@ -11,14 +11,14 @@
             <div class="pr-16 sm:text-center sm:px-16">
                 <p class="font-medium text-textBlue">
         <span class="md:hidden">
-         Interested in testing?
+         Interested how Laravel works under the hood?
         </span>
                     <span class="hidden md:inline">
-         Interested in testing?
+         Interested how Laravel works under the hood?
         </span>
                     <span class="block sm:ml-2 sm:inline-block">
-          <a href="https://pestdrivenlaravel.com" class="text-textBlue font-bold underline">
-            &rarr; Check my TDD course Pest Driven Laravel
+          <a href="https://laravelcoreadventures.com" class="text-textBlue font-bold underline">
+            &rarr; Check my Laravel Core Adventures Course
           </a>
         </span>
                 </p>
