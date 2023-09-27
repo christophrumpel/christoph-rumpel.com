@@ -1,5 +1,13 @@
 [
     {
+        "date": "26.09.2023",
+        "event": "Laravel Vienna Meetup",
+        "location": "Vienna",
+        "title": "Christoph Dreams of Simple Code",
+        "url": "https://www.meetup.com/laravel-frameworkers-vienna/photos/33966066/",
+        "slides": "https://speakerdeck.com/christophrumpel/christoph-dreams-of-simple-code-laravel-vienna-meetup"
+    },
+    {
         "date": "25.10.2022",
         "event": "Laravel Meetup Groningen",
         "location": "Groningen",
