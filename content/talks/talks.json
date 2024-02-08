@@ -1,5 +1,12 @@
 [
     {
+        "date": "5.02.2024",
+        "event": "LaraconEU",
+        "location": "Amsterdam",
+        "title": "Managing 5000+ Tests Efficiently",
+        "url": "https://laracon.eu"
+    },
+    {
         "date": "26.09.2023",
         "event": "Laravel Vienna Meetup",
         "location": "Vienna",
