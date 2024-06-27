@@ -3,7 +3,7 @@
         <article class="post-markdown-styles">
 
             <h1>The Tools That Help Me Create</h1>
-            <img src="{{ asset('images/pages/uses_desk_main.jpg') }}" alt="Christoph's working desk">
+            <img src="{{ asset('images/pages/uses_my_setup.png') }}" alt="Christoph's working desk">
 
 
             <p>This is my current development setup which includes all the hard- and software I need for my daily work as a web developer and content creator.</p>
