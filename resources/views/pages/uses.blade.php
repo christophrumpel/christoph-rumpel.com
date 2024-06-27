@@ -39,7 +39,7 @@
 
             <h3>Display</h3>
             <ul>
-                <li>LG UltraFine 5K Display</li>
+                <li><a href="https://amzn.to/3VFUVPk">Apple Studio Display</a></li>
                 <li>It gets powered through the USB-C connection</li>
                 <li>I was looking for a cheaper option, but none of them had a beautiful clean design</li>
                 <li>I didn't regret it</li>
@@ -175,10 +175,11 @@
             <img src="{{ asset('images/pages/uses_camera.jpg') }}" alt="Sony A6400 camera mounted behind the desk">
 
             <ul>
-                <li>Sony Alpha 6400</li>
-                <li>Lens - Sigma 16mm 1.4</li>
-                <li>Mounted over a Rode Psa1 microphone boom</li>
-                <li>The camera is used as a webcam through <a href="https://www.elgato.com/de/cam-link-4k">the Elgaot Cam Link 4k</a></li>
+                <li><a href="https://amzn.to/3VY2BOg">Sony Alpha 6400</a></li>
+                <li><a href="https://amzn.to/3zl5IH5">Lens - Sigma 16mm 1.4</a></li>
+                <li><a href="https://amzn.to/3XJ2nf4">Elgato Low Profile Arm</a></li>
+                <li><a href="https://amzn.to/45Z1AsN">Mounted over a Rode Psa1 microphone boom</a></li>
+                <li>The camera is used as a webcam through <a href="https://amzn.to/4c9EeTn">the Elgato Cam Link 4k</a></li>
                 <li>As a backup, I also have a <a
                         href="https://www.amazon.de/gp/product/B088NWWSKN/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1">HDMI Video Capture Card</a></li>
             </ul>
