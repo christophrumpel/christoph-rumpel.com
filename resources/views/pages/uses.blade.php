@@ -163,7 +163,7 @@
             <h3>Microphone</h3>
             <img src="{{ asset('images/pages/uses_mic_21.jpg') }}" alt="The Shure MV7 microphone">
             <ul>
-                <li>Shure MV7 USB Podcast Microphone</li>
+                <li><a href="https://amzn.to/3zfO9bk">Shure MV7 USB Podcast Microphone</a></li>
                 <li>I use the pop filter of the Shure SM7B which is better</li>
                 <li>Blue Compass microphone arm</li>
             </ul>
