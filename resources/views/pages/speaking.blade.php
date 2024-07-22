@@ -13,6 +13,7 @@
         <ul>
             <li><code>PHP</code></li>
             <li><code>Laravel</code></li>
+            <li><code>Testing</code></li>
             <li><code>PhpStorm</code></li>
             <li><code>My one-person business</code></li>
         </ul>
