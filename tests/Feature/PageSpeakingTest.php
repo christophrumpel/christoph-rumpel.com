@@ -58,7 +58,7 @@ class PageSpeakingTest extends TestCase
     /** @test */
     public function it_redirects_old_talks_route(): void
     {
-    	$this->get('speaking')
+        $this->get('speaking')
             ->assertRedirect(route('page.speaking'));
     }
 }
