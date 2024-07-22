@@ -54,4 +54,11 @@ class PageSpeakingTest extends TestCase
                 '2000-02-20 - Event Past',
             ]);
     }
+
+    /** @test */
+    public function it_redirects_old_talks_route(): void
+    {
+    	$this->get('speaking')
+            ->assertRedirect(route('page.speaking'));
+    }
 }

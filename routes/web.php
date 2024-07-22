@@ -25,7 +25,7 @@ Route::feeds();
 
 Route::get('/', PageHomeController::class)
     ->name('page.home');
-Route::get('speaking', PageSpeakingController::class)
+Route::get('talks', PageSpeakingController::class)
     ->name('page.speaking');
 Route::get('/category/{category}', PageCategoryController::class)
     ->name('page.category');
@@ -43,4 +43,7 @@ Route::get('build-chatbots-with-php', PageBcwpController::class)
     ->name('page.bcwp');
 
 Auth::routes(['register' => false]);
+
+// Redirect old routes
+Route::redirect('speaking', 'talks');
 
