@@ -168,12 +168,12 @@
 
 
             <h3>Camera</h3>
-
             <ul>
                 <li><a href="https://amzn.to/3VY2BOg">Sony Alpha 6400</a></li>
                 <li><a href="https://amzn.to/3zl5IH5">Lens - Sigma 16mm 1.4</a></li>
                 <li><a href="https://amzn.to/3XJ2nf4">Elgato Low Profile Arm</a></li>
                 <li>The camera is used as a webcam through <a href="https://amzn.to/4c9EeTn">the Elgato Cam Link 4k</a></li>
+                <li>In front of my cam sits the <a href="https://amzn.to/3Zs6E7r">Elgato Prompter</a></li>
             </ul>
 
             <h3>Lights</h3>
