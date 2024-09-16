@@ -159,43 +159,37 @@
             <img src="{{ asset('images/pages/uses_bartender_active.png') }}" alt="Bartender app active">
 
             <h2 id="recording">Recording & Streaming</h2>
-            <div class="blognote"><strong>Note:</strong> In December 2021, I did a <a href="https://www.youtube.com/watch?v=5hzXlLHYsmg" target="_blank">livestream</a> where I showcased my whole streaming setup. Give it a look if you prefer a visual demo.</div>
+            <img src="{{ asset('images/pages/uses_offscreen_setup.JPG') }}" alt="Off-Screen setup with cam, mic and lights.">
+
+{{--            <div class="blognote"><strong>Note:</strong> In December 2021, I did a <a href="https://www.youtube.com/watch?v=5hzXlLHYsmg" target="_blank">livestream</a> where I showcased my whole streaming setup. Give it a look if you prefer a visual demo.</div>--}}
             <h3>Microphone</h3>
-            <img src="{{ asset('images/pages/uses_mic_21.jpg') }}" alt="The Shure MV7 microphone">
             <ul>
-                <li><a href="https://amzn.to/3zfO9bk">Shure MV7 USB Podcast Microphone</a></li>
+                <li><a href="https://amzn.to/3zfO9bk">Shure MV7 XLR Podcast Microphone</a></li>
                 <li>I use the pop filter of the Shure SM7B which is better</li>
-                <li>Blue Compass microphone arm</li>
+                <li><a href="https://amzn.to/45Z1AsN">Mounted over a Rode Psa1 microphone boom</a></li>
             </ul>
-            <p class="post-markdown-styles">Before the Shure microphone, I was using the HyperX QuadCast. It was a good microphone, but I wanted to level up my audio game without investing ~$1.000 in the Shure SM7B. (which is currently the standard for a high-quality microphone) <br /><br />
-                The <code>MV7 is like the little brother of the SM7B</code> and it supports both USB and XLR. I have it connected to the Elgato Wave XLR audio interface.
-            </p>
+            <div class="blognote"><strong>Note:</strong> The Rode PSA1 is not the most beautiful arm, the best in terms of stability and flexibility.</div>
+
+
 
             <h3>Camera</h3>
-            <img src="{{ asset('images/pages/uses_camera.jpg') }}" alt="Sony A6400 camera mounted behind the desk">
 
             <ul>
                 <li><a href="https://amzn.to/3VY2BOg">Sony Alpha 6400</a></li>
                 <li><a href="https://amzn.to/3zl5IH5">Lens - Sigma 16mm 1.4</a></li>
                 <li><a href="https://amzn.to/3XJ2nf4">Elgato Low Profile Arm</a></li>
-                <li><a href="https://amzn.to/45Z1AsN">Mounted over a Rode Psa1 microphone boom</a></li>
                 <li>The camera is used as a webcam through <a href="https://amzn.to/4c9EeTn">the Elgato Cam Link 4k</a></li>
-                <li>As a backup, I also have a <a
-                        href="https://www.amazon.de/gp/product/B088NWWSKN/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1">HDMI Video Capture Card</a></li>
             </ul>
-
-            <div class="blognote"><strong>Note:</strong> I'm facing lots of issues with the Elgato Cam Link 4K where it freezes and can't be used anymore. That's why I need the backup capture card. This one is not capable of 4K though.</div>
-
 
             <h3>Lights</h3>
-            <img src="{{ asset('images/pages/uses_stream_image.jpg') }}" alt="Screenshot of Christoph's stream with his face">
+            <img src="{{ asset('images/pages/uses_lights.png') }}" alt="Screenshots of the result of my streaming lights">
             <ul>
-                <li>2x Elgato Key Light Air</li>
-                <li>They are mounted to the wall, so I don't have them on my desk.</li>
+                <li><a href="https://amzn.to/4goRuWJ">1x Elgato Keylight</a></li>
+                <li><a href="https://amzn.to/47rGlAm">2x Elgato Keylight Air</a></li>
+                <li>The Keylight is mounted to my desk</li>
+                <li>One Keylight Air also points at met, mounted at the wall. The other one I use in my back.</li>
                 <li>Philips Hue lights in the background</li>
             </ul>
-            <p>I regularly have video calls, and I decided to level up my video quality. Light is an essential factor of that, and so I bought the Elgato Key Light Air. I first had the more significant Elgato key Light, which is also more powerful. The downside is it comes only with a
-                mounting system which didn't fit my desk. So I switched to the smaller Light version, which is also more beautiful. I like it a lot.</p>
 
             <h3>Streaming Software</h3>
             <img class="blogimage" alt="Ecamm Live in action screenshot" src="/images/pages/uses_stream_app.png" />
