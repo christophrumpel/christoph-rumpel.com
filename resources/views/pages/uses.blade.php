@@ -57,6 +57,7 @@
                 a custom top.</p>
 
             <h3>Desk Top</h3>
+            <img src="{{ asset('images/pages/uses_table.jpg') }}" alt="Christoph's working desk">
             <ul>
                 <li>Custom Top</li>
             </ul>
