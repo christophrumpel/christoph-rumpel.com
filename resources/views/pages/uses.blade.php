@@ -99,35 +99,29 @@
             </ul>
 
             <h3>Local Development</h3>
+            <image src="{{ asset('images/pages/uses_herd.png') }}" alt="Laravel Herd">
             <ul>
-                <li>I use <a href="https://laravel.com/docs/master/valet">Laravel Valet</a> for local dev system</li>
-                <li>Depending on my clients, I sometimes also use <a href="https://www.docker.com/">Docker</a></li>
-                <li>In 2019, I switched from <a href="https://www.sequelpro.com/">SequelPro</a> to <a
-                        href="https://tableplus.com/">TablePlus</a> to manage my relational databases
-                </li>
+                <li>I use <a href="https://herd.laravel.com/">Laravel Herd (PRO)</a> for local development</li>
             </ul>
+
+            <div class="blognote"><strong>Note:</strong> There is no simpler local PHP/Laravel development than Herd. I love it!</div>
+
 
             <h3>Email</h3>
             <ul>
-                <li><a href="https://sparkmailapp.com/de">Spark</a> on my laptop</li>
-                <li>Apple Email on my phone</li>
+                <li>Apple Email (I switched back from Spark for simplicity</li>
             </ul>
 
             <h3>Productivity</h3>
             <ul>
-                <li><a href="https://www.raycast.com/">Raycast</a> is productivity tool of choice!</li>
+                <li><a href="https://www.raycast.com/">Raycast</a> is my productivity tool of choice!</li>
+                <li>It just covers it all!</li>
             </ul>
 
             <h3>Website Analytics</h3>
             <ul>
                 <li><a href="https://usefathom.com/ref/MOGXZ4">Fathom</a> - simple, fast and privacy-focused website analytics</li>
                 <li>You will get a $10 discount when using the above link</li>
-            </ul>
-
-            <h3>MacOS Window Manager</h3>
-            <ul>
-                <li>I need to move and resize windows all the time</li>
-                <li><a href="https://rectangleapp.com/">Rectangle</a> was my app of choice. I now use Raycast for that as well.</li>
             </ul>
 
             <h3>Cloud Storage</h3>
