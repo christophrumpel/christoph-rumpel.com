@@ -19,6 +19,8 @@
 
             <h2 id="general">General</h2>
 
+            <img src="{{ asset('images/pages/uses_desk_front_dark.JPG') }}" alt="Christoph's Desk front view">
+
             <h3>Laptop</h3>
             <ul>
                 <li>MacBook Pro (16-inch, 2021)</li>
@@ -39,7 +41,8 @@
 
             <h3>Display</h3>
             <ul>
-                <li><a href="https://amzn.to/3VFUVPk">Apple Studio Display</a></li>
+                <li><a href="https://amzn.to/4ezGS5s">Apple Studio Display</a></li>
+                <li>It's the best display I ever had</li>
                 <li>It gets powered through the USB-C connection</li>
                 <li>I was looking for a cheaper option, but none of them had a beautiful clean design</li>
                 <li>I didn't regret it</li>
@@ -99,7 +102,7 @@
             </ul>
 
             <h3>Local Development</h3>
-            <image src="{{ asset('images/pages/uses_herd.png') }}" alt="Laravel Herd">
+            <image src="{{ asset('images/pages/uses_herd.png') }}" alt="Laravel Herd" />
             <ul>
                 <li>I use <a href="https://herd.laravel.com/">Laravel Herd (PRO)</a> for local development</li>
             </ul>
@@ -168,19 +171,21 @@
 
 
             <h3>Camera</h3>
+
+            <img src="{{ asset('images/pages/uses_camera_side.JPG') }}" alt="My camera and prompter">
             <ul>
-                <li><a href="https://amzn.to/3VY2BOg">Sony Alpha 6400</a></li>
-                <li><a href="https://amzn.to/3zl5IH5">Lens - Sigma 16mm 1.4</a></li>
-                <li><a href="https://amzn.to/3XJ2nf4">Elgato Low Profile Arm</a></li>
-                <li>The camera is used as a webcam through <a href="https://amzn.to/4c9EeTn">the Elgato Cam Link 4k</a></li>
-                <li>In front of my cam sits the <a href="https://amzn.to/3Zs6E7r">Elgato Prompter</a></li>
+                <li><a href="https://amzn.to/3XE5LpN">Sony Alpha 6400</a></li>
+                <li><a href="https://amzn.to/3zxUP5b">Lens - Sigma 16mm 1.4</a></li>
+                <li><a href="https://amzn.to/3N0SLFO">Elgato Low Profile Arm</a></li>
+                <li>The camera is used as a webcam through <a href="https://amzn.to/3XSpDHf">the Elgato Cam Link 4k</a></li>
+                <li>In front of my cam sits the <a href="https://amzn.to/3zqSCIR">Elgato Prompter</a></li>
             </ul>
 
             <h3>Lights</h3>
             <img src="{{ asset('images/pages/uses_lights.png') }}" alt="Screenshots of the result of my streaming lights">
             <ul>
-                <li><a href="https://amzn.to/4goRuWJ">1x Elgato Keylight</a></li>
-                <li><a href="https://amzn.to/47rGlAm">2x Elgato Keylight Air</a></li>
+                <li><a href="https://amzn.to/3ZAACGn">1x Elgato Keylight</a></li>
+                <li><a href="https://amzn.to/3ZzlA3I">2x Elgato Keylight Air</a></li>
                 <li>The Keylight is mounted to my desk</li>
                 <li>One Keylight Air also points at met, mounted at the wall. The other one I use in my back.</li>
                 <li>Philips Hue lights in the background</li>
@@ -211,13 +216,10 @@
             <p>That's my current setup. It has come a long way and is still changing every year. If you feel like I'm missing any important tools I didn't mention, please <a
                     href="https://twitter.com/christophrumpel">let me know</a>. <br /><br />Find some images of my older setups below or check <a href="/2018/10/my-current-setup-in-2018">my 2018's setup.</a></p>
 
-            <img src="{{ asset('images/pages/uses_table.jpg') }}" alt="Christoph's working desk">
-            <img src="{{ asset('images/pages/uses_desk_front_old.jpg') }}" alt="Hyper microphone">
+            <img src="{{ asset('images/pages/uses_table.jpg') }}" alt="Christoph's working desk" />
+            <img src="{{ asset('images/pages/uses_desk_front_old.jpg') }}" alt="Hyper microphone" />
             <img class="blogimage" alt="Photo showing Christoph's streaming setup with microphone, lights and monitors." src="{{ asset('images/blog/2021/streaming_setup.png') }}" />
             <img class="blogimage" alt="Christoph's setup in 2018 showing old MBP" src="{{ asset('images/blog/setup_office.jpg') }}" />
-
-
-
         </article>
     </main>
 </x-main-layout>
