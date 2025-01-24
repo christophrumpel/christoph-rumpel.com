@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schedule;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,8 @@ Artisan::command('migrate-mailcoach-segments-for-v4', function () {
         }
     });
 });
+
+
+Schedule::command('horizon:snapshot')->everyFiveMinutes();
+Schedule::command('backup:clean')->daily()->at('01:00');
+Schedule::command('backup:run --only-db --disable-notifications')->daily()->at('02:00');
