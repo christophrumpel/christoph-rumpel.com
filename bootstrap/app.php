@@ -14,7 +14,22 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->redirectGuestsTo(fn () => route('login'));
+        $middleware->redirectUsersTo(RouteServiceProvider::HOME);
+
+        $middleware->append([
+            \App\Http\Middleware\CheckForMaintenanceMode::class,
+            \Bepsvpt\SecureHeaders\SecureHeadersMiddleware::class,
+        ]);
+
+        $middleware->web(\Spatie\ResponseCache\Middlewares\CacheResponse::class);
+
+        $middleware->throttleApi('200,1');
+
+        $middleware->alias([
+            'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            'doNotCacheResponse' => \Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
