@@ -12,9 +12,6 @@ class CodeTabCommentBtn extends Component
 
     /**
      * Create a new component instance.
-     *
-     * @param  string  $btnText
-     * @param  string  $tabState
      */
     public function __construct(string $btnText, string $tabState)
     {

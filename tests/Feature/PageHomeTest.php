@@ -59,7 +59,7 @@ class PageHomeTest extends TestCase
     }
 
     /** @test  */
-    public function it_sees_post_list_component_on_home_page()
+    public function it_sees_post_list_component_on_home_page(): void
     {
         $this->get('/')->assertSeeLivewire('post-list');
     }

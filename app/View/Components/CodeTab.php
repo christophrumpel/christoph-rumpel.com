@@ -11,8 +11,6 @@ class CodeTab extends Component
 
     /**
      * Create a new component instance.
-     *
-     * @param  string  $codeName
      */
     public function __construct(string $codeName)
     {
