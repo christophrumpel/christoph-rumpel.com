@@ -13,7 +13,7 @@ jobs:
           - 6379:6379
         options: --entrypoint redis-server
     steps:
-      -   uses: actions/checkout@v2
+      -   uses: actions/checkout@v4
 
       -   name: Setup PHP
           uses: shivammathur/setup-php@v2
@@ -28,7 +28,7 @@ jobs:
             mysql  -u root -proot -e 'CREATE DATABASE IF NOT EXISTS christophrumpel_test;'
 
       -   name: Cache yarn dependencies
-          uses: actions/cache@v2
+          uses: actions/cache@v4
           with:
             path: node_modules
             key: yarn-${{ hashFiles('yarn.lock') }}
@@ -37,7 +37,7 @@ jobs:
           run: yarn && yarn dev
 
       -   name: Cache composer dependencies
-          uses: actions/cache@v2
+          uses: actions/cache@v4
           with:
             path: vendor
             key: composer-${{ hashFiles('composer.lock') }}
