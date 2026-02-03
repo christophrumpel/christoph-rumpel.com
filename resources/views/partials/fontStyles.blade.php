@@ -1,9 +1,14 @@
+{{-- Preload fonts to prevent FOUT (Flash of Unstyled Text) --}}
+<link rel="preload" href="{{ asset('fonts/bitter-v28-latin-regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ asset('fonts/bitter-v28-latin-700.woff2') }}" as="font" type="font/woff2" crossorigin>
+
 <style>
     /* bitter-regular - latin */
     @font-face {
         font-family: 'Bitter';
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: url('../fonts/bitter-v28-latin-regular.eot'); /* IE9 Compat Modes */
         src: local(''),
         url('../fonts/bitter-v28-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -17,6 +22,7 @@
         font-family: 'Bitter';
         font-style: normal;
         font-weight: 600;
+        font-display: swap;
         src: url('../fonts/bitter-v28-latin-regular.eot'); /* IE9 Compat Modes */
         src: local(''),
         url('../fonts/bitter-v28-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -31,6 +37,7 @@
         font-family: 'Bitter';
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
         src: url('../fonts/bitter-v28-latin-700.eot'); /* IE9 Compat Modes */
         src: local(''),
         url('../fonts/bitter-v28-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
