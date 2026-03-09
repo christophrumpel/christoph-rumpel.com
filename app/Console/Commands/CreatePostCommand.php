@@ -8,13 +8,13 @@ use Illuminate\Support\Str;
 
 class CreatePostCommand extends Command
 {
-    protected $signature = 'post:create {title : The title of the blog post}';
+    protected $signature = 'post:create {title? : The title of the blog post}';
 
     protected $description = 'Create a new blog post template';
 
     public function handle(): int
     {
-        $title = $this->argument('title');
+        $title = $this->argument('title') ?? $this->ask('What is the title of your post?');
         $slug = Str::slug($title);
         $date = Carbon::now()->format('Y-m-d');
 
