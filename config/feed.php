@@ -37,7 +37,7 @@ return [
             /*
              * The view that will render the feed.
              */
-            'view' => 'feed::atom',
+            'view' => 'feeds.atom',
 
             /*
              * The type to be used in the <link> tag
