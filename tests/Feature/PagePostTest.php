@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\Factories\PostFactory;
 use Tests\TestCase;
 
@@ -30,6 +31,27 @@ class PagePostTest extends TestCase
             ->assertSee('laravel')
             ->assertSee('My blog content')
             ->assertSee($today->format('F Y'));
+    }
+
+    #[DataProvider('emptyCategories')]
+    public function test_it_shows_posts_without_categories(string $categories): void
+    {
+        Storage::fake('posts');
+        Storage::disk('posts')->put('2016-02-20.uncategorized-post.md', "---\ntitle: Uncategorized post\n{$categories}\n---\nArticle content");
+
+        $this->get('/2016/2/uncategorized-post')
+            ->assertSuccessful()
+            ->assertSee('Uncategorized post')
+            ->assertSee('Article content');
+    }
+
+    public static function emptyCategories(): array
+    {
+        return [
+            'missing' => [''],
+            'blank' => ['categories: ""'],
+            'whitespace' => ['categories: "   "'],
+        ];
     }
 
     /** @test */

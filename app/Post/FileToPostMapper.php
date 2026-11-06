@@ -19,11 +19,12 @@ class FileToPostMapper
             $slug,
         ] = explode('.', $fileName);
 
+        $categories = trim($postMetaData->matter('categories') ?? '');
 
         return (new Post)->create([
             'path' => $filePath,
             'title' => $postMetaData->matter('title'),
-            'categories' => explode(', ', strtolower($postMetaData->matter('categories'))),
+            'categories' => $categories === '' ? [] : explode(', ', strtolower($categories)),
             'preview_image' => $postMetaData->matter('preview_image'),
             'preview_image_twitter' => $postMetaData->matter('preview_image_twitter'),
             'content' => app(CommonMarkConverter::class)->convertToHtml($postMetaData->body()),
