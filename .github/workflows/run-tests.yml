@@ -27,14 +27,14 @@ jobs:
             sudo /etc/init.d/mysql start
             mysql  -u root -proot -e 'CREATE DATABASE IF NOT EXISTS christophrumpel_test;'
 
-      -   name: Cache yarn dependencies
-          uses: actions/cache@v4
+      -   name: Setup Node.js
+          uses: actions/setup-node@v4
           with:
-            path: node_modules
-            key: yarn-${{ hashFiles('yarn.lock') }}
+            node-version: '22'
+            cache: npm
 
-      -   name: Run yarn
-          run: yarn && yarn dev
+      -   name: Build frontend assets
+          run: npm ci && npm run dev
 
       -   name: Cache composer dependencies
           uses: actions/cache@v4
