@@ -40,7 +40,7 @@ jobs:
       -   name: Run composer install
           run: composer install -n --prefer-dist
           env:
-            COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
+            COMPOSER_AUTH: '{"github-oauth":{"github.com":"${{ github.token }}"}}'
 
       -   name: Prepare Laravel Application
           run: |
